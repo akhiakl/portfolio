@@ -14,92 +14,59 @@ const ServicesSection = () => {
   }, []);
   return (
     <section id="services" className="overflow-hidden bg-gray-50">
-      <div className="container mx-auto min-h-screen relative z-0 lg:px-20 md:px-10 px-8 md:py-32 py-12">
+      <div className="container mx-auto min-h-screen relative z-0 lg:px-20 md:px-10 px-8 md:py-36 py-12">
         <GridContainer />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-items-center">
           <ServiceCard
             headerIcon="laptop"
-            title="Front End"
-            description="Lead
-          TypeScript/JavaScript development: bootstraping, refactoring,
-          improving the structure, reliability, build setup"
+            title="Web - Front End"
             skillIcons={[
+              "javascript-plain",
+              "typescript-plain",
               "angularjs-plain-wordmark",
               "react-plain-wordmark",
+              "redux-plain",
               "nextjs-plain-wordmark",
               "handlebars-plain-wordmark",
               "html5-plain-wordmark",
               "css3-plain-wordmark",
               "sass-plain",
-              "react-plain-wordmark",
+              "jquery-plain-wordmark",
             ]}
           />
           <ServiceCard
-            headerIcon="laptop"
-            title="Front End"
-            description="Lead
-          TypeScript/JavaScript development: bootstraping, refactoring,
-          improving the structure, reliability, build setup"
+            headerIcon="construction"
+            title="Back End"
             skillIcons={[
-              "angularjs-plain-wordmark",
-              "react-plain-wordmark",
-              "nextjs-plain-wordmark",
-              "handlebars-plain-wordmark",
-              "html5-plain-wordmark",
-              "css3-plain-wordmark",
-              "sass-plain",
-              "react-plain-wordmark",
+              "nodejs-plain-wordmark",
+              "express-original-wordmark",
+              "nestjs-plain-wordmark",
+              "php-plain",
             ]}
           />
           <ServiceCard
-            headerIcon="laptop"
-            title="Front End"
-            description="Lead
-          TypeScript/JavaScript development: bootstraping, refactoring,
-          improving the structure, reliability, build setup"
+            headerIcon="phone_android"
+            title="Mobile App"
             skillIcons={[
-              "angularjs-plain-wordmark",
+              "apple-plain",
+              "android-plain-wordmark",
               "react-plain-wordmark",
-              "nextjs-plain-wordmark",
-              "handlebars-plain-wordmark",
-              "html5-plain-wordmark",
-              "css3-plain-wordmark",
-              "sass-plain",
-              "react-plain-wordmark",
+              "swift-plain-wordmark",
             ]}
           />
           <ServiceCard
-            headerIcon="laptop"
-            title="Front End"
-            description="Lead
-          TypeScript/JavaScript development: bootstraping, refactoring,
-          improving the structure, reliability, build setup"
+            headerIcon="storage"
+            title="Database"
+            gridPosition="col-start-2"
             skillIcons={[
-              "angularjs-plain-wordmark",
-              "react-plain-wordmark",
-              "nextjs-plain-wordmark",
-              "handlebars-plain-wordmark",
-              "html5-plain-wordmark",
-              "css3-plain-wordmark",
-              "sass-plain",
-              "react-plain-wordmark",
-            ]}
-          />
-          <ServiceCard
-            headerIcon="laptop"
-            title="Front End"
-            description="Lead
-          TypeScript/JavaScript development: bootstraping, refactoring,
-          improving the structure, reliability, build setup"
-            skillIcons={[
-              "angularjs-plain-wordmark",
-              "react-plain-wordmark",
-              "nextjs-plain-wordmark",
-              "handlebars-plain-wordmark",
-              "html5-plain-wordmark",
-              "css3-plain-wordmark",
-              "sass-plain",
-              "react-plain-wordmark",
+              "mongodb-plain-wordmark",
+              "mysql-plain-wordmark",
+              "postgresql-plain-wordmark",
+              "sequelize-plain-wordmark",
+              {
+                type: "icomoon",
+                icon: "knexjs",
+              },
             ]}
           />
         </div>

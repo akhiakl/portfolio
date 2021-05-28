@@ -33,19 +33,23 @@ const About = () => {
             data-aos="fade-in"
             className="text-3xl tracking-widest font-extrabold mb-4"
           >
-            HI I'M AKHIL K
+            HI I'M <span className="text-yellow-300">AKHIL K</span>
           </h3>
           <p
             data-aos="fade-in"
             data-aos-duration="1500"
             className="text-white md:text-base text-sm text-justify mb-6"
           >
-            I am enough of an artist to draw freely upon my imagination. The
-            point is that when I see a sunset or a waterfall or something, for a
-            split second it's so great, because for a little bit I'm out of my
-            brain, and it's got nothing to do with me. I'm not trying to figure
-            it out, you know what I mean? And I wonder if I can somehow find a
-            way to maintain that mind stillness.
+            I am a{" "}
+            <span className="text-yellow-300 underline font-bold text-lg">
+              Full stack Javascript developer
+            </span>{" "}
+            enough of an artist to draw freely upon my imagination. The point is
+            that when I see a sunset or a waterfall or something, for a split
+            second it's so great, because for a little bit I'm out of my brain,
+            and it's got nothing to do with me. I'm not trying to figure it out,
+            you know what I mean? And I wonder if I can somehow find a way to
+            maintain that mind stillness.
           </p>
           <form
             ref={hireRef}
