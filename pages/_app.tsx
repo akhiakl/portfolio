@@ -5,6 +5,7 @@ import AOS from "aos";
 import "../styles/globals.css";
 import "../styles/icomoon.css";
 import "aos/dist/aos.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -14,12 +15,12 @@ function App({ Component, pageProps }: AppProps) {
     });
   }, []);
   return (
-    <>
+    <ParallaxProvider>
       <Head>
         <title>Akhi AKL</title>
       </Head>
       <Component {...pageProps} />
-    </>
+    </ParallaxProvider>
   );
 }
 export default App;

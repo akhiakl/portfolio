@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import HomeSection from "../components/sections/Home";
 import AboutSection from "../components/sections/About";
-import ServicesSection from "../components/sections/services/Services";
+import ServicesSection from "../components/sections/Services";
+import PortflioSection from "../components/sections/Portfolio";
 
 export default function Home() {
   useEffect(() => {

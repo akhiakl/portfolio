@@ -1,22 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import Rellax from "rellax";
+import React from "react";
 import { Link } from "react-scroll";
 import TextRotator from "../TextRotator";
+import RellaxContainer from "../../helpers/RellaxContainer";
 
 const HomeSection = () => {
   const skillsets = ["WEB DEVELOPER", "MOBILE DEVELOPER", "3D ARTIST"];
 
-  const rellaxRef = useRef(null);
-
-  useEffect(() => {
-    const rellax = new Rellax(rellaxRef?.current || ".rellax", {
-      speed: -1,
-      center: true,
-    });
-    return () => {
-      rellax.destroy();
-    };
-  }, []);
   return (
     <section
       id="home"
@@ -25,8 +14,11 @@ const HomeSection = () => {
       <div className="bg-profile bg-right-bottom bg-no-repeat bg-contain flex flex-col md:justify-center h-full container">
         <div className="grid md:grid-cols-6 grid-cols-1 transform-gpu -translate-y-10">
           <div className="md:col-start-2 row-auto col-start-1 md:col-span-3 col-span-6 md:text-left text-center md:ml-5 md:mb-0 mb-5">
-            <div
-              ref={rellaxRef}
+            <RellaxContainer
+            options={{
+              speed: -1,
+              center: true,
+            }}
               className="backdrop-brightness-50 md:backdrop-filter-none backdrop-filter"
             >
               <p className="md:text-9xl text-8xl text-gray-500 font-extrabold md:mt-0 mt-10">
@@ -37,7 +29,7 @@ const HomeSection = () => {
                 </span>
               </p>
               <TextRotator textArr={skillsets} />
-            </div>
+            </RellaxContainer>
           </div>
         </div>
         <div className="absolute z-20 left-1/2 transform-gpu -translate-x-1/2 bottom-10 text-center">

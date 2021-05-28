@@ -8,8 +8,12 @@ function Navbar() {
   const [show, setShow] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("home");
   const onButtonClick = () => setShow(!show);
-  const primaryColor = activeSection === "home" ? "black-50" : "gray-50";
-  const secondaryColor = activeSection === "home" ? "gray-50" : "black-50";
+  const primaryColor = ["home", "portfolio"].includes(activeSection)
+    ? "black-50"
+    : "gray-50";
+  const secondaryColor = ["home", "portfolio"].includes(activeSection)
+    ? "gray-50"
+    : "black-50";
   return (
     <>
       <Hamburger
@@ -52,6 +56,7 @@ function Navbar() {
           <Nav.Link
             onSetActive={setActiveSection}
             to="about"
+            offset={-126}
             text="About"
             icon="info"
           />

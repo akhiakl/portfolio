@@ -1,19 +1,7 @@
-import React, { useEffect } from "react";
-import Rellax from "rellax";
+import React from "react";
 import GridContainer from "./GridContainer";
 import ServiceCard from "./ServiceCard";
-const ServicesSection = () => {
-  useEffect(() => {
-    const rellax = new Rellax(".box", {
-      speed: -2,
-      center: true,
-    });
-    return () => {
-      rellax.destroy();
-    };
-  }, []);
-  return (
-    <section id="services" className="overflow-hidden bg-gray-50">
+const ServicesSection = () => <section id="services" className="overflow-hidden bg-gray-50">
       <div className="container mx-auto min-h-screen relative z-0 lg:px-20 md:px-10 px-8 md:py-36 py-12">
         <GridContainer />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-items-center">
@@ -72,7 +60,5 @@ const ServicesSection = () => {
         </div>
       </div>
     </section>
-  );
-};
 
 export default ServicesSection;
