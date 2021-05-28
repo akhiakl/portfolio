@@ -16,13 +16,13 @@ const NavLink = ({
   onSetActive,
   onSetInactive,
   ...props
-}: ReactScrollLinkProps & NavLinkProps) => {
+}: ReactScrollLinkProps & NavLinkProps): JSX.Element => {
   const [active, setActive] = useState(false);
-  const handleSetActive = (to: string) => {
+  const handleSetActive = (to: string): void => {
     setActive(true);
     onSetActive?.(to);
   };
-  const handleSetInactive = () => {
+  const handleSetInactive = (): void => {
     setActive(false);
     onSetInactive?.();
   };

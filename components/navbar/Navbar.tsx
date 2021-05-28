@@ -4,10 +4,10 @@ import Nav from "./Nav";
 import Hamburger from "./Hamburger";
 import { animateScroll as scroll } from "react-scroll";
 
-function Navbar() {
+function Navbar(): JSX.Element {
   const [show, setShow] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("home");
-  const onButtonClick = () => setShow(!show);
+  const onButtonClick = (): void => setShow(!show);
   const primaryColor = ["home", "portfolio"].includes(activeSection)
     ? "black-50"
     : "gray-50";

@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import LoadingScreen from "../components/pre-loader/LoadingScreen";
 
 class AppDocument extends Document {
-  render() {
+  render(): JSX.Element {
     return (
       <Html>
         <Head>

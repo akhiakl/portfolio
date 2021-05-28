@@ -3,7 +3,7 @@ interface BoxRotateOptions {
   translate?: string;
   rotate?: string;
 }
-const GridContainer = () => {
+const GridContainer = (): JSX.Element => {
   const boxRotateStyle = (options?: BoxRotateOptions): CSSProperties => {
     const defaultOptions = {
       rotate: "rotate(45deg)",

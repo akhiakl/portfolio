@@ -18,11 +18,11 @@ const ServiceCard = ({
   title,
   skillIcons,
   gridPosition,
-}: ServiceCardProps) => {
+}: ServiceCardProps): JSX.Element => {
   const [flipped, setFlipped] = useState(false);
-  const flip = () => setFlipped(!flipped);
+  const flip = (): void => setFlipped(!flipped);
 
-  const renderIconsets = () =>
+  const renderIconsets = (): JSX.Element[] =>
     skillIcons.map((skillIcon) => {
       const icon =
         typeof skillIcon === "string"
@@ -55,20 +55,23 @@ const ServiceCard = ({
             {/* {description ? (
               <p className="text-gray-600 text-center mb-auto">{description}</p>
             ) : null} */}
-            <a
+            <button
               onClick={flip}
               className="cursor-pointer md:hidden block mt-auto"
             >
               <span className="material-icons">arrow_forward</span>
-            </a>
+            </button>
           </div>
           <div className="flip-card-face flip-card-face-back absolute left-0 right-0 top-0 bottom-0 p-8 md:group-hover:flex md:hidden flex flex-col justify-center items-center bg-red-500 text-gray-50">
             <div className="flex-1 w-full grid grid-cols-3 grid-rows-4 gap-4 items-center justify-items-center skillsets text-left text-5xl">
               {renderIconsets()}
             </div>
-            <a onClick={flip} className="cursor-pointer md:hidden block mt-3">
+            <button
+              onClick={flip}
+              className="cursor-pointer md:hidden block mt-3"
+            >
               <span className="material-icons">arrow_back</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>

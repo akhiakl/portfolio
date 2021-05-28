@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Rellax from "rellax";
 import AnimatedButton from "../AnimatedButton";
 
-const About = () => {
+const About = (): JSX.Element => {
   const aboutRef = useRef(null);
   const hireRef = useRef(null);
 
@@ -27,13 +27,13 @@ const About = () => {
             ref={aboutRef}
             className="md:text-9xl text-8xl font-extrabold text-red-900 opacity-20 absolute left-50 -top-2 leading-none -z-1"
           >
-            ABOUT
+            about
           </h1>
           <h3
             data-aos="fade-in"
             className="text-3xl tracking-widest font-extrabold mb-4"
           >
-            HI I'M <span className="text-yellow-300">AKHIL K</span>
+            Hi I&lsquo;m <span className="text-yellow-300">Akhil K</span>
           </h3>
           <p
             data-aos="fade-in"
@@ -46,10 +46,10 @@ const About = () => {
             </span>{" "}
             enough of an artist to draw freely upon my imagination. The point is
             that when I see a sunset or a waterfall or something, for a split
-            second it's so great, because for a little bit I'm out of my brain,
-            and it's got nothing to do with me. I'm not trying to figure it out,
-            you know what I mean? And I wonder if I can somehow find a way to
-            maintain that mind stillness.
+            second it&lsquo;s so great, because for a little bit I&lsquo;m out
+            of my brain, and it&lsquo;s got nothing to do with me. I&lsquo;m not
+            trying to figure it out, you know what I mean? And I wonder if I can
+            somehow find a way to maintain that mind stillness.
           </p>
           <form
             ref={hireRef}

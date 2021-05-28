@@ -19,9 +19,9 @@ module.exports = {
       fontFamily: {
         karla: ["Karla", "sans-serif"],
       },
-      backgroundImage: (theme) => ({
+      backgroundImage: () => ({
         profile: "url('/img/profile-bg.png')",
-        'black-50-dotted': "url('/img/black-dotted.svg')"
+        "black-50-dotted": "url('/img/black-dotted.svg')",
       }),
       transitionProperty: {
         size: "transform, height, width",
@@ -47,10 +47,10 @@ module.exports = {
         dim: "dim 3s ease-in-out infinite",
       },
       fontSize: {
-        '10xl': ['9rem'],
-        '11xl': ['10rem'],
-        '12xl': ['11rem']
-      }
+        "10xl": ["9rem"],
+        "11xl": ["10rem"],
+        "12xl": ["11rem"],
+      },
     },
   },
   variants: {

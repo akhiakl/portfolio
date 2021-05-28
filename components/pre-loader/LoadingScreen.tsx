@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoadingScreen = () => {
+const LoadingScreen = (): JSX.Element => {
   return (
     <div id="preloader">
       <div className="wrapper">

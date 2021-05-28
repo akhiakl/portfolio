@@ -3,9 +3,8 @@ import Navbar from "../components/navbar/Navbar";
 import HomeSection from "../components/sections/Home";
 import AboutSection from "../components/sections/About";
 import ServicesSection from "../components/sections/Services";
-import PortflioSection from "../components/sections/Portfolio";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   useEffect(() => {
     const bodyElement = document.getElementsByTagName("body")?.[0];
     const preloaderElement = document.getElementById("preloader");

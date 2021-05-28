@@ -7,7 +7,7 @@ import "../styles/icomoon.css";
 import "aos/dist/aos.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
