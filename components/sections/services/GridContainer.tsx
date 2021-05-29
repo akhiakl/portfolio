@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import RellaxContainer from "../../../helpers/RellaxContainer";
 interface BoxRotateOptions {
   translate?: string;
   rotate?: string;
@@ -17,40 +18,54 @@ const GridContainer = (): JSX.Element => {
   };
   return (
     <>
-      <h1 className="transform-gpu -z-1 md:rotate-90 md:absolute md:top-24 md:left-18 md:origin-top-left font-extrabold md:text-9xl text-6xl md:text-left text-center md:text-gray-300 text-gray-700 mb-4">
-        SERVICES.
+      <h1 className="transform-gpu -z-1 md:rotate-90 md:absolute md:top-24 md:left-18 md:origin-top-left font-extrabold md:text-10xl text-7xl md:text-left text-center md:text-gray-300 text-gray-700 mb-4">
+        services.
       </h1>
       <div className="absolute grid grid-cols-6 grid-flow-col -z-1 left-0 right-0 top-0 bottom-0">
         <div className="col-auto relative z-0 border-gray-300 md:border-l border-opacity-25">
-          <div
+          <RellaxContainer
+            options={{
+              speed: -0.5,
+              center: true,
+            }}
             style={boxRotateStyle()}
-            className="box z-0 bg-red-500 rounded-md shadow-md absolute bottom-1 transform-gpu -translate-x-1/2 md:h-10 h-8 md:w-10 w-8"
-          ></div>
+            className="z-0 bg-red-500 rounded-md shadow-md absolute bottom-24 transform-gpu -translate-x-1/2 md:h-10 h-8 md:w-10 w-8"
+          ></RellaxContainer>
         </div>
         <div className="col-auto relative z-0 border-gray-300 md:border-l border-opacity-25"></div>
         <div className="col-auto relative z-0 border-gray-300 md:border-l border-opacity-25">
-          <div
+          <RellaxContainer
+            options={{
+              speed: -0.5,
+              center: true,
+            }}
             style={boxRotateStyle()}
-            className="box z-0 bg-red-500 rounded-md shadow-md absolute top-4 md:h-10 h-8 md:w-10 w-8"
-          ></div>
+            className="z-0 bg-red-500 rounded-md shadow-md absolute top-4 md:h-10 h-8 md:w-10 w-8"
+          ></RellaxContainer>
         </div>
         <div className="col-auto relative z-0 border-gray-300 md:border-l border-opacity-25">
-          <div
+          <RellaxContainer
             style={boxRotateStyle()}
-            data-rellax-speed="4"
-            className="box md:block hidden z-0 bg-red-500 rounded-md shadow-lg absolute top-2/4 -right-1/4 h-24 w-24"
-          ></div>
+            options={{
+              speed: 1,
+              center: true,
+            }}
+            className="md:block hidden z-0 bg-red-500 rounded-md shadow-lg absolute top-2/4 -right-1/4 h-24 w-24"
+          ></RellaxContainer>
         </div>
         <div className="col-auto relative -z-1 border-gray-300 md:border-l border-opacity-25"></div>
         <div className="col-auto relative -z-1 border-gray-300 md:border-l border-opacity-25 border-r">
-          <div
+          <RellaxContainer
+            options={{
+              speed: -1,
+              center: true,
+            }}
             style={{
               transform: `rotate(65deg)`,
               transformOrigin: "left",
             }}
-            data-rellax-speed="-1"
-            className="box bg-red-500 rounded-md shadow-sm absolute top-24 left-48 h-96 w-96"
-          ></div>
+            className="bg-red-500 rounded-md shadow-sm absolute top-24 left-48 h-96 w-96"
+          ></RellaxContainer>
         </div>
       </div>
     </>

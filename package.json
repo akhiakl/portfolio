@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint . --ext js,jsx,ts,tsx --fix"
+    "lint": "eslint --ext js,jsx,ts,tsx --fix"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",

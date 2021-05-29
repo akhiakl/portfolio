@@ -46,7 +46,7 @@ const ServicesSection = (): JSX.Element => (
         <ServiceCard
           headerIcon="storage"
           title="Database"
-          gridPosition="col-start-2"
+          gridPosition="md:col-start-2"
           skillIcons={[
             "mongodb-plain-wordmark",
             "mysql-plain-wordmark",

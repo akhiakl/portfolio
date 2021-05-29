@@ -1,34 +1,22 @@
-import React, { useEffect, useRef } from "react";
-import Rellax from "rellax";
+import React from "react";
+import RellaxContainer from "../../helpers/RellaxContainer";
 import AnimatedButton from "../AnimatedButton";
 
 const About = (): JSX.Element => {
-  const aboutRef = useRef(null);
-  const hireRef = useRef(null);
-
-  useEffect(() => {
-    const aboutRellax = new Rellax(aboutRef?.current || ".about-rellax", {
-      speed: -0.225,
-      center: true,
-    });
-    const hireRellax = new Rellax(hireRef?.current || ".hire-rellax", {
-      speed: -0.225,
-    });
-    return () => {
-      aboutRellax.destroy();
-      hireRellax.destroy();
-    };
-  }, []);
   return (
     <section id="about">
       <div className="about-me bg-red-500 px-12 py-24 text-gray-50">
         <div className="container mx-auto flex flex-col items-center relative z-0 pt-6 lg:px-48 md:px-20 px-0">
-          <h1
-            ref={aboutRef}
+          <RellaxContainer
+            as="h1"
+            options={{
+              speed: -0.225,
+              center: true,
+            }}
             className="md:text-9xl text-8xl font-extrabold text-red-900 opacity-20 absolute left-50 -top-2 leading-none -z-1"
           >
             about
-          </h1>
+          </RellaxContainer>
           <h3
             data-aos="fade-in"
             className="text-3xl tracking-widest font-extrabold mb-4"
@@ -51,8 +39,11 @@ const About = (): JSX.Element => {
             trying to figure it out, you know what I mean? And I wonder if I can
             somehow find a way to maintain that mind stillness.
           </p>
-          <form
-            ref={hireRef}
+          <RellaxContainer
+            as="form"
+            options={{
+              speed: -0.225,
+            }}
             className="hire-rellax"
             method="get"
             target="_blank"
@@ -70,7 +61,7 @@ const About = (): JSX.Element => {
                 file_download
               </span>
             </AnimatedButton>
-          </form>
+          </RellaxContainer>
         </div>
       </div>
     </section>
