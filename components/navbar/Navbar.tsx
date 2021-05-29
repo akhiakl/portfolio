@@ -19,7 +19,7 @@ function Navbar(): JSX.Element {
       <Hamburger
         primaryColor={primaryColor}
         className={classNames(
-          "fixed z-40 left-10 top-10 ring-red-900 ring-opacity-5",
+          "fixed z-40 md:left-10 md:top-10 top-4 left-4 ring-red-900 ring-opacity-5",
           {
             "ring-4": !show,
           }
@@ -36,7 +36,8 @@ function Navbar(): JSX.Element {
            transition-size ease-in-out duration-500`,
           {
             "md:h-32 h-full w-full": show,
-            "h-14 w-14 translate-x-10 translate-y-10 rounded-full": !show,
+            "h-14 w-14 md:translate-x-10 md:translate-y-10  translate-x-4 translate-y-4 rounded-full":
+              !show,
           }
         )}
       >

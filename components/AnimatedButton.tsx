@@ -12,7 +12,7 @@ const AnimatedButton: React.FC<
       primaryColor || "black-50"
     } border-2 border-${secondaryColor || "red-500"} box-content text-${
       secondaryColor || "red-500"
-    } shadow-sm px-6 py-2 ${className}`}
+    } shadow-sm px-6 py-2 ${className || ""}`}
   >
     <span
       className={`top-line bg-${

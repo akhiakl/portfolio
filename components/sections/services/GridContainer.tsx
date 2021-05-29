@@ -18,14 +18,11 @@ const GridContainer = (): JSX.Element => {
   };
   return (
     <>
-      <h1 className="transform-gpu -z-1 md:rotate-90 md:absolute md:top-24 md:left-18 md:origin-top-left font-extrabold md:text-10xl text-7xl md:text-left text-center md:text-gray-300 text-gray-700 mb-4">
-        services.
-      </h1>
       <div className="absolute grid grid-cols-6 grid-flow-col -z-1 left-0 right-0 top-0 bottom-0">
         <div className="col-auto relative z-0 border-gray-300 md:border-l border-opacity-25">
           <RellaxContainer
             options={{
-              speed: -0.5,
+              speed: 1,
               center: true,
             }}
             style={boxRotateStyle()}
@@ -36,7 +33,7 @@ const GridContainer = (): JSX.Element => {
         <div className="col-auto relative z-0 border-gray-300 md:border-l border-opacity-25">
           <RellaxContainer
             options={{
-              speed: -0.5,
+              speed: -1,
               center: true,
             }}
             style={boxRotateStyle()}

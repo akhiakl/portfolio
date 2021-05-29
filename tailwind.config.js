@@ -17,7 +17,8 @@ module.exports = {
         86: "22.5rem",
       },
       fontFamily: {
-        karla: ["Karla", "sans-serif"],
+        karla: ["'Karla'", "sans-serif"],
+        'unica-one': ["'Unica One'", "cursive"],
       },
       backgroundImage: () => ({
         profile: "url('/img/profile-bg.png')",
@@ -61,6 +62,7 @@ module.exports = {
       ringColor: ["hover", "group-hover"],
       display: ["hover", "group-hover"],
       visibility: ["hover", "group-hover"],
+      padding: ["odd","even"],
     },
   },
   plugins: [],

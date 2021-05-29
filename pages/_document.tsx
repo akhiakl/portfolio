@@ -7,14 +7,6 @@ class AppDocument extends Document {
       <Html>
         <Head>
           <meta name="description" content="Portfolio website of Akhil" />
-          <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"
-          />
         </Head>
         <body className="overflow-hidden">
           <LoadingScreen />

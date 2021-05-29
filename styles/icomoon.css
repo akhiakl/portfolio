@@ -26,9 +26,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icomoon-cockpit:before {
+  content: "\e906";
+}
+.icomoon-netlify:before {
+  content: "\e907";
+}
+.icomoon-strapi:before {
+  content: "\e908";
+}
+.icomoon-github:before {
+  content: "\e905";
+}
+.icomoon-aws-cognito:before {
+  content: "\e902";
+}
+.icomoon-aws-dynamodb:before {
+  content: "\e903";
+}
+.icomoon-aws-lambda:before {
+  content: "\e904";
+}
+.icomoon-elasticsearch:before {
+  content: "\e901";
+}
 .icomoon-knexjs:before {
   content: "\e900";
 }
 .icomoon-database:before {
   content: "\e964";
+}
+.icomoon-linkedin:before {
+  content: "\eaca";
+}
+.icomoon-stackoverflow:before {
+  content: "\ead0";
+}
+.icomoon-twitter:before {
+  content: "\ea96";
 }

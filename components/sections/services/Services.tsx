@@ -1,9 +1,13 @@
 import React from "react";
 import GridContainer from "./GridContainer";
 import ServiceCard from "./ServiceCard";
+
 const ServicesSection = (): JSX.Element => (
-  <section id="services" className="overflow-hidden bg-gray-50">
-    <div className="container mx-auto min-h-screen relative z-0 lg:px-20 md:px-10 px-8 md:py-36 py-12">
+  <section id="services" className="overflow-hidden bg-gray-50 relative">
+    <h1 className="transform-gpu z-0 md:writing-vertical md:rotate-180 md:absolute md:top-36 md:left-4 font-extrabold md:text-10xl text-7xl md:text-left text-center md:text-gray-300 text-gray-700 mb-4">
+      services.
+    </h1>
+    <div className="container relative mx-auto min-h-screen z-0 lg:px-20 md:px-10 px-8 md:py-36 py-12">
       <GridContainer />
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-items-center">
         <ServiceCard
@@ -12,7 +16,7 @@ const ServicesSection = (): JSX.Element => (
           skillIcons={[
             "javascript-plain",
             "typescript-plain",
-            "angularjs-plain-wordmark",
+            "angularjs-plain",
             "react-plain-wordmark",
             "redux-plain",
             "nextjs-plain-wordmark",
@@ -28,8 +32,8 @@ const ServicesSection = (): JSX.Element => (
           title="Back End"
           skillIcons={[
             "nodejs-plain-wordmark",
-            "express-original-wordmark",
-            "nestjs-plain-wordmark",
+            "express-original",
+            "nestjs-plain",
             "php-plain",
           ]}
         />
@@ -40,21 +44,39 @@ const ServicesSection = (): JSX.Element => (
             "apple-plain",
             "android-plain-wordmark",
             "react-plain-wordmark",
-            "swift-plain-wordmark",
+            "swift-plain",
           ]}
         />
         <ServiceCard
           headerIcon="storage"
           title="Database"
-          gridPosition="md:col-start-2"
           skillIcons={[
             "mongodb-plain-wordmark",
-            "mysql-plain-wordmark",
+            "mysql-plain",
             "postgresql-plain-wordmark",
-            "sequelize-plain-wordmark",
+            "sequelize-plain",
             {
               type: "icomoon",
               icon: "knexjs",
+            },
+          ]}
+        />
+        <ServiceCard
+          headerIcon="tune"
+          title="CMS"
+          skillIcons={[
+            "wordpress-plain-wordmark",
+            {
+              type: "icomoon",
+              icon: "strapi",
+            },
+            {
+              type: "icomoon",
+              icon: "cockpit",
+            },
+            {
+              type: "icomoon",
+              icon: "netlify",
             },
           ]}
         />
