@@ -5,11 +5,11 @@ interface TextRotatorProps {
   textArr: string[]
 }
 
-const TextRotator = ({ textArr }: TextRotatorProps) => {
+const TextRotator = ({ textArr }: TextRotatorProps): JSX.Element => {
   const [activeSkillsetIndex, setActiveSkillsetIndex] = useState<number>(0)
   const [startAnimation, setStartAnimation] = useState<boolean>(false)
   const [timerInitialDelay, setTimerInitialDelay] = useState<number>(1500)
-  const setIndexWithDelay = (index: number) => {
+  const setIndexWithDelay = (index: number): void => {
     setTimeout(() => {
       setActiveSkillsetIndex(index)
     }, 3000)
@@ -24,7 +24,7 @@ const TextRotator = ({ textArr }: TextRotatorProps) => {
         setIndexWithDelay(activeSkillsetIndex + 1)
       }
     }, timerInitialDelay)
-  }, [activeSkillsetIndex])
+  }, [activeSkillsetIndex, textArr.length, timerInitialDelay])
 
   return (
     <div

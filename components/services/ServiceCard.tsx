@@ -1,11 +1,11 @@
-import classNames from "classnames";
-import React, { useState } from "react";
-import IconSet, { IconType } from "../../IconSet";
+import classNames from 'classnames'
+import React, { useState } from 'react'
+import IconSet, { IconType } from '../IconSet'
 interface ServiceCardProps {
-  headerIcon: string;
-  title: string;
-  gridPosition?: string;
-  skillIcons: IconType;
+  headerIcon: string
+  title: string
+  gridPosition?: string
+  skillIcons: IconType
 }
 
 const ServiceCard = ({
@@ -14,19 +14,19 @@ const ServiceCard = ({
   skillIcons,
   gridPosition,
 }: ServiceCardProps): JSX.Element => {
-  const [flipped, setFlipped] = useState(false);
-  const [timeout, setCompTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [flipped, setFlipped] = useState(false)
+  const [timeout, setCompTimeout] = useState<NodeJS.Timeout | null>(null)
   const flip = (): void => {
-    timeout && clearTimeout(timeout);
+    timeout && clearTimeout(timeout)
     if (!flipped) {
       const thisTimeout = setTimeout(() => {
-        setFlipped(false);
-      }, 5000);
-      setCompTimeout(thisTimeout);
+        setFlipped(false)
+      }, 5000)
+      setCompTimeout(thisTimeout)
     }
 
-    setFlipped(!flipped);
-  };
+    setFlipped(!flipped)
+  }
 
   return (
     <div
@@ -36,7 +36,7 @@ const ServiceCard = ({
       <div className="h-full w-full bg-gray-50 shadow-xl flex flex-col transition-transform transform-gpu md:group-hover:-translate-x-4 md:group-hover:-translate-y-4 md:group-hover:ring-red-500">
         <div
           className={classNames(
-            "flip-card ring-2 ring-black-50 md:group-hover:ring-red-600  md:group-hover:bg-red-500 h-full w-full md:group-hover:text-gray-50",
+            'flip-card ring-2 ring-black-50 md:group-hover:ring-red-600  md:group-hover:bg-red-500 h-full w-full md:group-hover:text-gray-50',
             { flipped }
           )}
         >
@@ -50,10 +50,7 @@ const ServiceCard = ({
             {/* {description ? (
               <p className="text-gray-600 text-center mb-auto">{description}</p>
             ) : null} */}
-            <button
-              onClick={flip}
-              className="cursor-pointer md:hidden block mt-auto"
-            >
+            <button onClick={flip} className="cursor-pointer md:hidden block mt-auto">
               <span className="material-icons">arrow_forward</span>
             </button>
           </div>
@@ -61,17 +58,14 @@ const ServiceCard = ({
             <div className="flex-1 w-full grid grid-cols-3 grid-rows-4 gap-4 items-center justify-items-center skillsets text-left text-4xl">
               <IconSet icons={skillIcons} />
             </div>
-            <button
-              onClick={flip}
-              className="cursor-pointer md:hidden block mt-3"
-            >
+            <button onClick={flip} className="cursor-pointer md:hidden block mt-3">
               <span className="material-icons">arrow_back</span>
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ServiceCard;
+export default ServiceCard

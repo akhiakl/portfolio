@@ -1,5 +1,5 @@
-import React from "react";
-import Project from "./Project";
+import React from 'react'
+import Project from '../portfolio/Project'
 
 const PortflioSection = (): JSX.Element => (
   <section id="portfolio" className="bg-black-50-dotted text-gray-50 relative">
@@ -10,53 +10,56 @@ const PortflioSection = (): JSX.Element => (
       <div className="container mx-auto xl:pl-30 lg:pl-24 flex flex-col lg:gap-0 gap-4 h-1/2 w-full mt-8">
         <Project
           index="01"
-          title={["MAN WITH", "A VAN"]}
+          title={['MAN WITH', 'A VAN']}
           imageSrc="/img/manwithavan.png"
           description="Manwithavan is a web app for the internal assessment of an entire packers and movers company."
           stackIcons={[
-            "angularjs-plain",
-            "typescript-plain",
-            "express-original-wordmark",
-            "html5-plain-wordmark",
-            "sass-plain",
-            "mysql-plain-wordmark",
+            'angularjs-plain',
+            'typescript-plain',
+            'express-original-wordmark',
+            'html5-plain-wordmark',
+            'sass-plain',
+            'mysql-plain-wordmark',
             {
-              type: "icomoon",
-              icon: "elasticsearch",
+              type: 'icomoon',
+              icon: 'elasticsearch',
             },
           ]}
+          link="https://manwithavan.com.au"
         />
         <Project
           index="02"
-          title={["GIBLIB"]}
+          title={['GIBLIB']}
           imageSrc="/img/giblib.png"
           description="Giblib is a streaming service for newest, most-advanced medical courses, surgical videos."
           stackIcons={[
-            "react-plain",
-            "typescript-plain",
-            "express-original-wordmark",
-            "postgresql-plain-wordmark",
-            "sequelize-plain",
-            { type: "icomoon", icon: "elasticsearch" },
+            'react-plain',
+            'typescript-plain',
+            'express-original-wordmark',
+            'postgresql-plain-wordmark',
+            'sequelize-plain',
+            { type: 'icomoon', icon: 'elasticsearch' },
           ]}
+          link="https://watch.giblib.com"
         />
         <Project
           index="03"
-          title={["AUDIO", "TEASER"]}
+          title={['AUDIO', 'TEASER']}
           imageSrc="/img/audioteaser.png"
           description="Audioteaser is an application which creates natural-sounding voiceovers."
           stackIcons={[
-            "amazonwebservices-plain",
-            "angularjs-plain",
-            "nodejs-plain",
-            { type: "icomoon", icon: "awslambda" },
-            { type: "icomoon", icon: "awscognito" },
-            { type: "icomoon", icon: "awsdynamodb" },
+            'amazonwebservices-plain',
+            'angularjs-plain',
+            'nodejs-plain',
+            { type: 'icomoon', icon: 'awslambda' },
+            { type: 'icomoon', icon: 'awscognito' },
+            { type: 'icomoon', icon: 'awsdynamodb' },
           ]}
+          link="https://audioteaser.com"
         />
       </div>
     </div>
   </section>
-);
+)
 
-export default PortflioSection;
+export default PortflioSection

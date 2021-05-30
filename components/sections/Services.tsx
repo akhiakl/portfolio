@@ -1,6 +1,6 @@
-import React from "react";
-import GridContainer from "./GridContainer";
-import ServiceCard from "./ServiceCard";
+import React from 'react'
+import GridContainer from '../services/GridContainer'
+import ServiceCard from '../services/ServiceCard'
 
 const ServicesSection = (): JSX.Element => (
   <section id="services" className="overflow-hidden bg-gray-50 relative">
@@ -14,50 +14,45 @@ const ServicesSection = (): JSX.Element => (
           headerIcon="laptop"
           title="Web - Front End"
           skillIcons={[
-            "javascript-plain",
-            "typescript-plain",
-            "angularjs-plain",
-            "react-plain-wordmark",
-            "redux-plain",
-            "nextjs-plain-wordmark",
-            "handlebars-plain-wordmark",
-            "html5-plain-wordmark",
-            "css3-plain-wordmark",
-            "sass-plain",
-            "jquery-plain-wordmark",
+            'javascript-plain',
+            'typescript-plain',
+            'angularjs-plain',
+            'react-plain-wordmark',
+            'redux-plain',
+            'nextjs-plain-wordmark',
+            'handlebars-plain-wordmark',
+            'html5-plain-wordmark',
+            'css3-plain-wordmark',
+            'sass-plain',
+            'jquery-plain-wordmark',
           ]}
         />
         <ServiceCard
           headerIcon="construction"
           title="Back End"
-          skillIcons={[
-            "nodejs-plain-wordmark",
-            "express-original",
-            "nestjs-plain",
-            "php-plain",
-          ]}
+          skillIcons={['nodejs-plain-wordmark', 'express-original', 'nestjs-plain', 'php-plain']}
         />
         <ServiceCard
           headerIcon="phone_android"
           title="Mobile App"
           skillIcons={[
-            "apple-plain",
-            "android-plain-wordmark",
-            "react-plain-wordmark",
-            "swift-plain",
+            'apple-plain',
+            'android-plain-wordmark',
+            'react-plain-wordmark',
+            'swift-plain',
           ]}
         />
         <ServiceCard
           headerIcon="storage"
           title="Database"
           skillIcons={[
-            "mongodb-plain-wordmark",
-            "mysql-plain",
-            "postgresql-plain-wordmark",
-            "sequelize-plain",
+            'mongodb-plain-wordmark',
+            'mysql-plain',
+            'postgresql-plain-wordmark',
+            'sequelize-plain',
             {
-              type: "icomoon",
-              icon: "knexjs",
+              type: 'icomoon',
+              icon: 'knexjs',
             },
           ]}
         />
@@ -65,24 +60,24 @@ const ServicesSection = (): JSX.Element => (
           headerIcon="tune"
           title="CMS"
           skillIcons={[
-            "wordpress-plain-wordmark",
+            'wordpress-plain-wordmark',
             {
-              type: "icomoon",
-              icon: "strapi",
+              type: 'icomoon',
+              icon: 'strapi',
             },
             {
-              type: "icomoon",
-              icon: "cockpit",
+              type: 'icomoon',
+              icon: 'cockpit',
             },
             {
-              type: "icomoon",
-              icon: "netlify",
+              type: 'icomoon',
+              icon: 'netlify',
             },
           ]}
         />
       </div>
     </div>
   </section>
-);
+)
 
-export default ServicesSection;
+export default ServicesSection

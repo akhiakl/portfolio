@@ -1,6 +1,6 @@
-import React from "react";
-import RellaxContainer from "../../helpers/RellaxContainer";
-import AnimatedButton from "../AnimatedButton";
+import React from 'react'
+import RellaxContainer from '../../helpers/RellaxContainer'
+import AnimatedButton from '../AnimatedButton'
 
 const About = (): JSX.Element => {
   return (
@@ -17,10 +17,10 @@ const About = (): JSX.Element => {
           >
             about
           </RellaxContainer>
-          <h3
-            data-aos="fade-in"
-            className="text-3xl tracking-widest font-extrabold mb-4"
-          >
+          <h3 data-aos="fade-in" className="text-3xl tracking-widest font-extrabold mb-4">
+            <span aria-label="emoji wave" role="img">
+              👋
+            </span>{' '}
             Hi I&lsquo;m <span className="text-yellow-300">Akhil K</span>
           </h3>
           <p
@@ -28,16 +28,14 @@ const About = (): JSX.Element => {
             data-aos-duration="1500"
             className="text-white md:text-base text-sm text-justify mb-6"
           >
-            I am a{" "}
+            An enthusiastic{' '}
             <span className="text-yellow-300 underline font-bold text-lg">
               Full stack Javascript developer
-            </span>{" "}
-            enough of an artist to draw freely upon my imagination. The point is
-            that when I see a sunset or a waterfall or something, for a split
-            second it&lsquo;s so great, because for a little bit I&lsquo;m out
-            of my brain, and it&lsquo;s got nothing to do with me. I&lsquo;m not
-            trying to figure it out, you know what I mean? And I wonder if I can
-            somehow find a way to maintain that mind stillness.
+            </span>{' '}
+            with successful experience in Angular2+, NodeJS, MongoDB, Mysql, HTML & CSS3, Javascript
+            and hands-on experience in React, React Native, AWS, Jest, Wordpress and other CMS. I am
+            an artish who like to create traditional portraits & 3d models. I am a gamer myself and
+            interested in buiding games using Unreal or Unity
           </p>
           <RellaxContainer
             as="form"
@@ -56,16 +54,14 @@ const About = (): JSX.Element => {
               primaryColor="red-500"
               secondaryColor="gray-50"
             >
-              Checkout my resume{"  "}
-              <span className="material-icons-outlined text-base leading-none">
-                file_download
-              </span>
+              Checkout my resume{'  '}
+              <span className="material-icons-outlined text-base leading-none">file_download</span>
             </AnimatedButton>
           </RellaxContainer>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

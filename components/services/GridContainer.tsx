@@ -1,21 +1,21 @@
-import React, { CSSProperties } from "react";
-import RellaxContainer from "../../../helpers/RellaxContainer";
+import React, { CSSProperties } from 'react'
+import RellaxContainer from '../../helpers/RellaxContainer'
 interface BoxRotateOptions {
-  translate?: string;
-  rotate?: string;
+  translate?: string
+  rotate?: string
 }
 const GridContainer = (): JSX.Element => {
   const boxRotateStyle = (options?: BoxRotateOptions): CSSProperties => {
     const defaultOptions = {
-      rotate: "rotate(45deg)",
-      translate: "translate3d(-50%, 0, 0)",
-    };
-    const { translate, rotate } = options || defaultOptions;
+      rotate: 'rotate(45deg)',
+      translate: 'translate3d(-50%, 0, 0)',
+    }
+    const { translate, rotate } = options || defaultOptions
     return {
       transform: `${rotate} ${translate}`,
-      transformOrigin: "left",
-    };
-  };
+      transformOrigin: 'left',
+    }
+  }
   return (
     <>
       <div className="absolute grid grid-cols-6 grid-flow-col -z-1 left-0 right-0 top-0 bottom-0">
@@ -59,14 +59,14 @@ const GridContainer = (): JSX.Element => {
             }}
             style={{
               transform: `rotate(65deg)`,
-              transformOrigin: "left",
+              transformOrigin: 'left',
             }}
             className="bg-red-500 rounded-md shadow-sm absolute top-24 left-48 h-96 w-96"
           ></RellaxContainer>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default GridContainer;
+export default GridContainer

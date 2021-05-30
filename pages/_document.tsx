@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import LoadingScreen from "../components/pre-loader/LoadingScreen";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import LoadingScreen from '../components/pre-loader/LoadingScreen'
 
 class AppDocument extends Document {
   render(): JSX.Element {
@@ -14,7 +14,7 @@ class AppDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
-export default AppDocument;
+export default AppDocument

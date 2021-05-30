@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const LoadingScreen = (): JSX.Element => {
   return (
@@ -12,7 +12,7 @@ const LoadingScreen = (): JSX.Element => {
         <div className="shadow bg-red-900 bg-opacity-80"></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LoadingScreen;
+export default LoadingScreen

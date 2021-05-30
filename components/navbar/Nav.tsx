@@ -1,13 +1,13 @@
-import classNames from "classnames";
-import React, { ReactElement } from "react";
-import NavLink from "./NavLink";
+import classNames from 'classnames'
+import React, { ReactElement } from 'react'
+import NavLink from './NavLink'
 
 interface NavProps {
-  children: ReactElement<typeof NavLink>[] | ReactElement<typeof NavLink>;
-  className: string;
+  children: ReactElement<typeof NavLink>[] | ReactElement<typeof NavLink>
+  className: string
 }
 const Nav: React.FC<NavProps & React.AllHTMLAttributes<HTMLElement>> & {
-  Link: typeof NavLink;
+  Link: typeof NavLink
 } = ({ children, className, ...props }: NavProps) => {
   return (
     <ul
@@ -19,9 +19,9 @@ const Nav: React.FC<NavProps & React.AllHTMLAttributes<HTMLElement>> & {
     >
       {children}
     </ul>
-  );
-};
+  )
+}
 
-Nav.Link = NavLink;
+Nav.Link = NavLink
 
-export default Nav;
+export default Nav

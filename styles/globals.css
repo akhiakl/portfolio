@@ -13,6 +13,9 @@
     }
   }
 }
+.text-stroke-1 {
+  text-shadow:  0 0 4px #00000075;
+}
 
 .navlink::after {
   content: "";

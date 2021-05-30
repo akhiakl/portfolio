@@ -1,28 +1,33 @@
-import React from "react";
+import React, { createElement } from 'react'
 
 export type IconType = Array<
   | {
-      type: "icomoon" | "devicon";
-      icon: string;
+      type: 'icomoon' | 'devicon'
+      icon: string
+      link?: string
     }
   | string
->;
-
+>
 interface IconSetProps {
-  icons: IconType;
+  icons: IconType
 }
 
 const IconSet = ({ icons }: IconSetProps): JSX.Element => (
   <>
     {icons.map((iconItem, i) => {
       const icon =
-        typeof iconItem === "string"
-          ? `devicon-${iconItem}`
-          : `${iconItem.type}-${iconItem.icon}`;
-      const title = icon.split("-")[1];
-      return <i key={`${icon}-${i}}`} className={icon} title={title}></i>;
+        typeof iconItem === 'string' ? `devicon-${iconItem}` : `${iconItem.type}-${iconItem.icon}`
+      const title = icon.split('-')[1]
+      const isLink = typeof iconItem !== 'string' && iconItem?.link
+      return createElement(isLink ? 'a' : 'i', {
+        title,
+        className: icon,
+        key: `${icon}-icon-set-${i}`,
+        href: isLink ? iconItem?.link : undefined,
+        target: isLink ? '_blank' : undefined,
+      })
     })}
   </>
-);
+)
 
-export default IconSet;
+export default IconSet
