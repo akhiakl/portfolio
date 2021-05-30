@@ -13,6 +13,7 @@
 /out/
 
 # production
+deploy.sh
 /build
 
 # misc
