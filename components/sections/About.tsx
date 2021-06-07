@@ -54,8 +54,7 @@ const About = (): JSX.Element => {
               primaryColor="red-500"
               secondaryColor="gray-50"
             >
-              Checkout my resume{'  '}
-              <span className="material-icons-outlined text-base leading-none">file_download</span>
+              Checkout my resume
             </AnimatedButton>
           </RellaxContainer>
         </div>
