@@ -13,7 +13,7 @@ const PortflioSection = (): JSX.Element => (
           index="01"
           image={ImageExporter.commonClosets}
           title={['THE', 'COMMON', 'CLOSETS']}
-          description="The common closets (Gemme) is a cloth/apparel rental platform based in sweden"
+          description="The common closets (now Gemme) is a cloth/apparel rental platform based in sweden"
           stackIcons={[
             'angularjs-plain',
             'typescript-plain',
