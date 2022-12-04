@@ -14,9 +14,7 @@ const Hamburger: React.FC<HamburgerProps & React.ButtonHTMLAttributes<HTMLButton
 }) => {
   return (
     <button
-      className={`${className} text-red-500 w-14 h-14 focus:outline-none rounded-full bg-${
-        primaryColor || 'black-50'
-      }`}
+      className={`${className} text-red-500 w-14 h-14 focus:outline-none rounded-full bg-${primaryColor || 'black-50'}`}
       {...props}
     >
       <span className="sr-only">Open main menu</span>

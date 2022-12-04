@@ -1,12 +1,13 @@
 import classNames from 'classnames'
-import React from 'react'
+import Image, { StaticImageData } from 'next/image'
+import React, { useMemo } from 'react'
 import RellaxContainer from '../../helpers/RellaxContainer'
 import IconSet, { IconType } from '../IconSet'
 
 interface ProjectProps {
   index: string
   title: string | string[]
-  imageSrc: string
+  image: StaticImageData
   description?: string
   stackIcons?: IconType
   className?: string
@@ -15,7 +16,7 @@ interface ProjectProps {
 
 const Project = ({
   title,
-  imageSrc,
+  image,
   index,
   description,
   stackIcons,
@@ -40,6 +41,8 @@ const Project = ({
       )}
     </div>
   )
+
+  const titleStr = useMemo(() => (typeof title === 'string' ? title : title.join(' ')), [title])
   return (
     <div className="md:h-screen md:bg-transparent bg-gray-50 bg-opacity-5 lg:odd:pl-36 lg:even:pr-36  md:odd:pl-12 md:even:pr-12">
       <div className="py-12 w-full h-full md:px-4 flex items-center">
@@ -112,7 +115,7 @@ const Project = ({
           <div data-aos="fade-in" data-aos-duration="1000" className="w-full flex">
             <div className="lg:w-64 md:w-60 md:block hidden" />
             <div className="flex-1">
-              <img src={imageSrc} alt="Manwithavan" className="object-contain w-full h-full" />
+              <Image src={image} alt={titleStr} className="object-contain w-full h-full" />
             </div>
           </div>
         </div>

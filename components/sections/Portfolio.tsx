@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageExporter from '../../helpers/image-exporter'
 import Project from '../portfolio/Project'
 
 const PortflioSection = (): JSX.Element => (
@@ -7,33 +8,10 @@ const PortflioSection = (): JSX.Element => (
       <span className="">portfolio.</span>
     </h1>
     <div className="relative z-10 flex flex-col gap-4 w-full min-h-screen lg:py-10 lg:pb-10 pb-8 px-4">
-      {/* <div className="flex flex-col gap-10 w-full h-full items-center justify-center lg:px-36 md:px-10 px-4 border-b border-red-500 border-opacity-50">
-        <h1 className="text-4xl">Projects are now added in the Resume.</h1>
-        <RellaxContainer
-          as="form"
-          options={{
-            speed: -0.225,
-          }}
-          className="hire-rellax"
-          method="get"
-          target="_blank"
-          action="resume.pdf"
-        >
-          <AnimatedButton
-            data-aos="fade-up"
-            type="submit"
-            className="w-100 flex"
-            primaryColor="black-50"
-            secondaryColor="red-500"
-          >
-            Checkout my resume
-          </AnimatedButton>
-        </RellaxContainer>
-      </div> */}
       <div className="container mx-auto xl:pl-30 lg:pl-24 flex flex-col lg:gap-0 gap-4 h-1/2 w-full mt-8">
         <Project
           index="01"
-          imageSrc="/img/commonclosets.png"
+          image={ImageExporter.commonClosets}
           title={['THE', 'COMMON', 'CLOSETS']}
           description="The common closets (Gemme) is a cloth/apparel rental platform based in sweden"
           stackIcons={[
@@ -47,7 +25,7 @@ const PortflioSection = (): JSX.Element => (
         />
         <Project
           index="02"
-          imageSrc="/img/badan.png"
+          image={ImageExporter.badan}
           title={['BADAN']}
           description="Badan is a full service landscape architectural design specialist and construction firm"
           stackIcons={[
@@ -61,7 +39,7 @@ const PortflioSection = (): JSX.Element => (
         />
         <Project
           index="03"
-          imageSrc="/img/beaudesk.png"
+          image={ImageExporter.beaudesk}
           title={['BEAUDESK']}
           description="Beaudesk is a Fully Integrated System to transform your Appointment system. "
           stackIcons={['html5-plain-wordmark', 'css3-plain', 'bootstrap-plain']}
@@ -69,7 +47,7 @@ const PortflioSection = (): JSX.Element => (
         />
         <Project
           index="04"
-          imageSrc="/img/umr.png"
+          image={ImageExporter.umr}
           title={['UMR']}
           description="United Machinery Resources Co. (UMR Company), serve the requirement of manufacturer of spare parts of all types of heavy equipment."
           stackIcons={['html5-plain-wordmark', 'css3-plain', 'bootstrap-plain']}
