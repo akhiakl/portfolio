@@ -1,5 +1,5 @@
 import React from 'react'
-import RellaxContainer from '../../helpers/RellaxContainer'
+import {RellaxContainer} from '@/components'
 import IconSet from '../IconSet'
 
 const ContactSection = (): JSX.Element => {

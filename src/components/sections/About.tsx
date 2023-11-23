@@ -1,5 +1,5 @@
 import React from 'react'
-import RellaxContainer from '../../helpers/RellaxContainer'
+import { RellaxContainer } from '@/components'
 import AnimatedButton from '../AnimatedButton'
 
 const About = (): JSX.Element => {
@@ -51,8 +51,6 @@ const About = (): JSX.Element => {
               data-aos="fade-up"
               type="submit"
               className="w-100 flex"
-              primaryColor="red-500"
-              secondaryColor="gray-50"
             >
               Checkout my resume
             </AnimatedButton>

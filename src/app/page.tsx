@@ -1,10 +1,15 @@
+'use client'
 import React, { useEffect } from 'react'
-import Navbar from '../components/navbar/Navbar'
-import HomeSection from '../components/sections/Home'
-import AboutSection from '../components/sections/About'
-import ServicesSection from '../components/sections/Services'
-import PortflioSection from '../components/sections/Portfolio'
-import ContactSection from '../components/sections/Contact'
+import {
+  Navbar,
+  HomeSection,
+  AboutSection,
+  ServicesSection,
+  PortfolioSection,
+  ContactSection,
+} from '@/components'
+import { ParallaxProvider } from 'react-scroll-parallax'
+import AOS from 'aos'
 
 export default function Home() {
   useEffect(() => {
@@ -15,16 +20,24 @@ export default function Home() {
       preloaderElement?.remove()
     }, 2000)
   }, [])
+  useEffect(() => {
+    AOS.init({
+      easing: 'ease-out-cubic',
+      // once: true,
+    })
+  }, [])
   return (
+    <ParallaxProvider>
     <div className="font-karla subpixel-antialiased">
       <Navbar />
       <main>
         <HomeSection />
         <AboutSection />
         <ServicesSection />
-        <PortflioSection />
+        <PortfolioSection />
         <ContactSection />
       </main>
     </div>
+    </ParallaxProvider>
   )
 }

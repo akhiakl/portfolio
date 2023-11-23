@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
+"use client"
 import React, { createElement, ReactHTML, useEffect, useRef } from 'react'
 import Rellax, { RellaxOptions } from 'rellax'
 

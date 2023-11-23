@@ -1,6 +1,6 @@
 import React from 'react'
-import ImageExporter from '../../helpers/image-exporter'
 import Project from '../portfolio/Project'
+import ImageExporter from '@/helpers/image-exporter'
 
 const PortflioSection = (): JSX.Element => (
   <section id="portfolio" className="bg-black-50-dotted text-gray-50 relative">

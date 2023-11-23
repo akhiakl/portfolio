@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import TextRotator from '../TextRotator'
-import RellaxContainer from '../../helpers/RellaxContainer'
+import { RellaxContainer } from '@/components'
 
 const HomeSection = (): JSX.Element => {
   const skillsets = ['WEB DEVELOPER', 'MOBILE DEVELOPER', '3D ARTIST']

@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react'
-import RellaxContainer from '../../helpers/RellaxContainer'
+import {RellaxContainer} from '@/components'
 interface BoxRotateOptions {
   translate?: string
   rotate?: string
