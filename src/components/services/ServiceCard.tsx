@@ -33,7 +33,7 @@ const ServiceCard = ({
       data-aos="flip-up"
       className={`relative group border-2 border-dashed border-black-50 w-full max-w-72 h-80 ${gridPosition}`}
     >
-      <div className="h-full w-full bg-gray-50 shadow-xl flex flex-col transition-transform transform-gpu md:group-hover:-translate-x-4 md:group-hover:-translate-y-4 md:group-hover:ring-red-500">
+      <div className="h-full w-full bg-gray-50 shadow-xl flex flex-col transition-transform transform-gpu ease-in-out delay-100 duration-500 md:group-hover:-translate-x-4 md:group-hover:-translate-y-4 md:group-hover:ring-red-500">
         <div
           className={classNames(
             'flip-card ring-2 ring-black-50 md:group-hover:ring-red-600  md:group-hover:bg-red-500 h-full w-full md:group-hover:text-gray-50',

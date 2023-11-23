@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import Image, { StaticImageData } from 'next/image'
 import React, { useMemo } from 'react'
-import RellaxContainer from '../../helpers/RellaxContainer'
+import { RellaxContainer } from '@/components'
 import IconSet, { IconType } from '../IconSet'
 
 interface ProjectProps {

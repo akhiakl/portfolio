@@ -1,9 +1,11 @@
+import type { Config } from 'tailwindcss'
 const { fontFamily } = require('tailwindcss/defaultTheme')
-/** @type {import('tailwindcss').Config} \*/
-module.exports = {
+
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     container: {
@@ -40,10 +42,10 @@ module.exports = {
       keyframes: {
         dim: {
           "0%, 100%": {
-            opacity: 1,
+            opacity: '1',
           },
           "50%": {
-            opacity: 0,
+            opacity: '0',
           },
         },
       },
@@ -51,9 +53,9 @@ module.exports = {
         dim: "dim 3s ease-in-out infinite",
       },
       fontSize: {
-        "10xl": ["9rem"],
-        "11xl": ["10rem"],
-        "12xl": ["11rem"],
+        "10xl": "9rem",
+        "11xl": "10rem",
+        "12xl": "11rem"
       },
     },
   },
@@ -69,4 +71,5 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}
+export default config
