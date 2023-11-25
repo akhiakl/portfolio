@@ -25,12 +25,15 @@ const ServicesSection = (): JSX.Element => (
             'css3-plain-wordmark',
             'sass-plain',
             'jquery-plain-wordmark',
+            'graphql-plain-wordmark'
           ]}
         />
         <ServiceCard
           headerIcon="construction"
           title="Back End"
-          skillIcons={['nodejs-plain-wordmark', 'express-original', 'nestjs-plain', 'php-plain']}
+          skillIcons={['nodejs-plain-wordmark', 'express-original', 'nestjs-plain', 'php-plain', 
+          'graphql-plain-wordmark'
+        ]}
         />
         <ServiceCard
           headerIcon="phone_android"
@@ -49,18 +52,15 @@ const ServicesSection = (): JSX.Element => (
             'mongodb-plain-wordmark',
             'mysql-plain',
             'postgresql-plain-wordmark',
-            'sequelize-plain',
-            {
-              type: 'icomoon',
-              icon: 'knexjs',
-            },
+            'sequelize-plain'
           ]}
         />
         <ServiceCard
           headerIcon="tune"
-          title="CMS"
+          title="Others"
           skillIcons={[
             'wordpress-plain-wordmark',
+            'magento-original-wordmark',
             {
               type: 'icomoon',
               icon: 'strapi',
@@ -71,7 +71,15 @@ const ServicesSection = (): JSX.Element => (
             },
             {
               type: 'icomoon',
-              icon: 'netlify',
+              icon: 'contentful',
+            },
+            {
+              type: 'icomoon',
+              icon: 'vercel',
+            },
+            {
+              type: 'icomoon',
+              icon: 'algolia',
             },
           ]}
         />

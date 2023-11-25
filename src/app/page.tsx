@@ -5,7 +5,7 @@ import {
   HomeSection,
   AboutSection,
   ServicesSection,
-  PortfolioSection,
+  ProjectsSection,
   ContactSection,
 } from '@/components'
 import { ParallaxProvider } from 'react-scroll-parallax'
@@ -34,7 +34,7 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <ServicesSection />
-        <PortfolioSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
     </div>

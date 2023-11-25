@@ -28,13 +28,12 @@ const About = (): JSX.Element => {
             data-aos-duration="1500"
             className="text-white md:text-base text-sm text-justify mb-6"
           >
-            An enthusiastic{' '}
+            An accomplished{' '}
             <span className="text-yellow-300 underline font-bold text-lg">
               Full stack Javascript developer
             </span>{' '}
-            with successful experience in Angular2+, NodeJS, MongoDB, Mysql, HTML & CSS3, Javascript
-            and hands-on experience in React, React Native, AWS, Jest, Wordpress and other CMS. I am
-            an artish who like to create traditional portraits & 3d models. I am a gamer myself and
+            with a solid proficiency in React, Node.js, and Next.js, complemented by extensive experience in frontend technologies. Skilled in developing dynamic web applications, refining CSS/HTML for optimal performance, and architecting efficient database designs (MySQL, MongoDB). Specialized in eCommerce platforms such as Contentful, Magento, Algolia, and Fabric, dedicated to delivering innovative, top-tier solutions.
+             I am also an artish who like to create traditional portraits & 3d models. I am a gamer myself and
             interested in buiding games using Unreal or Unity
           </p>
           <RellaxContainer

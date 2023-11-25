@@ -26,42 +26,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icomoon-cockpit:before {
-  content: "\e906";
+.icomoon-algolia:before {
+  content: "\e900";
 }
-.icomoon-netlify:before {
-  content: "\e907";
-}
-.icomoon-strapi:before {
-  content: "\e908";
-}
-.icomoon-github:before {
-  content: "\e905";
-}
-.icomoon-aws-cognito:before {
-  content: "\e902";
-}
-.icomoon-aws-dynamodb:before {
-  content: "\e903";
-}
-.icomoon-aws-lambda:before {
-  content: "\e904";
-}
-.icomoon-elasticsearch:before {
+.icomoon-contentful:before {
   content: "\e901";
 }
-.icomoon-knexjs:before {
-  content: "\e900";
+.icomoon-elasticsearch:before {
+  content: "\e9de";
+}
+.icomoon-vercel:before {
+  content: "\e902";
+}
+.icomoon-verifone:before {
+  content: "\e903";
+}
+.icomoon-aws-cognito:before {
+  content: "\e904";
+}
+.icomoon-aws-dynamodb:before {
+  content: "\e905";
+}
+.icomoon-aws-lambda:before {
+  content: "\e906";
+}
+.icomoon-github:before {
+  content: "\e907";
+}
+.icomoon-cockpit:before {
+  content: "\e908";
+}
+.icomoon-netlify:before {
+  content: "\e909";
+}
+.icomoon-strapi:before {
+  content: "\e90a";
 }
 .icomoon-database:before {
   content: "\e964";
+}
+.icomoon-twitter:before {
+  content: "\ea96";
 }
 .icomoon-linkedin:before {
   content: "\eaca";
 }
 .icomoon-stackoverflow:before {
   content: "\ead0";
-}
-.icomoon-twitter:before {
-  content: "\ea96";
 }
