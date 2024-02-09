@@ -21,7 +21,7 @@ const About = (): JSX.Element => {
             <span aria-label="emoji wave" role="img">
               👋
             </span>{' '}
-            Hi I&lsquo;m <span className="text-yellow-300">Akhil K</span>
+            Hi I&lsquo;m <span className="text-yellow-300">Akhil Kizhuvath</span>
           </h3>
           <p
             data-aos="fade-in"
