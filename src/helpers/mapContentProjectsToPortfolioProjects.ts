@@ -8,8 +8,12 @@ const mapContentProjectsToPortfolioProjects = (projectEntrieItems: ContentProduc
         techStack,
         title,
         url
+    },
+    sys: {
+        id
     }
 }, idx): PortfolioProject => ({
+    id,
     index: (idx + 1).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false

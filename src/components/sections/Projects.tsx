@@ -14,6 +14,7 @@ const ProjectsSection = (): JSX.Element => {
         <div className="container mx-auto xl:pl-30 lg:pl-24 flex flex-col lg:gap-0 gap-4 h-1/2 w-full mt-8">
           {data?.projects.map(project => (
             <Project
+              key={project.id}
               {...project}
             />
           ))}

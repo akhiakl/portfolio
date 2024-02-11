@@ -1,6 +1,7 @@
 import { IconType } from "./common"
 
 export type PortfolioProject = {
+    id: string
     index: string
     title: string | string[]
     image: {
