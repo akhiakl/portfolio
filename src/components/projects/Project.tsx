@@ -1,17 +1,12 @@
 import classNames from 'classnames'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import React, { useMemo } from 'react'
 import { RellaxContainer } from '@/components'
-import IconSet, { IconType } from '../IconSet'
+import IconSet from '../IconSet'
+import { PortfolioProject } from '@/types'
 
-interface ProjectProps {
-  index: string
-  title: string | string[]
-  image: StaticImageData
-  description?: string
-  stackIcons?: IconType
+type ProjectProps = PortfolioProject & {
   className?: string
-  link?: string
 }
 
 const Project = ({
@@ -35,9 +30,9 @@ const Project = ({
       )}
     >
       {typeof title === 'string' ? (
-        <span>{title}</span>
+        <span className="uppercase">{title}</span>
       ) : (
-        title.map((titleEl, i) => <span key={`titleEl${i}`}>{titleEl}</span>)
+        title.map((titleEl, i) => <span className="uppercase" key={`titleEl${i}`}>{titleEl}</span>)
       )}
     </div>
   )
@@ -112,12 +107,14 @@ const Project = ({
               </div>
             ) : null}
           </RellaxContainer>
-          <div data-aos="fade-in" data-aos-duration="1000" className="w-full flex">
-            <div className="lg:w-64 md:w-60 md:block hidden" />
-            <div className="flex-1">
-              <Image src={image} alt={titleStr} className="object-contain w-full h-full" />
+          {!!image.url && (
+            <div data-aos="fade-in" data-aos-duration="1000" className="w-full flex">
+              <div className="lg:w-64 md:w-60 md:block hidden" />
+              <div className="flex-1">
+                <Image src={image.url} height={image.height} width={image.width} alt={titleStr} className="object-contain w-full h-full" />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
