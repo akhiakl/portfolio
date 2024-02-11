@@ -10,6 +10,8 @@ import {
 } from '@/components'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import AOS from 'aos'
+import { SWRConfig } from 'swr'
+import fetcher from '@/helpers/fetcher'
 
 export default function Home() {
   useEffect(() => {
@@ -28,16 +30,22 @@ export default function Home() {
   }, [])
   return (
     <ParallaxProvider>
-    <div className="font-karla subpixel-antialiased">
-      <Navbar />
-      <main>
-        <HomeSection />
-        <AboutSection />
-        <ServicesSection />
-        <ProjectsSection />
-        <ContactSection />
-      </main>
-    </div>
-    </ParallaxProvider>
+      <div className="font-karla subpixel-antialiased">
+        <Navbar />
+        <SWRConfig
+          value={{
+            fetcher
+          }}
+        >
+          <main>
+            <HomeSection />
+            <AboutSection />
+            <ServicesSection />
+            <ProjectsSection />
+            <ContactSection />
+          </main>
+        </SWRConfig>
+      </div>
+    </ParallaxProvider >
   )
 }

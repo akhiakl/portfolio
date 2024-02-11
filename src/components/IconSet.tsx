@@ -1,15 +1,8 @@
+import { IconType } from '@/types'
 import React, { createElement } from 'react'
 
-export type IconType = Array<
-  | {
-      type: 'icomoon' | 'devicon'
-      icon: string
-      link?: string
-    }
-  | string
->
 interface IconSetProps {
-  icons: IconType
+  icons: IconType[]
 }
 
 const IconSet = ({ icons }: IconSetProps): JSX.Element => (

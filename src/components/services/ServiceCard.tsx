@@ -1,11 +1,12 @@
 import classNames from 'classnames'
 import React, { useState } from 'react'
-import IconSet, { IconType } from '../IconSet'
+import IconSet from '../IconSet'
+import { IconType } from '@/types'
 interface ServiceCardProps {
   headerIcon: string
   title: string
   gridPosition?: string
-  skillIcons: IconType
+  skillIcons: IconType[]
 }
 
 const ServiceCard = ({
