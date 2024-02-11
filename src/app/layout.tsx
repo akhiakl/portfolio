@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import './styles/globals.css'
 import './styles/icomoon.css'
 import './styles/preloader.css'
 import { LoadingScreen } from '@/components'
