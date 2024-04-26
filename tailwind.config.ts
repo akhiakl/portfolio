@@ -26,7 +26,6 @@ const config: Config = {
         'unica-one': ['var(--font-unica-one)', "cursive"],
       },
       backgroundImage: () => ({
-        profile: "url('/img/profile-bg.png')",
         "black-50-dotted": "url('/img/black-dotted.svg')",
       }),
       transitionProperty: {

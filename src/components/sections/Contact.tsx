@@ -1,5 +1,5 @@
 import React from 'react'
-import {RellaxContainer} from '@/components'
+import { RellaxContainer } from '@/components'
 import IconSet from '../IconSet'
 
 const ContactSection = (): JSX.Element => {
@@ -13,16 +13,16 @@ const ContactSection = (): JSX.Element => {
               speed: 0.25,
               center: true,
             }}
-            className="lg:text-9xl md:text-7xl text-6xl text-red-500 font-extrabold absolute lg:-top-20 md:-top-12 -top-9 left-0 text-center w-full text-stroke-1"
+            className="lg:text-9xl md:text-7xl text-6xl text-red-900 font-extrabold absolute lg:-top-20 md:-top-12 -top-9 left-0 text-center w-full drop-shadow-lg"
           >
             contact me
           </RellaxContainer>
-          <div className="w-full px-8 text-red-500">
+          <div className="w-full px-8 text-red-900">
             <div className="lg:h-56 lg:py-8 py-4 flex">
-              <div className="mt-auto lg:py-0 py-8 flex lg:flex-row flex-col lg:divide-x lg:divide-y-0 divide-y divide-red-500 w-full justify-around">
+              <div className="mt-auto lg:py-0 py-8 flex lg:flex-row flex-col lg:divide-x lg:divide-y-0 divide-y divide-red-00 w-full justify-around">
                 <div className="flex flex-col items-center w-full px-4 py-4">
                   <h3 className="lg:text-4xl text-2xl mb-4">email</h3>
-                  <p className="lg:text-2xl text-xl font-unica-one text-red-400 flex flex-row items-center gap-2">
+                  <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
                     <span className="material-icons">mail</span>
                     <a className="underline" href="mailto:akhilk4k@gmail.com">
                       akhilk4k@gmail.com
@@ -31,7 +31,7 @@ const ContactSection = (): JSX.Element => {
                 </div>
                 <div className="flex flex-col items-center w-full px-4 py-4">
                   <h3 className="lg:text-4xl text-2xl mb-4">address</h3>
-                  <p className="lg:text-2xl text-xl font-unica-one text-red-400 flex flex-row items-center gap-2">
+                  <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
                     <span className="material-icons">place</span>
                     <a
                       className="underline"
@@ -45,7 +45,7 @@ const ContactSection = (): JSX.Element => {
                 </div>
                 <div className="flex flex-col items-center w-full px-4 py-4">
                   <h3 className="lg:text-4xl text-2xl mb-4">phone</h3>
-                  <p className="lg:text-2xl text-xl font-unica-one text-red-400 flex flex-row items-center gap-2">
+                  <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
                     <span className="material-icons">phone</span>
                     <a className="underline" href="tel:+91-9567706055">
                       +91-9567706055

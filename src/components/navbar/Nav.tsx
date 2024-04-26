@@ -6,9 +6,7 @@ interface NavProps {
   children: ReactElement<typeof NavLink>[] | ReactElement<typeof NavLink>
   className: string
 }
-const Nav: React.FC<NavProps & React.AllHTMLAttributes<HTMLElement>> & {
-  Link: typeof NavLink
-} = ({ children, className, ...props }: NavProps) => {
+const Nav: React.FC<NavProps & React.AllHTMLAttributes<HTMLElement>> = ({ children, className, ...props }: NavProps) => {
   return (
     <ul
       {...props}
@@ -21,7 +19,5 @@ const Nav: React.FC<NavProps & React.AllHTMLAttributes<HTMLElement>> & {
     </ul>
   )
 }
-
-Nav.Link = NavLink
 
 export default Nav

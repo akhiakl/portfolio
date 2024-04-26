@@ -40,7 +40,7 @@ const ServiceCard = ({
             { flipped }
           )}
         >
-          <div className="flip-card-face absolute text-black-50 left-0 right-0 top-0 bottom-0 p-8 md:group-hover:invisible flex flex-col gap-4 items-center justify-center h-full">
+          <div className="card-face absolute text-black-50 left-0 right-0 top-0 bottom-0 p-8 md:group-hover:invisible flex flex-col gap-4 items-center justify-center h-full">
             <div className="w-16 h-16 flex justify-center items-center rounded-full border-red-500 border mt-auto">
               <span className="text-4xl material-icons">{headerIcon}</span>
             </div>
@@ -54,7 +54,7 @@ const ServiceCard = ({
               <span className="material-icons">arrow_forward</span>
             </button>
           </div>
-          <div className="flip-card-face flip-card-face-back absolute left-0 right-0 top-0 bottom-0 p-8 md:group-hover:flex md:hidden flex flex-col justify-center items-center bg-red-500 text-gray-50">
+          <div className="card-face card-back absolute left-0 right-0 top-0 bottom-0 p-8 md:group-hover:flex md:hidden flex flex-col justify-center items-center bg-red-500 text-gray-50">
             <div className="flex-1 w-full grid grid-cols-3 grid-rows-4 gap-4 items-center justify-items-center skillsets text-left text-4xl">
               <IconSet icons={skillIcons} />
             </div>

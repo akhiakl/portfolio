@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import './styles/globals.css'
-import './styles/icomoon.css'
-import './styles/preloader.css'
-import {LoadingScreen} from '@/components'
-import 'aos/dist/aos.css'
+import '@material-design-icons/font/filled.css';
+// import './styles/icomoon.css'
+// import 'aos/dist/aos.css'
 
 export const metadata: Metadata = {
   title: 'Akhil',
@@ -16,15 +15,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
-        <head>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        </head>
-        <body className="overflow-hidden">
-          <LoadingScreen />
-          {children}
-        </body>
-      </html>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+      </head>
+      <body>
+        {children}
+      </body>
+    </html>
   )
 }

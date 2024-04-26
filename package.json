@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-design-icons/font": "^0.14.13",
     "aos": "^2.3.4",
     "classnames": "^2.3.2",
     "next": "14.0.2",
