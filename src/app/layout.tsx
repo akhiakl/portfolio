@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import './styles/globals.css'
 import '@material-design-icons/font/filled.css';
-// import './styles/icomoon.css'
-// import 'aos/dist/aos.css'
+import './styles/icomoon.css'
+import 'aos/dist/aos.css'
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 export const metadata: Metadata = {
   title: 'Akhil',
@@ -24,6 +26,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
