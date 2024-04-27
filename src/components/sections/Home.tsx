@@ -42,7 +42,7 @@ const HomeSection = (): JSX.Element => {
             duration={500}
           >
             <h2 className="text-red-500 text-2xl mb-4">SEE MORE</h2>
-            <span className="animate-bounce material-icons text-6xl">expand_more</span>
+            <i className="block animate-bounce icomoon-chevron-down text-2xl" />
           </Link>
         </div>
       </div>

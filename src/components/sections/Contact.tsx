@@ -21,18 +21,18 @@ const ContactSection = (): JSX.Element => {
             <div className="lg:h-56 lg:py-8 py-4 flex">
               <div className="mt-auto lg:py-0 py-8 flex lg:flex-row flex-col lg:divide-x lg:divide-y-0 divide-y divide-red-00 w-full justify-around">
                 <div className="flex flex-col items-center w-full px-4 py-4">
-                  <h3 className="lg:text-4xl text-2xl mb-4">email</h3>
+                  <h4 className="lg:text-4xl text-2xl mb-4">email</h4>
                   <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
-                    <span className="material-icons">mail</span>
+                    <i className="icomoon-envelop" />
                     <a className="underline" href="mailto:akhilk4k@gmail.com">
                       akhilk4k@gmail.com
                     </a>
                   </p>
                 </div>
                 <div className="flex flex-col items-center w-full px-4 py-4">
-                  <h3 className="lg:text-4xl text-2xl mb-4">address</h3>
+                  <h4 className="lg:text-4xl text-2xl mb-4">address</h4>
                   <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
-                    <span className="material-icons">place</span>
+                    <i className="icomoon-location2" />
                     <a
                       className="underline"
                       href="https://goo.gl/maps/E1JW5Ap1xqeevUi5A"
@@ -44,9 +44,9 @@ const ContactSection = (): JSX.Element => {
                   </p>
                 </div>
                 <div className="flex flex-col items-center w-full px-4 py-4">
-                  <h3 className="lg:text-4xl text-2xl mb-4">phone</h3>
+                  <h4 className="lg:text-4xl text-2xl mb-4">phone</h4>
                   <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
-                    <span className="material-icons">phone</span>
+                    <i className="icomoon-phone" />
                     <a className="underline" href="tel:+91-9567706055">
                       +91-9567706055
                     </a>

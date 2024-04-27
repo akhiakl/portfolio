@@ -11,7 +11,7 @@ const ServicesSection = (): JSX.Element => (
       <GridContainer />
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-items-center">
         <ServiceCard
-          headerIcon="laptop"
+          headerIcon="display"
           title="Web - Front End"
           skillIcons={[
             'javascript-plain',
@@ -29,14 +29,14 @@ const ServicesSection = (): JSX.Element => (
           ]}
         />
         <ServiceCard
-          headerIcon="construction"
+          headerIcon="cogs"
           title="Back End"
-          skillIcons={['nodejs-plain-wordmark', 'express-original', 'nestjs-plain', 'php-plain', 
-          'graphql-plain-wordmark'
-        ]}
+          skillIcons={['nodejs-plain-wordmark', 'express-original', 'nestjs-plain', 'php-plain',
+            'graphql-plain-wordmark'
+          ]}
         />
         <ServiceCard
-          headerIcon="phone_android"
+          headerIcon="mobile"
           title="Mobile App"
           skillIcons={[
             'apple-plain',
@@ -46,7 +46,7 @@ const ServicesSection = (): JSX.Element => (
           ]}
         />
         <ServiceCard
-          headerIcon="storage"
+          headerIcon="database"
           title="Database"
           skillIcons={[
             'mongodb-plain-wordmark',
@@ -56,7 +56,7 @@ const ServicesSection = (): JSX.Element => (
           ]}
         />
         <ServiceCard
-          headerIcon="tune"
+          headerIcon="make-group"
           title="Others"
           skillIcons={[
             'wordpress-plain-wordmark',

@@ -2,10 +2,9 @@ import classNames from 'classnames'
 import React, { useState } from 'react'
 import Hamburger from './Hamburger'
 import { animateScroll as scroll } from 'react-scroll'
-import dynamic from 'next/dynamic'
+import Nav from './Nav'
+import NavLink from './NavLink'
 
-const Nav = dynamic(() => import('./Nav'))
-const NavLink = dynamic(() => import('./NavLink'))
 
 function Navbar(): JSX.Element {
   const [show, setShow] = useState<boolean>(false)
@@ -18,7 +17,7 @@ function Navbar(): JSX.Element {
       <Hamburger
         primaryColor={bgColor}
         className={classNames(
-          'fixed z-40 md:left-10 md:top-10 top-4 left-4 ring-red-900 ring-opacity-5',
+          'fixed z-40 top-4 left-4 ring-red-900 ring-opacity-5',
           {
             'ring-4': !show,
           }
@@ -36,14 +35,14 @@ function Navbar(): JSX.Element {
           bgColor,
           textColor,
           {
-            'md:h-32 h-full w-full': show,
-            'h-14 w-14 md:translate-x-10 md:translate-y-10  translate-x-4 translate-y-4 rounded-full':
+            'md:h-20 h-full w-full': show,
+            'h-14 w-14 translate-x-4 translate-y-4 rounded-full':
               !show,
           }
         )}
       >
         <Nav
-          className={classNames('transition-opacity duration-500  px-10', {
+          className={classNames('transition-opacity duration-500 px-10', {
             'opacity-0': !show,
             'opacity-100 delay-500': show,
           })}
@@ -53,30 +52,28 @@ function Navbar(): JSX.Element {
             to="home"
             hashSpy={false}
             text="Home"
-            icon="home"
           />
           <NavLink
             onSetActive={setActiveSection}
             to="about"
             offset={-126}
             text="About"
-            icon="info"
           />
-          <NavLink onSetActive={setActiveSection} to="services" text="Services" icon="whatshot" />
+          <NavLink onSetActive={setActiveSection} to="services" text="Services" />
           <NavLink
             onSetActive={setActiveSection}
             to="portfolio"
             text="Portfolio"
-            icon="grid_view"
           />
-          <NavLink onSetActive={setActiveSection} to="contact" text="Contact" icon="mail" />
+          <NavLink onSetActive={setActiveSection} to="contact" text="Contact" />
         </Nav>
       </nav>
       <button
         className="fixed z-40 hover:bg-red-400 focus:outline-none bottom-12 right-12 rounded-full shadow-lg bg-red-500 h-14 w-14 text-gray-50 flex justify-center items-center"
         onClick={() => scroll.scrollToTop()}
       >
-        <span className="material-icons text-3xl">arrow_upward</span>
+        <i className="icomoon-arrow-up2 text-2xl" />
+        <span className="sr-only">Go to top</span>
       </button>
     </>
   )

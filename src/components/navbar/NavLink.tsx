@@ -5,14 +5,12 @@ import { ReactScrollLinkProps } from 'react-scroll/modules/components/Link'
 
 interface NavLinkProps {
   text?: string
-  icon?: string
   children?: ReactElement
 }
 
 const NavLink = ({
   children,
   text,
-  icon,
   onSetActive,
   onSetInactive,
   ...props
@@ -42,7 +40,6 @@ const NavLink = ({
         onSetInactive={handleSetInactive}
         {...props}
       >
-        {icon && <p className="material-icons">{icon}</p>}
         <p className="uppercase">{children || text || props?.to}</p>
       </Link>
     </li>

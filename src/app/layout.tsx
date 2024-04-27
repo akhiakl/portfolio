@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import './styles/globals.css'
-import '@material-design-icons/font/filled.css';
 import './styles/icomoon.css'
 import 'aos/dist/aos.css'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { icomoon } from '@/helpers/fonts';
 
 
 export const metadata: Metadata = {
@@ -17,10 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={icomoon.variable}>
       <head>
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </head>

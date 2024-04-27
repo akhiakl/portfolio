@@ -26,7 +26,7 @@ const config: Config = {
         'unica-one': ['var(--font-unica-one)', "cursive"],
       },
       backgroundImage: () => ({
-        "black-50-dotted": "url('/img/black-dotted.svg')",
+        "black-50-dotted": "url('/black-dotted.svg')",
       }),
       transitionProperty: {
         size: "transform, height, width",

@@ -1,19 +1,7 @@
-@font-face {
-  font-family: "icomoon";
-  src: url("/fonts/icomoon.eot?9yq0d9");
-  src: url("/fonts/icomoon.eot?9yq0d9#iefix") format("embedded-opentype"),
-    url("/fonts/icomoon.ttf?9yq0d9") format("truetype"),
-    url("/fonts/icomoon.woff?9yq0d9") format("woff"),
-    url("/fonts/icomoon.svg?9yq0d9#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
 [class^="icomoon-"],
 [class*=" icomoon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: var(--font-icomoon) !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,51 +14,118 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icomoon-algolia:before {
+.icomoon-home:before {
   content: "\e900";
 }
-.icomoon-contentful:before {
+
+.icomoon-display:before {
+  content: "\e956";
+}
+
+.icomoon-mobile:before {
+  content: "\e958";
+}
+
+.icomoon-user-tie:before {
+  content: "\e976";
+}
+
+.icomoon-cogs:before {
+  content: "\e995";
+}
+
+.icomoon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+.icomoon-arrow-left2:before {
+  content: "\ea40";
+}
+
+.icomoon-make-group:before {
+  content: "\ea58";
+}
+
+.icomoon-arrow-up2:before {
+  content: "\ea3a";
+}
+
+.icomoon-phone:before {
+  content: "\e942";
+}
+
+.icomoon-envelop:before {
+  content: "\e945";
+}
+
+.icomoon-location2:before {
+  content: "\e948";
+}
+
+.icomoon-algolia:before {
   content: "\e901";
 }
-.icomoon-elasticsearch:before {
-  content: "\e9de";
-}
-.icomoon-vercel:before {
+
+.icomoon-contentful:before {
   content: "\e902";
 }
-.icomoon-verifone:before {
+
+.icomoon-vercel:before {
   content: "\e903";
 }
-.icomoon-aws-cognito:before {
+
+.icomoon-verifone:before {
   content: "\e904";
 }
-.icomoon-aws-dynamodb:before {
+
+.icomoon-aws-cognito:before {
   content: "\e905";
 }
-.icomoon-aws-lambda:before {
+
+.icomoon-aws-dynamodb:before {
   content: "\e906";
 }
-.icomoon-github:before {
+
+.icomoon-aws-lambda:before {
   content: "\e907";
 }
-.icomoon-cockpit:before {
+
+.icomoon-github:before {
   content: "\e908";
 }
-.icomoon-netlify:before {
+
+.icomoon-cockpit:before {
   content: "\e909";
 }
-.icomoon-strapi:before {
+
+.icomoon-netlify:before {
   content: "\e90a";
 }
+
+.icomoon-strapi:before {
+  content: "\e90b";
+}
+
 .icomoon-database:before {
   content: "\e964";
 }
+
+.icomoon-elasticsearch:before {
+  content: "\e9de";
+}
+
 .icomoon-twitter:before {
   content: "\ea96";
 }
+
 .icomoon-linkedin:before {
   content: "\eaca";
 }
+
 .icomoon-stackoverflow:before {
   content: "\ead0";
+}
+
+.icomoon-chevron-down:before {
+  content: "\e90c";
 }
