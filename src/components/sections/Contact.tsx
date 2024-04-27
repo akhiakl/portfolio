@@ -33,23 +33,12 @@ const ContactSection = (): JSX.Element => {
                   <h4 className="lg:text-4xl text-2xl mb-4">address</h4>
                   <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
                     <i className="icomoon-location2" />
-                    <a
+                    <span
                       className="underline"
-                      href="https://goo.gl/maps/E1JW5Ap1xqeevUi5A"
-                      target="_blank"
                       rel="noreferrer"
                     >
                       Malappuram <br /> Kerala, India
-                    </a>
-                  </p>
-                </div>
-                <div className="flex flex-col items-center w-full px-4 py-4">
-                  <h4 className="lg:text-4xl text-2xl mb-4">phone</h4>
-                  <p className="lg:text-2xl text-xl font-unica-one text-red-800 flex flex-row items-center gap-2">
-                    <i className="icomoon-phone" />
-                    <a className="underline" href="tel:+91-9567706055">
-                      +91-9567706055
-                    </a>
+                    </span>
                   </p>
                 </div>
               </div>
