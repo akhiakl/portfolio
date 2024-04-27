@@ -4,7 +4,7 @@ import ServiceCard from '../services/ServiceCard'
 
 const ServicesSection = (): JSX.Element => (
   <section id="services" className="overflow-hidden bg-gray-50 relative">
-    <h1 className="transform-gpu z-0 md:writing-vertical md:rotate-180 md:absolute md:top-36 md:left-4 font-extrabold md:text-10xl text-7xl md:text-left text-center md:text-gray-300 text-gray-700 mb-4">
+    <h1 className="transform-gpu z-0 md:writing-vertical md:absolute md:top-36 md:left-4 font-extrabold md:text-10xl text-7xl md:text-left text-center md:text-gray-300 text-gray-700 mb-4">
       services.
     </h1>
     <div className="container relative mx-auto min-h-screen z-0 lg:px-20 md:px-10 px-8 md:py-36 py-12">
