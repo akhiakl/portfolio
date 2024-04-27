@@ -5,6 +5,6 @@ export const icomoon = localFont({
         { path: './icomoon.ttf' },
         { path: './icomoon.woff' },
     ],
-    display: 'block',
+    display: 'swap',
     variable: '--font-icomoon',
 })
