@@ -1,10 +1,10 @@
 "use client"
-import React, { createElement, ReactHTML, useEffect, useRef } from 'react'
+import React, { createElement, useEffect, useRef, type JSX } from 'react';
 import Rellax, { RellaxOptions } from 'rellax'
 
 interface ContainerProps {
   options?: RellaxOptions
-  as?: keyof ReactHTML
+  as?: keyof JSX.IntrinsicElements
 }
 
 const RellaxContainer = ({

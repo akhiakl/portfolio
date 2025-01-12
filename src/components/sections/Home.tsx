@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { type JSX } from 'react';
 import { Link } from 'react-scroll'
 import TextRotator from '../TextRotator'
 import { RellaxContainer } from '@/components'

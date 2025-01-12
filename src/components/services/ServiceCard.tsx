@@ -1,6 +1,6 @@
 "use client"
 import classNames from 'clsx'
-import React, { useState } from 'react'
+import React, { useState, type JSX } from 'react';
 import IconSet, { IconType } from '../IconSet'
 interface ServiceCardProps {
   headerIcon: string

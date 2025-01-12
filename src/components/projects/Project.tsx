@@ -1,6 +1,6 @@
 import classNames from 'clsx'
 import Image, { StaticImageData } from 'next/image'
-import React, { useMemo } from 'react'
+import React, { useMemo, type JSX } from 'react';
 import { RellaxContainer } from '@/components'
 import IconSet, { IconType } from '../IconSet'
 

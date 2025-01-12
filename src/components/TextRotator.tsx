@@ -1,6 +1,6 @@
 'use client'
 import classNames from 'clsx'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type JSX } from 'react';
 
 interface TextRotatorProps {
   textArr: string[]
