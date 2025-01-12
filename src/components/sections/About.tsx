@@ -21,7 +21,7 @@ const About = (): JSX.Element => {
             <span aria-label="emoji wave" role="img">
               👋
             </span>{' '}
-            Hi I&lsquo;m <span className="text-yellow-300">Akhil Kizhuvath</span>
+            Hi I&lsquo;m <span className="text-yellow-300">Akhil K</span>
           </h3>
           <p
             data-aos="fade-in"
@@ -30,10 +30,10 @@ const About = (): JSX.Element => {
           >
             An accomplished{' '}
             <span className="text-yellow-300 underline font-bold text-lg">
-              Full stack Javascript developer
+              Senior Full stack Javascript developer
             </span>{' '}
             with a solid proficiency in React, Node.js, and Next.js, complemented by extensive experience in frontend technologies. Skilled in developing dynamic web applications, refining CSS/HTML for optimal performance, and architecting efficient database designs (MySQL, MongoDB). Specialized in eCommerce platforms such as Contentful, Magento, Algolia, and Fabric, dedicated to delivering innovative, top-tier solutions.
-             I am also an artish who like to create traditional portraits & 3d models. I am a gamer myself and
+            I am also an artish who like to create traditional portraits & 3d models. I am a gamer myself and
             interested in buiding games using Unreal or Unity
           </p>
           <RellaxContainer

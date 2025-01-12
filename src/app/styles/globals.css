@@ -10,7 +10,7 @@
 
 @layer components {
   .navlink {
-    position: relative;
+    @apply relative;
   }
 
   .navlink::after {
@@ -22,7 +22,7 @@
     width: calc(100% - 0.75rem);
     height: 0.25rem;
     z-index: -1;
-    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+    transition: all 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
   }
 
   .navlink:hover::after {
@@ -31,26 +31,26 @@
     width: 110%;
     height: 110%;
   }
+}
 
-  @media (max-width: 768px) {
-    .flip-card {
-      transform-style: preserve-3d;
-      transform-origin: center right;
-      transition: transform 1s;
-    }
+@media only screen and (max-width: 768px) {
+  .flip-card {
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: all transform 1s;
+  }
 
-    .flip-card.flipped {
-      transform: translateX(-100%) rotateY(-180deg);
-    }
+  .flip-card.flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
 
-    .flip-card.card-face {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      backface-visibility: hidden;
-    }
+  .flip-card.card-face {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backface-visibility: hidden;
   }
 
   .flip-card.card-face.card-back {
