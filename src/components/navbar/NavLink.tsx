@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import classNames from 'clsx'
 import React, { ReactElement, useState } from 'react'
 import { Link } from 'react-scroll'
 import { ReactScrollLinkProps } from 'react-scroll/modules/components/Link'

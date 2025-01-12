@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import classNames from 'clsx'
 import Image, { StaticImageData } from 'next/image'
 import React, { useMemo } from 'react'
 import { RellaxContainer } from '@/components'

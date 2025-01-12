@@ -1,5 +1,4 @@
-'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import {
   Navbar,
   HomeSection,
@@ -8,18 +7,11 @@ import {
   ProjectsSection,
   ContactSection,
 } from '@/components'
-import { ParallaxProvider } from 'react-scroll-parallax'
-import AOS from 'aos'
+import ProviderWrapper from '@/components/ProviderWrapper'
 
 export default function Home() {
-  useEffect(() => {
-    AOS.init({
-      easing: 'ease-out-cubic',
-      // once: true,
-    })
-  }, [])
   return (
-    <ParallaxProvider>
+    <ProviderWrapper>
       <div className="font-karla subpixel-antialiased">
         <Navbar />
         <main>
@@ -30,6 +22,6 @@ export default function Home() {
           <ContactSection />
         </main>
       </div>
-    </ParallaxProvider>
+    </ProviderWrapper>
   )
 }

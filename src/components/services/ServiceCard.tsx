@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import classNames from 'clsx'
 import React, { useState } from 'react'
 import IconSet, { IconType } from '../IconSet'
 interface ServiceCardProps {

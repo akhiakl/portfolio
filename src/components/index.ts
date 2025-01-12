@@ -1,4 +1,3 @@
-'use client'
 export { default as AnimatedButton } from './AnimatedButton'
 export { default as TextRotator } from './TextRotator'
 export { default as RellaxContainer } from './RellaxContainer'

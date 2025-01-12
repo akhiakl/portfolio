@@ -1,4 +1,5 @@
-import classNames from 'classnames'
+'use client'
+import classNames from 'clsx'
 import React, { useState } from 'react'
 import Hamburger from './Hamburger'
 import { animateScroll as scroll } from 'react-scroll'
