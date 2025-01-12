@@ -4,6 +4,8 @@ import './styles/icomoon.css'
 import 'aos/dist/aos.css'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { icomoon } from '@/helpers/fonts';
+import Providers from './providers';
+import { Navbar } from '@/components';
 
 
 export const metadata: Metadata = {
@@ -24,9 +26,14 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </head>
       <body>
-        {children}
+        <Providers>
+          <div className="font-karla subpixel-antialiased">
+            <Navbar />
+            {children}
+          </div>
+        </Providers>
         <SpeedInsights />
       </body>
-    </html>
+    </html >
   )
 }

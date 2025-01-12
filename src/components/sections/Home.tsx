@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { type JSX } from 'react';
 import { Link } from 'react-scroll'
 import TextRotator from '../TextRotator'
 import { RellaxContainer } from '@/components'
@@ -6,7 +7,7 @@ import Image from 'next/image'
 import ImageExporter from '@/helpers/image-exporter'
 
 const HomeSection = (): JSX.Element => {
-  const skillsets = ['WEB DEVELOPER', 'MOBILE DEVELOPER', '3D ARTIST']
+  const skillsets = ['FRONT END DEVELOPER', 'FULL STACK DEVELOPER']
 
   return (
     <section id="home" className="bg-black-50 h-screen w-full text-gray-50 pt-20 relative">
@@ -22,10 +23,10 @@ const HomeSection = (): JSX.Element => {
               className="backdrop-brightness-50 md:backdrop-filter-none backdrop-filter"
             >
               <p className="md:text-9xl text-8xl text-gray-500 font-extrabold md:mt-0 mt-10">
-                A<span className="text-red-900">K</span>HI
+                A<span className="text-red-900">KH</span>IL
                 <br />
                 <span className="text-gray-800">
-                  A<span className="text-yellow-500">K</span>L
+                  <span className="text-yellow-500">K</span>
                 </span>
               </p>
               <TextRotator textArr={skillsets} />

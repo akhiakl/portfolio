@@ -1,11 +1,12 @@
-import classNames from 'classnames'
-import React, { ReactElement, useState } from 'react'
+'use client'
+import classNames from 'clsx'
+import React, { ReactElement, useState, type JSX } from 'react';
 import { Link } from 'react-scroll'
 import { ReactScrollLinkProps } from 'react-scroll/modules/components/Link'
 
 interface NavLinkProps {
   text?: string
-  children?: ReactElement
+  children?: ReactElement<any>
 }
 
 const NavLink = ({

@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, type JSX } from 'react';
 import {RellaxContainer} from '@/components'
 interface BoxRotateOptions {
   translate?: string

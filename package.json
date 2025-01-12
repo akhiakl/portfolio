@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,27 +11,33 @@
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10",
     "aos": "^2.3.4",
-    "classnames": "^2.3.2",
-    "next": "14.0.2",
-    "react": "^18",
-    "react-dom": "^18",
+    "clsx": "^2.1.1",
+    "next": "15.1.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-scroll": "^1.9.0",
-    "react-scroll-parallax": "^3.4.4",
+    "react-scroll-parallax": "^3.4.5",
     "rellax": "^1.12.1",
     "sharp": "^0.32.6"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "19.0.5",
+    "@types/react-dom": "19.0.3",
     "@types/react-scroll": "^1.8.10",
     "@types/rellax": "^1.7.7",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.0.2",
+    "eslint-config-next": "15.1.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.5",
+      "@types/react-dom": "19.0.3"
+    }
   }
 }

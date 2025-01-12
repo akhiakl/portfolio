@@ -1,4 +1,4 @@
-import React, { createElement } from 'react'
+import React, { createElement, type JSX } from 'react';
 
 export type IconType = Array<
   | {

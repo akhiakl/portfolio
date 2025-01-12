@@ -1,5 +1,6 @@
-import classNames from 'classnames'
-import { useState, useEffect } from 'react'
+'use client'
+import classNames from 'clsx'
+import { useState, useEffect, type JSX } from 'react';
 
 interface TextRotatorProps {
   textArr: string[]

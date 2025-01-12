@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react';
 import Project from '../projects/Project'
 import ImageExporter from '@/helpers/image-exporter'
 
