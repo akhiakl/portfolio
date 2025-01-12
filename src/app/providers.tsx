@@ -3,7 +3,7 @@ import React, { PropsWithChildren, useEffect } from 'react'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import AOS from 'aos'
 
-const ProviderWrapper = ({ children }: PropsWithChildren) => {
+const Providers = ({ children }: PropsWithChildren) => {
     useEffect(() => {
         AOS.init({
             easing: 'ease-out-cubic',
@@ -17,4 +17,4 @@ const ProviderWrapper = ({ children }: PropsWithChildren) => {
     )
 }
 
-export default ProviderWrapper
+export default Providers

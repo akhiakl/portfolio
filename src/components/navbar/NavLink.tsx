@@ -1,3 +1,4 @@
+'use client'
 import classNames from 'clsx'
 import React, { ReactElement, useState } from 'react'
 import { Link } from 'react-scroll'

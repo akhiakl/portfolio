@@ -1,3 +1,4 @@
+"use client"
 import classNames from 'clsx'
 import React, { useState } from 'react'
 import IconSet, { IconType } from '../IconSet'
