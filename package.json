@@ -11,7 +11,6 @@
   "dependencies": {
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.0.10",
-    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "next": "15.1.4",
     "react": "19.0.0",
@@ -22,7 +21,6 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "19.0.5",
     "@types/react-dom": "19.0.3",

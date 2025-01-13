@@ -112,7 +112,7 @@ const Project = ({
               </div>
             ) : null}
           </RellaxContainer>
-          <div data-aos="fade-in" data-aos-duration="1000" className="w-full flex">
+          <div className="w-full flex">
             <div className="lg:w-64 md:w-60 md:block hidden" />
             <div className="flex-1">
               <Image src={image} width={500} height={500} sizes="(max-width: 768px) 100vw, 80vw" alt={titleStr} className="object-contain w-full h-full" />

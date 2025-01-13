@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './styles/globals.css'
 import './styles/icomoon.css'
-import 'aos/dist/aos.css'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { icomoon } from '@/helpers/fonts';
 import Providers from './providers';

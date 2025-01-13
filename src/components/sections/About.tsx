@@ -17,15 +17,13 @@ const About = (): JSX.Element => {
           >
             about
           </RellaxContainer>
-          <h3 data-aos="fade-in" className="text-3xl tracking-widest font-extrabold mb-4">
+          <h3 className="text-3xl tracking-widest font-extrabold mb-4">
             <span aria-label="emoji wave" role="img">
               👋
             </span>{' '}
             Hi I&lsquo;m <span className="text-yellow-300">Akhil K</span>
           </h3>
           <p
-            data-aos="fade-in"
-            data-aos-duration="1500"
             className="text-white md:text-base text-sm text-justify mb-6"
           >
             An accomplished{' '}
@@ -47,7 +45,6 @@ const About = (): JSX.Element => {
             action="resume.pdf"
           >
             <AnimatedButton
-              data-aos="fade-up"
               type="submit"
               className="w-100 flex"
             >
