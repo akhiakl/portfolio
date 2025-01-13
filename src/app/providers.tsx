@@ -1,5 +1,5 @@
 'use client'
-import React, { PropsWithChildren, useEffect } from 'react'
+import React, { PropsWithChildren } from 'react'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 const Providers = ({ children }: PropsWithChildren) => {
