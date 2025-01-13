@@ -12,7 +12,7 @@ const HomeSection = (): JSX.Element => {
   return (
     <section id="home" className="bg-black-50 h-screen w-full text-gray-50 pt-20 relative">
       <div className="bg-right-bottom bg-no-repeat bg-contain flex flex-col md:justify-center h-full container relative">
-        <Image priority height={450} width={450} sizes="(max-width: 768px) 100vw, 33vw" className='object-contain absolute right-0 bottom-0' src={ImageExporter.profileBg} alt="Profile image" />
+        <Image priority fill sizes="(max-width: 768px) 100vw, 33vw" className='object-contain' src={ImageExporter.profileBg} alt="Profile image" />
         <div className="grid md:grid-cols-6 grid-cols-1 transform-gpu -translate-y-10">
           <div className="md:col-start-2 row-auto col-start-1 md:col-span-3 col-span-6 md:text-left text-center md:ml-5 md:mb-0 mb-5">
             <RellaxContainer
