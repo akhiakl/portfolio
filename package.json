@@ -22,17 +22,17 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.17",
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "@types/react-scroll": "^1.8.10",
     "@types/rellax": "^1.7.7",
-    "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "15.2.4",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^4.0.17",
     "typescript": "^5"
   },
   "pnpm": {

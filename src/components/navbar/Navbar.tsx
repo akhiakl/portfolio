@@ -18,7 +18,7 @@ function Navbar(): JSX.Element {
       <Hamburger
         primaryColor={bgColor}
         className={classNames(
-          'fixed z-40 top-4 left-4 ring-red-900 ring-opacity-5',
+          'fixed z-40 top-4 left-4 ring-red-900/5',
           {
             'ring-4': !show,
           }
@@ -70,7 +70,7 @@ function Navbar(): JSX.Element {
         </Nav>
       </nav>
       <button
-        className="fixed z-40 hover:bg-red-400 focus:outline-none bottom-12 right-12 rounded-full shadow-lg bg-red-500 h-14 w-14 text-gray-50 flex justify-center items-center"
+        className="fixed cursor-pointer z-40 hover:bg-red-400 focus:outline-hidden bottom-12 right-12 rounded-full shadow-lg bg-red-500 h-14 w-14 text-gray-50 flex justify-center items-center"
         onClick={() => scroll.scrollToTop()}
       >
         <i className="icomoon-arrow-up2 text-2xl" />

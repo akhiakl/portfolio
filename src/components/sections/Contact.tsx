@@ -6,7 +6,7 @@ const ContactSection = (): JSX.Element => {
   return (
     <section id="contact" className="bg-black-50 min-h-screen pt-16 flex flex-col justify-end">
       <div className="bg-gray-50 container mx-auto">
-        <div className="bg-red-500 bg-opacity-5 h-full w-full flex relative pt-10">
+        <div className="bg-red-500/5 h-full w-full flex relative pt-10">
           <RellaxContainer
             as="h1"
             options={{

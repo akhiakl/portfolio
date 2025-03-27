@@ -44,7 +44,7 @@ const Project = ({
 
   const titleStr = useMemo(() => (typeof title === 'string' ? title : title.join(' ')), [title])
   return (
-    <div className="md:h-screen md:bg-transparent bg-gray-50 bg-opacity-5 lg:odd:pl-36 lg:even:pr-36  md:odd:pl-12 md:even:pr-12">
+    <div className="md:h-screen md:bg-transparent bg-gray-50/5 lg:odd:pl-36 lg:even:pr-36  md:odd:pl-12 md:even:pr-12">
       <div className="py-12 w-full h-full md:px-4 flex items-center">
         <div className="flex flex-col relative">
           <RellaxContainer

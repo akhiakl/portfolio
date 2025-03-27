@@ -1,20 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer utilities {
-  .writing-vertical-lr {
-    writing-mode: vertical-lr;
+@theme {
+  /* Container */
+  --container-center: true;
+
+  /* Rotation */
+  --rotate-65: 65deg;
+
+  /* Sizing */
+  --max-w-72: 18rem;
+  --h-86: 22.5rem;
+
+  /* Font Families */
+  --font-karla: var(--font-google-karla), var(--font-sans);
+  --font-unica-one: var(--font-google-unica-one), cursive;
+
+
+  /* Transition Properties */
+  --transition-size: transform, height, width;
+
+  /* Colors */
+  --color-black-50: #0E0E0E;
+
+  /* Z-Index */
+  --z--1: -1;
+  --z--10: -10;
+
+  /* Keyframes */
+  --keyframes-dim: {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
   }
+
+  ;
+
+  /* Animations */
+  --animation-dim: dim 3s ease-in-out infinite;
+
+  /* Font Sizes */
+  --text-10xl: 9rem;
+  --text-11xl: 10rem;
+  --text-12xl: 11rem;
 }
 
-@layer components {
-  .navlink {
-    @apply relative;
-  }
+@utility writing-vertical-lr {
+  writing-mode: vertical-lr;
+}
 
-  .navlink::after {
-    content: "";
+@utility navlink {
+  @apply relative;
+
+  &::after {
+    content: '';
     background: rgba(248, 113, 113, 0.5);
     position: absolute;
     left: 0.75rem;
@@ -25,7 +69,7 @@
     transition: all 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
   }
 
-  .navlink:hover::after {
+  &:hover::after {
     left: -5%;
     bottom: -0.125rem;
     width: 110%;
