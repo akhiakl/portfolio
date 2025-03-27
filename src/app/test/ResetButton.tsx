@@ -4,7 +4,7 @@ import React from 'react'
 
 const ResetButton = () => {
     return (
-        <button className="bg-gray-900 text-white p-3 shadow-sm" onClick={() => revalidate('/')}>Reset</button>
+        <button className="bg-gray-900 text-white p-3 shadow-sm" onClick={() => revalidate('/test')}>Reset</button>
 
     )
 }
