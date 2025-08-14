@@ -1,5 +1,6 @@
-[![Status](badge)](https://akhiakl.zeabur.app/api/badge/1/status)
-[![Uptime](badge)](https://akhiakl.zeabur.app/api/badge/1/uptime)
+[![Status](https://akhiakl.zeabur.app/api/badge/1/status)](https://akhiakl.zeabur.app/status/akhiakl)
+[![Uptime](https://akhiakl.zeabur.app/api/badge/1/uptime)](https://akhiakl.zeabur.app/status/akhiakl)
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
