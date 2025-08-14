@@ -10,10 +10,53 @@ import { Analytics } from '@vercel/analytics/next';
 
 
 export const metadata: Metadata = {
-  title: 'Akhil',
-  description: 'portfolio website of Akhil K',
+  title: 'Akhil K | Senior Frontend Developer & UI Engineer',
+  description:
+    'Senior Frontend Developer specializing in React, Next.js, and TypeScript. Explore my projects, skills, and contact details.',
+  keywords: [
+    'Akhil K',
+    'Senior Frontend Developer',
+    'UI Engineer',
+    'React Developer',
+    'Next.js Developer',
+    'TypeScript',
+    'JavaScript',
+    'Frontend Portfolio',
+    'Kerala Developer',
+    'Web Developer Portfolio',
+  ],
+  authors: [{ name: 'Akhil K', url: 'https://akhiakl.in' }],
+  creator: 'Akhil K',
+  publisher: 'Akhil K',
+  openGraph: {
+    title: 'Akhil K | Senior Frontend Developer & UI Engineer',
+    description:
+      'Portfolio of Akhil K, Senior Frontend Developer specializing in React, Next.js, and TypeScript.',
+    url: 'https://akhiakl.in',
+    siteName: 'Akhil K Portfolio',
+    images: [
+      {
+        url: 'https://akhiakl.in/profile-bg.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Akhil K Portfolio Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Akhil K | Senior Frontend Developer & UI Engineer',
+    description:
+      'Portfolio of Akhil K, Senior Frontend Developer specializing in React, Next.js, and TypeScript.',
+    creator: '@yourtwitterhandle',
+    images: ['https://akhiakl.in/profile-bg.webp'],
+  },
+  alternates: {
+    canonical: 'https://akhiakl.in',
+  },
 }
-
 export default function RootLayout({
   children,
 }: {
