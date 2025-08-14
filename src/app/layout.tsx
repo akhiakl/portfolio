@@ -56,6 +56,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://akhiakl.in',
   },
+  other: {
+    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? ''
+  },
 }
 export default function RootLayout({
   children,
