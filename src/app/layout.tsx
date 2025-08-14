@@ -76,8 +76,7 @@ const jsonLd = {
   },
   "sameAs": [
     "https://github.com/akhiakl",
-    "https://www.linkedin.com/in/akhiakl",
-    "https://twitter.com/yourtwitterhandle"
+    "https://www.linkedin.com/in/akhiakl"
   ]
 }
 export default function RootLayout({
