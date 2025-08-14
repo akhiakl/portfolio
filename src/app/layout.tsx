@@ -25,18 +25,18 @@ export const metadata: Metadata = {
     'Kerala Developer',
     'Web Developer Portfolio',
   ],
-  authors: [{ name: 'Akhil K', url: 'https://akhiakl.in' }],
+  authors: [{ name: 'Akhil K', url: 'https://www.akhiakl.in' }],
   creator: 'Akhil K',
   publisher: 'Akhil K',
   openGraph: {
     title: 'Akhil K | Senior Frontend Developer & UI Engineer',
     description:
       'Portfolio of Akhil K, Senior Frontend Developer specializing in React, Next.js, and TypeScript.',
-    url: 'https://akhiakl.in',
+    url: 'https://www.akhiakl.in',
     siteName: 'Akhil K Portfolio',
     images: [
       {
-        url: 'https://akhiakl.in/profile-bg.webp',
+        url: 'https://www.akhiakl.in/profile-bg.webp',
         width: 1200,
         height: 630,
         alt: 'Akhil K Portfolio Preview',
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     description:
       'Portfolio of Akhil K, Senior Frontend Developer specializing in React, Next.js, and TypeScript.',
     creator: '@yourtwitterhandle',
-    images: ['https://akhiakl.in/profile-bg.webp'],
+    images: ['https://www.akhiakl.in/profile-bg.webp'],
   },
   alternates: {
-    canonical: 'https://akhiakl.in',
+    canonical: 'https://www.akhiakl.in',
   },
   other: {
     'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? ''
@@ -67,7 +67,7 @@ const jsonLd = {
   "name": "Akhil K",
   "jobTitle": "Front End Lead",
   "url": "https://www.akhiakl.in",
-  "image": "https://akhiakl.in/profile-bg.webp",
+  "image": "https://www.akhiakl.in/profile-bg.webp",
   "description": "Senior Frontend Developer specializing in React, Next.js, and TypeScript",
   "address": {
     "@type": "PostalAddress",
