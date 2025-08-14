@@ -22,13 +22,13 @@ const HomeSection = (): JSX.Element => {
               }}
               className="backdrop-brightness-50 md:backdrop-filter-none backdrop-filter"
             >
-              <p className="md:text-9xl text-8xl text-gray-500 font-extrabold md:mt-0 mt-10">
+              <h1 className="md:text-9xl text-8xl text-gray-500 font-extrabold md:mt-0 mt-10">
                 A<span className="text-red-900">KH</span>IL
                 <br />
                 <span className="text-gray-800">
                   <span className="text-yellow-500">K</span>
                 </span>
-              </p>
+              </h1>
               <TextRotator textArr={skillsets} />
             </RellaxContainer>
           </div>

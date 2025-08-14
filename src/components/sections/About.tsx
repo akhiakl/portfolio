@@ -8,7 +8,7 @@ const About = (): JSX.Element => {
       <div className="about-me bg-red-500 px-12 py-24 text-gray-50">
         <div className="container mx-auto flex flex-col items-center relative z-0 pt-6 lg:px-48 md:px-20 px-0">
           <RellaxContainer
-            as="h1"
+            as="h2"
             options={{
               speed: -0.225,
               center: true,

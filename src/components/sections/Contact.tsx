@@ -8,7 +8,7 @@ const ContactSection = (): JSX.Element => {
       <div className="bg-gray-50 container mx-auto">
         <div className="bg-red-500 bg-opacity-5 h-full w-full flex relative pt-10">
           <RellaxContainer
-            as="h1"
+            as="h2"
             options={{
               speed: 0.25,
               center: true,
