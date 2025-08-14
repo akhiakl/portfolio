@@ -60,6 +60,26 @@ export const metadata: Metadata = {
     'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? ''
   },
 }
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Akhil K",
+  "jobTitle": "Front End Lead",
+  "url": "https://www.akhiakl.in",
+  "image": "https://akhiakl.in/profile-bg.webp",
+  "description": "Senior Frontend Developer specializing in React, Next.js, and TypeScript",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Kerala",
+    "addressCountry": "India"
+  },
+  "sameAs": [
+    "https://github.com/akhiakl",
+    "https://www.linkedin.com/in/akhiakl",
+    "https://twitter.com/yourtwitterhandle"
+  ]
+}
 export default function RootLayout({
   children,
 }: {
@@ -73,6 +93,12 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
         <Providers>
           <div className="font-karla subpixel-antialiased">
             <Navbar />
