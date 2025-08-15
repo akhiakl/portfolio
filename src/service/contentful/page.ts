@@ -40,11 +40,6 @@ const PageQuery = graphql(`
                 id
               }
             }
-            ... on Skill{
-              sys {
-                id
-              }
-            }
             ... on Experience{
               sys {
                 id
