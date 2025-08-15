@@ -50,7 +50,8 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "@tailwindcss/oxide",
-      "sharp"
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }

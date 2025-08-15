@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { PageBySlugQuery } from "./generated/graphql/graphql";
 import { FragmentType } from "./generated/graphql";
 import { ProfileFragment, ContactInfoFragment } from "./service/contentful/fragments";

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { FragmentType, useFragment } from "@/generated/graphql";
 import {
     ContactInfoFragment,
