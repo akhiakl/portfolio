@@ -1,5 +1,5 @@
-[![Status](https://akhiakl.zeabur.app/api/badge/1/status)](https://akhiakl.zeabur.app/status/akhiakl)
-[![Uptime](https://akhiakl.zeabur.app/api/badge/1/uptime)](https://akhiakl.zeabur.app/status/akhiakl)
+[![Status](https://uptime.akhiakl.in/api/badge/1/status)](https://uptime.akhiakl.in/status/akhiakl)
+[![Uptime](https://uptime.akhiakl.in/api/badge/1/uptime)](https://uptime.akhiakl.in/status/akhiakl)
 
 
 
