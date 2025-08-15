@@ -36,16 +36,16 @@ export const getPersonJsonLd = (
     return {
         "@context": "https://schema.org",
         "@type": "Person",
-        name: profile?.name!,
-        jobTitle: profile?.title!,
+        name: profile?.name ?? undefined,
+        jobTitle: profile?.title ?? undefined,
         url:
             process.env.NEXT_PUBLIC_SITE_URL ||
             process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL,
         sameAs: profileLinks?.length ? profileLinks : undefined,
-        email: contact?.email!,
+        email: contact?.email ?? undefined,
         worksFor: experience?.company ? {
             "@type": "Organization",
-            name: experience?.company!,
+            name: experience?.company ?? undefined,
             description: experience?.description?.json ? documentToPlainTextString(experience?.description?.json) : "",
             skills: skills?.length ? skills : undefined,
         } : undefined,

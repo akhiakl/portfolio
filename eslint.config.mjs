@@ -10,7 +10,19 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.config({
+    extends: [
+      "next/core-web-vitals",
+      "next/typescript",
+      "next/core-web-vitals",
+    ],
+    rules: {
+      "react-hooks/exhaustive-deps": [
+        "warn",
+        { additionalHooks: "^(use(?!Fragment)[A-Z0-9].*)$" },
+      ],
+    },
+  }),
 ];
 
 export default eslintConfig;
