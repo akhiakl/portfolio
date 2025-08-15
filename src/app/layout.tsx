@@ -1,41 +1,81 @@
-import type { Metadata } from 'next'
-import './styles/globals.css'
-import './styles/icomoon.css'
-import 'aos/dist/aos.css'
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { icomoon } from '@/helpers/fonts';
-import Providers from './providers';
-import { Navbar } from '@/components';
-import { Analytics } from '@vercel/analytics/next';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
-export const metadata: Metadata = {
-  title: 'Akhil',
-  description: 'portfolio website of Akhil K',
-}
+export const generateMetadata = (): Metadata => {
+  return {
+    title: 'Akhil K | Senior Frontend Developer & UI Engineer',
+    description:
+      'Akhil K is a Senior Frontend Developer with 8+ years of experience building scalable, accessible, and high-performance web applications using React, Next.js, and TypeScript.',
+    keywords: [
+      'Akhil K',
+      'Senior Frontend Developer',
+      'React Developer',
+      'Next.js Developer',
+      'TypeScript',
+      'Web Accessibility',
+      'UI Engineer',
+      'Frontend Lead',
+      'JavaScript Developer',
+      'Remote Developer',
+      'India',
+    ],
+    authors: [{ name: 'Akhil K', url: 'https://www.akhiakl.in' }],
+    metadataBase: new URL('https://www.akhiakl.in'),
+    openGraph: {
+      title: 'Akhil K | Senior Frontend Developer & UI Engineer',
+      description:
+        '8+ years of experience creating scalable, accessible, and high-performance UI systems with React, Next.js, and TypeScript.',
+      url: 'https://www.akhiakl.in',
+      siteName: 'Akhil K Portfolio',
+      images: [
+        {
+          url: '/logo.svg', // ideally 1200x630px
+          width: 1200,
+          height: 630,
+          alt: 'Portfolio preview of Akhil K, Senior Frontend Developer',
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Akhil K | Senior Frontend Developer & UI Engineer',
+      description:
+        'Building accessible, scalable, and high-performance web applications using React, Next.js, and TypeScript.',
+      images: ['/logo.svg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: 'https://www.akhiakl.in',
+    },
+    icons: {
+      icon: '/logo.svg',
+    },
+  };
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" className={icomoon.variable}>
-      <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-      </head>
-      <body>
-        <Providers>
-          <div className="font-karla subpixel-antialiased">
-            <Navbar />
-            {children}
-          </div>
-        </Providers>
-        <SpeedInsights />
-        <Analytics />
+    <html lang="en">
+
+      <body
+        className={`${inter.variable} antialiased`}
+      >
+        {children}
       </body>
-    </html >
-  )
+    </html>
+  );
 }

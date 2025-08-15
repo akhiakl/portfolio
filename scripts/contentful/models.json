@@ -1,0 +1,924 @@
+[
+  {
+    "id": "profile",
+    "name": "Profile",
+    "displayField": "name",
+    "fields": [
+      {
+        "id": "name",
+        "name": "Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "title",
+        "name": "Title / Role",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "profilePhoto",
+        "name": "Profile Photo",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "bio",
+        "name": "Bio",
+        "type": "RichText",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "enabledNodeTypes": [
+              "heading-1",
+              "heading-2",
+              "heading-3",
+              "heading-4",
+              "heading-5",
+              "heading-6",
+              "ordered-list",
+              "unordered-list",
+              "hr",
+              "blockquote",
+              "embedded-entry-block",
+              "embedded-asset-block",
+              "hyperlink",
+              "entry-hyperlink",
+              "asset-hyperlink",
+              "embedded-entry-inline"
+            ],
+            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset and inline entry nodes are allowed"
+          },
+          {
+            "enabledMarks": [
+              "bold",
+              "italic",
+              "underline",
+              "code"
+            ],
+            "message": "Only bold, italic, underline and code marks are allowed"
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "location",
+        "name": "Location",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "resume",
+        "name": "Resume (CV)",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "pdfdocument"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "profileLinks",
+        "name": "Profile Links",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "socialLink"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      }
+    ]
+  },
+  {
+    "id": "page",
+    "name": "Page",
+    "displayField": "title",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "slug",
+        "name": "Slug",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "heroImage",
+        "name": "Hero Image",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "content",
+        "name": "Content",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "education",
+                "contactInfo",
+                "experience",
+                "profile",
+                "project",
+                "skill"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "metaTitle",
+        "name": "Meta Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "metaDescription",
+        "name": "Meta Description",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "metaKeywords",
+        "name": "Meta Keywords",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "ogTitle",
+        "name": "Open Graph Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "ogDescription",
+        "name": "Open Graph Description",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "ogImage",
+        "name": "Open Graph Image",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "canonicalUrl",
+        "name": "Canonical URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "noindex",
+        "name": "Noindex",
+        "type": "Boolean",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "twitterCard",
+        "name": "Twitter Card Type",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "twitterTitle",
+        "name": "Twitter Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "twitterDescription",
+        "name": "Twitter Description",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "twitterImages",
+        "name": "Twitter Images",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Symbol",
+          "validations": []
+        }
+      },
+      {
+        "id": "robotsIndex",
+        "name": "Robots Index",
+        "type": "Boolean",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "robotsFollow",
+        "name": "Robots Follow",
+        "type": "Boolean",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "alternateCanonical",
+        "name": "Alternate Canonical URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "metadataBase",
+        "name": "Metadata Base URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "id": "skill",
+    "name": "Skill",
+    "displayField": "name",
+    "fields": [
+      {
+        "id": "name",
+        "name": "Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "category",
+        "name": "Category",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "icon",
+        "name": "Icon",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      }
+    ]
+  },
+  {
+    "id": "project",
+    "name": "Project",
+    "displayField": "title",
+    "fields": [
+      {
+        "id": "title",
+        "name": "Title",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "slug",
+        "name": "Slug",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": true
+      },
+      {
+        "id": "thumbnail",
+        "name": "Thumbnail",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "RichText",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "enabledMarks": [
+              "bold",
+              "italic",
+              "underline",
+              "code",
+              "strikethrough",
+              "subscript",
+              "superscript"
+            ],
+            "message": "Only bold, italic, underline, code, strikethrough, subscript and superscript marks are allowed"
+          },
+          {
+            "enabledNodeTypes": [
+              "heading-1",
+              "heading-2",
+              "heading-3",
+              "heading-4",
+              "heading-5",
+              "heading-6",
+              "ordered-list",
+              "unordered-list",
+              "hr",
+              "blockquote",
+              "embedded-asset-block"
+            ],
+            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote and asset nodes are allowed"
+          },
+          {
+            "nodes": {}
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "techStack",
+        "name": "Tech Stack",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "skill"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      },
+      {
+        "id": "liveUrl",
+        "name": "Live URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "repoUrl",
+        "name": "Repo URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "gallery",
+        "name": "Gallery",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "linkType": "Asset"
+        }
+      },
+      {
+        "id": "sortOrder",
+        "name": "Sort Order",
+        "type": "Integer",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "displayField": "internalName",
+    "fields": [
+      {
+        "id": "internalName",
+        "name": "Internal Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "institution",
+        "name": "Institution",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "degree",
+        "name": "Degree / Certification",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "startDate",
+        "name": "Start Date",
+        "type": "Date",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "endDate",
+        "name": "End Date",
+        "type": "Date",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "RichText",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "enabledMarks": [
+              "bold",
+              "italic",
+              "underline",
+              "code",
+              "strikethrough",
+              "subscript",
+              "superscript"
+            ],
+            "message": "Only bold, italic, underline, code, strikethrough, subscript and superscript marks are allowed"
+          },
+          {
+            "enabledNodeTypes": [
+              "heading-1",
+              "heading-2",
+              "heading-3",
+              "heading-4",
+              "heading-5",
+              "heading-6",
+              "ordered-list",
+              "unordered-list",
+              "hr",
+              "blockquote",
+              "table",
+              "embedded-asset-block"
+            ],
+            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, table and asset nodes are allowed"
+          },
+          {
+            "nodes": {}
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "id": "experience",
+    "name": "Experience",
+    "displayField": "internalName",
+    "fields": [
+      {
+        "id": "internalName",
+        "name": "Internal Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "role",
+        "name": "Role",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "company",
+        "name": "Company",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "companyLogo",
+        "name": "Company Logo",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "linkMimetypeGroup": [
+              "image"
+            ]
+          }
+        ],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      },
+      {
+        "id": "startDate",
+        "name": "Start Date",
+        "type": "Date",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "endDate",
+        "name": "End Date",
+        "type": "Date",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "description",
+        "name": "Description",
+        "type": "RichText",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "enabledNodeTypes": [
+              "heading-1",
+              "heading-2",
+              "heading-3",
+              "heading-4",
+              "heading-5",
+              "heading-6",
+              "ordered-list",
+              "unordered-list",
+              "hr",
+              "blockquote",
+              "embedded-entry-block",
+              "embedded-asset-block",
+              "hyperlink",
+              "entry-hyperlink",
+              "asset-hyperlink",
+              "embedded-entry-inline"
+            ],
+            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset and inline entry nodes are allowed"
+          },
+          {
+            "enabledMarks": [
+              "bold",
+              "italic",
+              "underline",
+              "code"
+            ],
+            "message": "Only bold, italic, underline and code marks are allowed"
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "skillsUsed",
+        "name": "Skills Used",
+        "type": "Array",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "items": {
+          "type": "Link",
+          "validations": [
+            {
+              "linkContentType": [
+                "skill"
+              ]
+            }
+          ],
+          "linkType": "Entry"
+        }
+      }
+    ]
+  },
+  {
+    "id": "contactInfo",
+    "name": "Contact Info",
+    "displayField": "internalName",
+    "fields": [
+      {
+        "id": "internalName",
+        "name": "Internal Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "email",
+        "name": "Email",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "regexp": {
+              "pattern": "^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$",
+              "flags": null
+            }
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "phone",
+        "name": "Phone",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [
+          {
+            "regexp": {
+              "pattern": "^\\+?[\\d\\s\\-().]{7,25}$",
+              "flags": null
+            },
+            "message": "Please provide a valid phone number."
+          }
+        ],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "formEndpoint",
+        "name": "Contact Form Endpoint",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "preferredMethod",
+        "name": "Preferred Contact Method",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      }
+    ]
+  },
+  {
+    "id": "socialLink",
+    "name": "Social Link",
+    "displayField": "platformName",
+    "fields": [
+      {
+        "id": "platformName",
+        "name": "Platform Name",
+        "type": "Symbol",
+        "localized": false,
+        "required": true,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "url",
+        "name": "URL",
+        "type": "Symbol",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false
+      },
+      {
+        "id": "icon",
+        "name": "Icon",
+        "type": "Link",
+        "localized": false,
+        "required": false,
+        "validations": [],
+        "disabled": false,
+        "omitted": false,
+        "linkType": "Asset"
+      }
+    ]
+  }
+]

@@ -6,39 +6,51 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "prebuild": "pnpm codegen",
+    "pull-models": "node scripts/contentful/pullModels.js",
+    "push-models": "node scripts/contentful/pushModels.js"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.0.10",
-    "aos": "^2.3.4",
-    "clsx": "^2.1.1",
-    "next": "15.2.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "react-scroll": "^1.9.0",
-    "react-scroll-parallax": "^3.4.5",
-    "rellax": "^1.12.1",
-    "sharp": "^0.32.6"
+    "@contentful/rich-text-plain-text-renderer": "^17.1.0",
+    "@contentful/rich-text-react-renderer": "^16.1.0",
+    "next": "15.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.7",
+    "@0no-co/graphqlsp": "^1.15.0",
+    "@contentful/rich-text-types": "^17.1.0",
+    "@eslint/eslintrc": "^3",
+    "@graphql-codegen/cli": "5.0.7",
+    "@graphql-codegen/schema-ast": "^4.1.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@parcel/watcher": "^2.5.1",
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20",
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4",
-    "@types/react-scroll": "^1.8.10",
-    "@types/rellax": "^1.7.7",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.2.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cf-content-types-generator": "^2.16.0",
+    "contentful": "^11.7.15",
+    "contentful-management": "^11.54.4",
+    "dotenv": "^17.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "graphql": "^16.11.0",
+    "schema-dts": "^1.1.5",
+    "tailwindcss": "^4.1.11",
     "typescript": "^5"
   },
   "pnpm": {
     "overrides": {
       "@types/react": "19.0.12",
       "@types/react-dom": "19.0.4"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@tailwindcss/oxide",
+      "sharp"
+    ]
   }
 }

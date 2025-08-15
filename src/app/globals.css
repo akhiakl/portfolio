@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f1a; /* dark brand background */
+  --foreground: #e6eef9; /* primary text */
+  --surface: #0f1724; /* card background */
+  --muted: #99a0b3; /* secondary text */
+  --primary: #2c3a91; /* brand indigo */
+  --primary-darker: #1f2a77; /* darker hover */
+  --primary-lighter: #3f51b5; /* lighter accent */
+  --accent: #00bfa6; /* small highlight */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-darker: var(--primary-darker);
+  --color-primary-lighter: var(--primary-lighter);
+  --color-accent: var(--accent);
+  --font-inter: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
