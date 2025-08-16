@@ -8,6 +8,7 @@ import Providers from "./providers";
 import { Navbar } from "@/components";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleTagManager } from "@next/third-parties/google";
+import GtmNoScript from "@/components/GtmNoScript";
 
 export const metadata: Metadata = {
   title: "Akhil K | Senior Frontend Developer & UI Engineer",
@@ -101,6 +102,9 @@ export default function RootLayout({
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       )}
       <body>
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <GtmNoScript gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
