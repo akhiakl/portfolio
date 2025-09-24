@@ -37,9 +37,7 @@ export const metadata: Metadata = {
     siteName: "Akhil K Portfolio",
     images: [
       {
-        url: "https://www.akhiakl.in/profile-bg.webp",
-        width: 1200,
-        height: 630,
+        url: "https://www.akhiakl.in/profile_thumb.jpg",
         alt: "Akhil K Portfolio Preview",
       },
     ],
