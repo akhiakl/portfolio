@@ -1,10 +1,9 @@
-import { cn } from "@/lib/utils"
-import VisibleOnScroll from "./visible-on-scroll"
+import { ScrollAnimationSection } from "./scroll-animation-section"
 
 export function AboutSection() {
 
   return (
-    <VisibleOnScroll as="section" id="about" className="py-24">
+    <ScrollAnimationSection as="section" id="about" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
         <span className="font-mono text-xl text-accent">01.</span>
         About Me
@@ -49,6 +48,6 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-    </VisibleOnScroll>
+    </ScrollAnimationSection>
   )
 }

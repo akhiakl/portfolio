@@ -1,56 +1,40 @@
-"use client"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { projects } from "@/lib/project"
 import { cn } from "@/lib/utils"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
-
+import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
 
 export function ProjectsSection() {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 })
-
   return (
-    <section id="projects" ref={ref} className="py-24">
-      <div
-        className={cn(
-          "transition-all duration-700",
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
-        )}
-      >
-        <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-          <span className="font-mono text-xl text-accent">03.</span>
-          Featured Projects
-          <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
-        </h2>
+    <ScrollAnimationSection as="section" id="projects" className="py-24">
+      <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
+        <span className="font-mono text-xl text-accent">03.</span>
+        Featured Projects
+        <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
+      </h2>
 
-        <div className="space-y-24">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} isVisible={isVisible} />
-          ))}
-        </div>
+      <div className="space-y-24">
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
+        ))}
       </div>
-    </section>
+    </ScrollAnimationSection>
   )
 }
 
 function ProjectCard({
   project,
   index,
-  isVisible,
 }: {
   project: (typeof projects)[0]
   index: number
-  isVisible: boolean
 }) {
   const isEven = index % 2 === 0
 
   return (
-    <div
-      className={cn(
-        "group relative grid gap-4 md:grid-cols-12 md:items-center transition-all duration-500",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
-      )}
-      style={{ transitionDelay: `${index * 200}ms` }}
+    <AnimatedElement
+      delay={index * 200}
+      className="group relative grid gap-4 md:grid-cols-12 md:items-center"
     >
       {/* Project Image */}
       <div
@@ -124,6 +108,6 @@ function ProjectCard({
           </a>
         </div>
       </div>
-    </div>
+    </AnimatedElement>
   )
 }

@@ -1,4 +1,3 @@
-"use client"
 import { Mail, Linkedin, Github } from "lucide-react"
 
 export function ContactSection() {
