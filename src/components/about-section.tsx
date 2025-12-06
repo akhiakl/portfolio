@@ -25,13 +25,8 @@ export function AboutSection() {
 
         <div className="relative mx-auto w-full max-w-xs">
           <div className="group relative">
-            <div className="relative z-10 overflow-hidden rounded bg-accent/20">
-              <img
-                src={aboutContent.image.src}
-                alt={aboutContent.image.alt}
-                className="mix-blend-luminosity grayscale transition-all duration-300 group-hover:mix-blend-normal group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 bg-accent/20 transition-opacity duration-300 group-hover:opacity-0" />
+            <div className="relative z-10 overflow-hidden rounded bg-card border border-border aspect-square">
+              <GameLoader />
             </div>
             <div className="absolute -bottom-3 -right-3 z-0 h-full w-full rounded border-2 border-accent transition-all duration-300 group-hover:-bottom-4 group-hover:-right-4" />
           </div>
