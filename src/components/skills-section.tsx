@@ -1,12 +1,13 @@
 import { skillCategories } from "@/lib/skills"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
+import { sectionTitles } from "@/lib/site-content"
 
 export function SkillsSection() {
   return (
     <ScrollAnimationSection as="section" id="skills" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-        <span className="font-mono text-xl text-accent">02.</span>
-        Skills & Technologies
+        <span className="font-mono text-xl text-accent">{sectionTitles.skills.number}.</span>
+        {sectionTitles.skills.title}
         <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
       </h2>
 

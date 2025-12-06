@@ -2,10 +2,9 @@
 
 import { cn } from "@/lib/utils"
 import { experiences } from "@/lib/experience"
+import { sectionTitles } from "@/lib/site-content"
 import { useState } from "react"
 import VisibleOnScroll from "./visible-on-scroll"
-
-
 
 export function ExperienceSection() {
   const [activeTab, setActiveTab] = useState(0)
@@ -13,8 +12,8 @@ export function ExperienceSection() {
   return (
     <VisibleOnScroll as="section" id="experience" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-        <span className="font-mono text-xl text-accent">04.</span>
-        Experience
+        <span className="font-mono text-xl text-accent">{sectionTitles.experience.number}.</span>
+        {sectionTitles.experience.title}
         <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
       </h2>
 

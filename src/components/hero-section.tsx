@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
+import { personalInfo } from "@/lib/personal-info"
 
 export function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export function HeroSection() {
         {/* Text Content */}
         <div className="space-y-6 order-2 lg:order-1">
           <AnimatedElement as="p" delay={100} className="font-mono text-accent">
-            Hi, my name is
+            {personalInfo.hero.greeting}
           </AnimatedElement>
 
           <AnimatedElement
@@ -16,7 +17,7 @@ export function HeroSection() {
             delay={200}
             className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Akhil K.
+            {personalInfo.hero.name}
           </AnimatedElement>
 
           <AnimatedElement
@@ -24,7 +25,7 @@ export function HeroSection() {
             delay={300}
             className="text-2xl font-bold text-muted sm:text-3xl md:text-4xl lg:text-5xl"
           >
-            I build intuitive user interfaces.
+            {personalInfo.hero.tagline}
           </AnimatedElement>
 
           <AnimatedElement
@@ -32,22 +33,21 @@ export function HeroSection() {
             delay={400}
             className="max-w-xl text-lg text-muted"
           >
-            Lead Frontend Developer specialized in React, Next.js, performance-first engineering, and full stack
-            development with Node.js. I craft clean, scalable, and accessible web experiences.
+            {personalInfo.hero.description}
           </AnimatedElement>
 
           <AnimatedElement delay={500} className="flex flex-wrap gap-4 pt-6">
             <a
-              href="#projects"
+              href={personalInfo.hero.primaryCta.href}
               className="group relative overflow-hidden rounded border border-accent px-7 py-4 font-mono text-sm text-accent transition-all hover:bg-accent/10"
             >
-              View Work
+              {personalInfo.hero.primaryCta.text}
             </a>
             <a
-              href="#contact"
+              href={personalInfo.hero.secondaryCta.href}
               className="rounded bg-accent px-7 py-4 font-mono text-sm text-primary-foreground transition-all hover:bg-accent/90"
             >
-              Contact Me
+              {personalInfo.hero.secondaryCta.text}
             </a>
           </AnimatedElement>
         </div>
@@ -64,8 +64,8 @@ export function HeroSection() {
 
             <div className="relative overflow-hidden rounded-lg bg-card">
               <Image
-                src="/images/akhil-portrait.webp"
-                alt="Akhil K - Lead Frontend Developer"
+                src={personalInfo.hero.image.src}
+                alt={personalInfo.hero.image.alt}
                 width={400}
                 height={500}
                 className="grayscale hover:grayscale-0 transition-all duration-500 object-cover"

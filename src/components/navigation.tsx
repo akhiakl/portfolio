@@ -1,13 +1,7 @@
 import Image from "next/image"
 import { MobileNavigation } from "./mobile-navigation"
-
-const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Work", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
-]
+import { navigationLinks } from "@/lib/site-content"
+import { personalInfo } from "@/lib/personal-info"
 
 export function Navigation() {
   return (
@@ -16,12 +10,12 @@ export function Navigation() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12 lg:px-24">
         <a href="#" className="text-xl font-bold text-accent transition-opacity hover:opacity-80">
-          <Image src="/images/logo.svg" alt="Akhil K Logo" width={30} height={30} />
+          <Image src="/images/logo.svg" alt={`${personalInfo.name} Logo`} width={30} height={30} />
         </a>
 
         {/* Desktop Navigation */}
         <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link, index) => (
+          {navigationLinks.map((link, index) => (
             <li key={link.name}>
               <a
                 href={link.href}
@@ -41,7 +35,7 @@ export function Navigation() {
             </a>
           </li>
         </ul>
-        <MobileNavigation navLinks={navLinks} />
+        <MobileNavigation navLinks={navigationLinks} />
       </nav>
     </header>
   )

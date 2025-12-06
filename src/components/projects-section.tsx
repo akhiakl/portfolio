@@ -3,17 +3,16 @@ import { cn } from "@/lib/utils"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
+import { sectionTitles } from "@/lib/site-content"
 
 export function ProjectsSection() {
   return (
     <ScrollAnimationSection as="section" id="projects" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-        <span className="font-mono text-xl text-accent">03.</span>
-        Featured Projects
+        <span className="font-mono text-xl text-accent">{sectionTitles.projects.number}.</span>
+        {sectionTitles.projects.title}
         <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
-      </h2>
-
-      <div className="space-y-24">
+      </h2>      <div className="space-y-24">
         {projects.map((project, index) => (
           <ProjectCard key={project.title} project={project} index={index} />
         ))}
