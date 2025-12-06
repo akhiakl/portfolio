@@ -13,11 +13,29 @@ export const personalInfo = {
 
     // SEO Meta
     seo: {
-        title: "Akhil K - Senior Frontend Engineer | Lead Experience Engineer",
+        title: "Akhil K | Senior Frontend Engineer | Lead Experience Engineer",
         description: coreContent.description,
-        keywords: ["Senior Frontend Engineer", "Lead Experience Engineer", "React", "Next.js", "TypeScript", "Performance", "Accessibility", "eCommerce", "Enterprise"],
+        keywords: [
+            "Akhil K",
+            "Senior Frontend Engineer",
+            "Lead Experience Engineer",
+            "React Developer",
+            "Next.js Developer",
+            "TypeScript",
+            "JavaScript",
+            "Frontend Portfolio",
+            "Performance Optimization",
+            "Accessibility",
+            "eCommerce",
+            "Enterprise",
+            "Kerala Developer",
+            "Web Developer Portfolio"
+        ],
         author: "Akhil K",
         url: "https://akhiakl.in",
+        siteName: "Akhil K Portfolio",
+        twitterHandle: "@akhiakl",
+        locale: "en_US"
     },
 
     // Contact information  

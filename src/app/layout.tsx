@@ -4,30 +4,19 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { GoogleTagManager } from "@next/third-parties/google"
 import GtmNoScript from "@/components/GtmNoScript"
+import { personalInfo } from "@/lib/personal-info"
 
-const description =
-  "Lead Frontend Developer building intuitive user interfaces. Specialized in React, Next.js, TypeScript, and full stack development."
-const title = "Akhil K | Lead Frontend Developer"
-const url = "https://www.akhiakl.in"
+const { seo } = personalInfo
+const description = seo.description
+const title = seo.title
+const url = seo.url
 export const metadata: Metadata = {
   title,
   description,
-  keywords: [
-    "Akhil K",
-    "Senior Frontend Developer",
-    "UI Engineer",
-    "React Developer",
-    "Next.js Developer",
-    "TypeScript",
-    "JavaScript",
-    "Frontend Portfolio",
-    "Kerala Developer",
-    "Web Developer Portfolio",
-    "Full Stack Developer",
-  ],
-  authors: [{ name: "Akhil K", url: url }],
-  creator: "Akhil K",
-  publisher: "Akhil K",
+  keywords: seo.keywords,
+  authors: [{ name: personalInfo.name, url: url }],
+  creator: personalInfo.name,
+  publisher: personalInfo.name,
   openGraph: {
     title,
     description,
@@ -44,10 +33,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akhil K | Senior Frontend Developer & UI Engineer",
+    title: personalInfo.title,
     description,
     creator: "@akhiakl",
-    images: [`${url}/images/akhil-portrait.webp`],
+    images: [`${url}${personalInfo.hero.image.src}`],
   },
   alternates: {
     canonical: url,
@@ -77,17 +66,17 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Akhil K",
-  jobTitle: "Lead Experience Engineer",
+  name: personalInfo.name,
+  jobTitle: personalInfo.title,
   url,
-  image: `${url}/profile-bg.webp`,
+  image: `${url}${personalInfo.hero.image.src}`,
   description,
   address: {
     "@type": "PostalAddress",
     addressRegion: "Kerala",
     addressCountry: "India",
   },
-  sameAs: ["https://github.com/akhiakl", "https://www.linkedin.com/in/akhiakl"],
+  sameAs: [personalInfo.contact.github, personalInfo.contact.linkedin],
 };
 
 export default function RootLayout({

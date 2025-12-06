@@ -30,10 +30,12 @@ export const skillCategories = [
         skills: [
             "Docker",
             "AWS",
+            "Contentful",
+            "Algolia",
             "CI/CD (GitHub Actions)",
             "Vercel",
             "Storybook",
-            "Figma Tokens",
+            "Figma",
             "Builder.io",
             "Salesforce Commerce Cloud"
         ],

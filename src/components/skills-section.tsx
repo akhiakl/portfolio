@@ -18,7 +18,6 @@ export function SkillsSection() {
             delay={categoryIndex * 150}
           >
             <h3 className="mb-4 font-mono text-lg text-accent">{category.title}</h3>
-            <h3 className="mb-4 font-mono text-lg text-accent">{category.title}</h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
                 <span
