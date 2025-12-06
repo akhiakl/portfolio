@@ -1,19 +1,17 @@
-import type { Metadata } from "next";
-import "./styles/globals.css";
-import "./styles/icomoon.css";
-import "aos/dist/aos.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { icomoon } from "@/helpers/fonts";
-import Providers from "./providers";
-import { Navbar } from "@/components";
-import { Analytics } from "@vercel/analytics/next";
-import { GoogleTagManager } from "@next/third-parties/google";
-import GtmNoScript from "@/components/GtmNoScript";
+import type React from "react"
+import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+import { GoogleTagManager } from "@next/third-parties/google"
+import GtmNoScript from "@/components/GtmNoScript"
 
+const description =
+  "Lead Frontend Developer building intuitive user interfaces. Specialized in React, Next.js, TypeScript, and full stack development."
+const title = "Akhil K | Lead Frontend Developer"
+const url = "https://www.akhiakl.in"
 export const metadata: Metadata = {
-  title: "Akhil K | Senior Frontend Developer & UI Engineer",
-  description:
-    "Senior Frontend Developer specializing in React, Next.js, and TypeScript. Explore my projects, skills, and contact details.",
+  title,
+  description,
   keywords: [
     "Akhil K",
     "Senior Frontend Developer",
@@ -25,19 +23,19 @@ export const metadata: Metadata = {
     "Frontend Portfolio",
     "Kerala Developer",
     "Web Developer Portfolio",
+    "Full Stack Developer",
   ],
-  authors: [{ name: "Akhil K", url: "https://www.akhiakl.in" }],
+  authors: [{ name: "Akhil K", url: url }],
   creator: "Akhil K",
   publisher: "Akhil K",
   openGraph: {
-    title: "Akhil K | Senior Frontend Developer & UI Engineer",
-    description:
-      "Portfolio of Akhil K, Senior Frontend Developer specializing in React, Next.js, and TypeScript.",
-    url: "https://www.akhiakl.in",
+    title,
+    description,
+    url,
     siteName: "Akhil K Portfolio",
     images: [
       {
-        url: "https://www.akhiakl.in/profile_thumb.jpg",
+        url: `${url}/images/akhil-portrait.webp`,
         alt: "Akhil K Portfolio Preview",
       },
     ],
@@ -47,29 +45,43 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Akhil K | Senior Frontend Developer & UI Engineer",
-    description:
-      "Portfolio of Akhil K, Senior Frontend Developer specializing in React, Next.js, and TypeScript.",
-    creator: "@yourtwitterhandle",
-    images: ["https://www.akhiakl.in/profile-bg.webp"],
+    description,
+    creator: "@akhiakl",
+    images: [`${url}/images/akhil-portrait.webp`],
   },
   alternates: {
-    canonical: "https://www.akhiakl.in",
+    canonical: url,
   },
   other: {
     "google-site-verification":
       process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "",
   },
-};
-
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+}
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Akhil K",
-  jobTitle: "Front End Lead",
-  url: "https://www.akhiakl.in",
-  image: "https://www.akhiakl.in/profile-bg.webp",
-  description:
-    "Senior Frontend Developer specializing in React, Next.js, and TypeScript",
+  jobTitle: "Lead Experience Engineer",
+  url,
+  image: `${url}/profile-bg.webp`,
+  description,
   address: {
     "@type": "PostalAddress",
     addressRegion: "Kerala",
@@ -77,29 +89,18 @@ const jsonLd = {
   },
   sameAs: ["https://github.com/akhiakl", "https://www.linkedin.com/in/akhiakl"],
 };
+
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="en" className={icomoon.variable}>
-      <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link
-          rel="preload"
-          as="style"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        />
-      </head>
+    <html lang="en">
       {process.env.NEXT_PUBLIC_GTM_ID && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       )}
-      <body>
+      <body className={`font-sans antialiased`}>
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <GtmNoScript gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         )}
@@ -109,15 +110,9 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        <Providers>
-          <div className="font-karla subpixel-antialiased">
-            <Navbar />
-            {children}
-          </div>
-        </Providers>
-        <SpeedInsights />
+        {children}
         <Analytics />
       </body>
     </html>
-  );
+  )
 }
