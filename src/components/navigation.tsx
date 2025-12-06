@@ -10,7 +10,7 @@ export function Navigation() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12 lg:px-24">
         <a href="#" className="text-xl font-bold text-accent transition-opacity hover:opacity-80">
-          <Image src="/images/logo.svg" alt={`${personalInfo.name} Logo`} width={30} height={30} />
+          <Image src="/images/logo.svg" alt={`${personalInfo.name} Logo`} width={30} height={30} preload />
         </a>
 
         {/* Desktop Navigation */}

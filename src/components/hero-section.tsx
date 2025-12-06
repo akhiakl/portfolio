@@ -69,7 +69,7 @@ export function HeroSection() {
                 width={400}
                 height={500}
                 className="grayscale hover:grayscale-0 transition-all duration-500 object-cover"
-                priority
+                preload
               />
               {/* Red accent overlay on hover */}
               <div className="absolute inset-0 bg-accent/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
