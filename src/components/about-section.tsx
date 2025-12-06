@@ -1,3 +1,4 @@
+import { GameLoader } from "./game-loader"
 import { ScrollAnimationSection } from "./scroll-animation-section"
 import { aboutContent } from "@/lib/about-content"
 
@@ -17,9 +18,6 @@ export function AboutSection() {
             <p key={index} className="text-muted leading-relaxed">
               {paragraph.text}
               {paragraph.highlight && <span className="text-accent">{paragraph.highlight}</span>}
-              {paragraph.quote && (
-                <span className="text-foreground italic">"{paragraph.quote}"</span>
-              )}
               {paragraph.continuation}
             </p>
           ))}

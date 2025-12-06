@@ -1,25 +1,42 @@
 export const skillCategories = [
     {
-        title: "Frontend",
+        title: "Languages & Frameworks",
         skills: [
+            "JavaScript (ES6+)",
+            "TypeScript",
             "React",
             "Next.js",
-            "TypeScript",
-            "Tailwind CSS",
-            "Styled Components",
-            "shadcn/ui",
-            "Webpack",
-            "Vite",
-            "Storybook",
+            "Remix",
+            "Node.js",
+            "NestJS",
+            "Express"
         ],
     },
     {
-        title: "Backend",
-        skills: ["Node.js", "Express", "NestJS", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"],
+        title: "Architecture & Performance",
+        skills: [
+            "Component Design Systems",
+            "Micro-frontends",
+            "Core Web Vitals",
+            "Lighthouse",
+            "Bundle Analysis",
+            "SSR/ISR",
+            "Lazy Loading",
+            "Accessibility (WCAG 2.1)"
+        ],
     },
     {
-        title: "Tools & DevOps",
-        skills: ["Git", "Docker", "AWS", "Vercel", "CI/CD", "Jest", "React Testing Library"],
+        title: "Tools & Infrastructure",
+        skills: [
+            "Docker",
+            "AWS",
+            "CI/CD (GitHub Actions)",
+            "Vercel",
+            "Storybook",
+            "Figma Tokens",
+            "Builder.io",
+            "Salesforce Commerce Cloud"
+        ],
     },
 ]
 

@@ -1,15 +1,21 @@
+// Core content - single source of truth
+const coreContent = {
+    tagline: "I build high-performance web experiences",
+    description: "Senior Frontend Engineer with 8+ years of expertise in enterprise eCommerce and SaaS platforms. Specialized in React, Next.js, and TypeScript with a proven track record of delivering performance improvements and leading engineering teams."
+}
+
 // Personal information and SEO data
 export const personalInfo = {
     name: "Akhil K",
-    title: "Lead Frontend Developer",
-    tagline: "I build intuitive user interfaces",
-    description: "Lead Frontend Developer specialized in React, Next.js, performance-first engineering, and full stack development with Node.js. I craft clean, scalable, and accessible web experiences.",
+    title: "Senior Frontend Engineer | Lead Experience Engineer",
+    tagline: coreContent.tagline,
+    description: coreContent.description,
 
     // SEO Meta
     seo: {
-        title: "Akhil K - Lead Frontend Developer",
-        description: "Lead Frontend Developer specialized in React, Next.js, and full stack development. Building scalable, accessible web experiences with 8+ years of experience.",
-        keywords: ["Frontend Developer", "React", "Next.js", "TypeScript", "Full Stack", "UI/UX", "Web Development"],
+        title: "Akhil K - Senior Frontend Engineer | Lead Experience Engineer",
+        description: coreContent.description,
+        keywords: ["Senior Frontend Engineer", "Lead Experience Engineer", "React", "Next.js", "TypeScript", "Performance", "Accessibility", "eCommerce", "Enterprise"],
         author: "Akhil K",
         url: "https://akhiakl.in",
     },
@@ -25,8 +31,8 @@ export const personalInfo = {
     hero: {
         greeting: "Hi, my name is",
         name: "Akhil K.",
-        tagline: "I build intuitive user interfaces.",
-        description: "Lead Frontend Developer specialized in React, Next.js, performance-first engineering, and full stack development with Node.js. I craft clean, scalable, and accessible web experiences.",
+        tagline: coreContent.tagline,
+        description: coreContent.description,
         primaryCta: {
             text: "View Work",
             href: "#projects"

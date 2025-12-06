@@ -4,30 +4,30 @@ export const aboutContent = {
 
     paragraphs: [
         {
-            text: "With over ",
+            text: "Senior Frontend Engineer with ",
             highlight: "8+ years",
-            continuation: " of experience designing and building high-performance web applications, I specialize in creating interfaces that are both beautiful and functional. My journey in web development has taken me through startups and enterprise companies, where I've led teams and architected scalable solutions."
+            continuation: " building scalable, high-performance web applications for enterprise eCommerce and SaaS. I've architected modular React + TypeScript foundations, built component design systems, and delivered measurable Core Web Vitals improvements across multiple enterprise clients."
+        },
+        {
+            text: "My expertise spans from ",
+            highlight: "performance optimization",
+            continuation: " and accessibility to leading engineering teams and establishing CI/CD pipelines. I've reduced perceived load times by 25-40% through strategic bundle-splitting, SSR/ISR tuning, and automated performance gates in production."
         },
         {
             text: "I'm passionate about ",
-            highlight: "UI/UX",
-            continuation: ", developer experience, accessibility, and scalable system design. I believe that great software emerges from the intersection of technical excellence and thoughtful design."
-        },
-        {
-            text: "My philosophy is simple: ",
-            quote: "Craft comes from clarity, simplicity, and thoughtful interaction.",
-            continuation: " Every line of code I write is purposeful, every interface I design is intentional."
+            highlight: "developer experience",
+            continuation: " and engineering culture. Whether I'm mentoring engineers, championing TypeScript-first workflows, or building tools that accelerate delivery velocity, I focus on creating sustainable solutions that elevate entire teams."
         }
     ],
 
     technologies: {
-        title: "Technologies I work with:",
+        title: "Core Technologies:",
         items: [
-            "React & Next.js",
-            "TypeScript",
-            "Node.js & Express",
-            "PostgreSQL & MongoDB",
-            "AWS & Docker",
+            "React, Next.js & Remix",
+            "TypeScript & JavaScript (ES6+)",
+            "Node.js, NestJS & GraphQL",
+            "Component Design Systems",
+            "Performance & Accessibility",
             "GraphQL & REST APIs"
         ]
     },
