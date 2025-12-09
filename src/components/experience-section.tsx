@@ -52,25 +52,29 @@ export function ExperienceSection() {
                 activeTab === index ? "opacity-100 visible" : "opacity-0 invisible absolute",
               )}
             >
-              <h3 className="text-xl font-medium text-foreground">
-                {exp.role} <span className="text-accent">@ {exp.company}</span>
-              </h3>
-              <p className="mb-2 mt-1 font-mono text-sm text-muted">{exp.period}</p>
-              {exp.location && (
-                <p className="mb-2 font-mono text-sm text-muted">{exp.location}</p>
-              )}
-              {exp.note && (
-                <p className="mb-6 text-sm text-muted italic">{exp.note}</p>
-              )}
-              {!exp.note && <div className="mb-6" />}
-              <ul className="space-y-3">
-                {exp.description.map((item, i) => (
-                  <li key={i} className="flex gap-3 text-muted">
-                    <span className="mt-1.5 text-accent">▹</span>
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {exp.roles?.map((role, roleIndex) => (
+                <div key={role.role} className={roleIndex > 0 ? "mt-8" : ""}>
+                  <h3 className="text-xl font-medium text-foreground">
+                    {role.role} <span className="text-accent">@ {exp.company}</span>
+                  </h3>
+                  <p className="mb-2 mt-1 font-mono text-sm text-muted">{role.period}</p>
+                  {role.location && (
+                    <p className="mb-2 font-mono text-sm text-muted">{role.location}</p>
+                  )}
+                  {role?.note && (
+                    <p className="mb-6 text-sm text-muted italic">{role.note}</p>
+                  )}
+                  {!role?.note && <div className="mb-6" />}
+                  <ul className="space-y-3">
+                    {role.description.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-muted">
+                        <span className="mt-1.5 text-accent">▹</span>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           ))}
         </div>
