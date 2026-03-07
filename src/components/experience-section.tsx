@@ -1,8 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { experiences } from "@/lib/experience"
-import { sectionTitles } from "@/lib/site-content"
+import { experiences, sectionTitles } from "@/lib/content"
 import { useState } from "react"
 import VisibleOnScroll from "./visible-on-scroll"
 

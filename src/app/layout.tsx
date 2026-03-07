@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { GoogleTagManager } from "@next/third-parties/google"
 import GtmNoScript from "@/components/GtmNoScript"
-import { personalInfo } from "@/lib/personal-info"
+import { personalInfo } from "@/lib/content"
 
 const { seo } = personalInfo
 const description = seo.description

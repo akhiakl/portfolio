@@ -1,6 +1,6 @@
 import { GameLoader } from "./game-loader"
 import { ScrollAnimationSection } from "./scroll-animation-section"
-import { aboutContent } from "@/lib/about-content"
+import { aboutContent } from "@/lib/content"
 
 export function AboutSection() {
 

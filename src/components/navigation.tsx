@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { MobileNavigation } from "./mobile-navigation"
-import { navigationLinks } from "@/lib/site-content"
-import { personalInfo } from "@/lib/personal-info"
+import { navigationLinks, personalInfo } from "@/lib/content"
 
 export function Navigation() {
   return (

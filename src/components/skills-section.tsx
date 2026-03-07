@@ -1,6 +1,5 @@
-import { skillCategories } from "@/lib/skills"
+import { skillCategories, sectionTitles } from "@/lib/content"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
-import { sectionTitles } from "@/lib/site-content"
 
 export function SkillsSection() {
   return (

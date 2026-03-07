@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react"
-import { footerContent } from "@/lib/site-content"
+import { footerContent } from "@/lib/content"
 
 export function Footer() {
   return (

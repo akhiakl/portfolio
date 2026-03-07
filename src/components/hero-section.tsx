@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
-import { personalInfo } from "@/lib/personal-info"
+import { personalInfo } from "@/lib/content"
 
 export function HeroSection() {
   return (

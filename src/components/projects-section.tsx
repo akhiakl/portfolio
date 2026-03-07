@@ -1,9 +1,8 @@
-import { projects } from "@/lib/project"
+import { projects, sectionTitles } from "@/lib/content"
 import { cn } from "@/lib/utils"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
-import { sectionTitles } from "@/lib/site-content"
 
 export function ProjectsSection() {
   return (

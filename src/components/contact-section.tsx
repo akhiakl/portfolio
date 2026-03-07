@@ -1,5 +1,5 @@
 import { Mail, Linkedin, Github } from "lucide-react"
-import { contactContent } from "@/lib/contact-content"
+import { contactContent } from "@/lib/content"
 
 export function ContactSection() {
   return (
