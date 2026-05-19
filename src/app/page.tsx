@@ -9,9 +9,9 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background/60 text-on-surface">
       <Navigation />
-      <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-24">
+      <div className="mx-auto max-w-[1440px] space-y-16 px-4 pb-32 pt-24 md:px-10">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

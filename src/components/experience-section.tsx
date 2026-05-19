@@ -1,82 +1,35 @@
-"use client"
-
-import { cn } from "@/lib/utils"
 import { experiences, sectionTitles } from "@/lib/content"
-import { useState } from "react"
 import VisibleOnScroll from "./visible-on-scroll"
 
 export function ExperienceSection() {
-  const [activeTab, setActiveTab] = useState(0)
-
   return (
-    <VisibleOnScroll as="section" id="experience" className="py-24">
-      <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-        <span className="font-mono text-xl text-accent">{sectionTitles.experience.number}.</span>
-        {sectionTitles.experience.title}
-        <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
-      </h2>
+    <VisibleOnScroll as="section" id="experience" className="section-shell">
+      <h2 className="section-title">&gt; EXPERIENCE_LOG</h2>
+      <h3 className="sr-only">{sectionTitles.experience.title}</h3>
+      <div className="section-rule" />
+      <p className="mb-8 font-mono text-[13px] text-on-surface-variant">{"// FETCHING_TIMELINE_DATA"}</p>
 
-      <div className="flex flex-col gap-4 md:flex-row md:gap-8">
-        {/* Tab List */}
-        <div className="flex overflow-x-auto md:flex-col md:overflow-visible">
-          {experiences.map((exp, index) => (
-            <button
-              key={exp.company}
-              onClick={() => setActiveTab(index)}
-              className={cn(
-                "relative whitespace-nowrap px-5 py-3 font-mono text-sm transition-all text-left",
-                activeTab === index
-                  ? "text-accent bg-card"
-                  : "text-muted hover:text-accent hover:bg-card/50",
-              )}
-            >
-              {exp.company}
-              <span
-                className={cn(
-                  "absolute bottom-0 left-0 h-0.5 w-full bg-accent transition-transform md:bottom-auto md:left-0 md:top-0 md:h-full md:w-0.5",
-                  activeTab === index ? "scale-100" : "scale-0",
-                )}
-              />
-            </button>
-          ))}
-        </div>
-
-        {/* Tab Content */}
-        <div className="min-h-80 flex-1">
-          {experiences.map((exp, index) => (
-            <div
-              key={exp.company}
-              className={cn(
-                "transition-all duration-300",
-                activeTab === index ? "opacity-100 visible" : "opacity-0 invisible absolute",
-              )}
-            >
-              {exp.roles?.map((role, roleIndex) => (
-                <div key={role.role} className={roleIndex > 0 ? "mt-8" : ""}>
-                  <h3 className="text-xl font-medium text-foreground">
-                    {role.role} <span className="text-accent">@ {exp.company}</span>
-                  </h3>
-                  <p className="mb-2 mt-1 font-mono text-sm text-muted">{role.period}</p>
-                  {role.location && (
-                    <p className="mb-2 font-mono text-sm text-muted">{role.location}</p>
-                  )}
-                  {role?.note && (
-                    <p className="mb-6 text-sm text-muted italic">{role.note}</p>
-                  )}
-                  {!role?.note && <div className="mb-6" />}
-                  <ul className="space-y-3">
-                    {role.description.map((item, i) => (
-                      <li key={i} className="flex gap-3 text-muted">
-                        <span className="mt-1.5 text-accent">▹</span>
-                        <span className="leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+      <div className="relative ml-4 space-y-12 border-l border-outline-variant pb-4">
+        {experiences.flatMap((exp) => exp.roles.map((role) => ({ exp, role }))).map(({ exp, role }, index) => (
+          <div key={`${exp.company}-${role.role}`} className="relative pl-8">
+            <div className={`absolute -left-[6.5px] top-2 h-3 w-3 ${index === 0 ? "bg-primary-container" : "bg-outline-variant"}`} />
+            <div className={`mb-1 font-mono text-[13px] ${index === 0 ? "text-primary-container" : "text-on-surface-variant"}`}>
+              {role.period}
             </div>
-          ))}
-        </div>
+            <h4 className={`mb-1 font-mono text-2xl font-semibold ${index === 0 ? "text-primary" : "text-on-surface"}`}>
+              {role.role}
+            </h4>
+            <div className="mb-4 font-mono text-[13px] text-on-surface-variant">@ {exp.company}</div>
+            {role.note && <p className="mb-4 font-mono text-[13px] italic text-on-surface-variant">{role.note}</p>}
+            <ul className={`list-disc max-w-3xl font-mono text-[15px] leading-relaxed ${index === 0 ? "text-on-surface" : "text-on-surface-variant"}`}>
+              {role.description.map((item, i) => (
+                <li key={i} className="flex gap-3 text-muted">
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </VisibleOnScroll>
   )

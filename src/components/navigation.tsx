@@ -1,26 +1,23 @@
-import Image from "next/image"
 import { MobileNavigation } from "./mobile-navigation"
 import { navigationLinks, personalInfo } from "@/lib/content"
 
 export function Navigation() {
   return (
     <header
-      className="fixed top-0 z-50 w-full transition-all duration-300 bg-background/90 backdrop-blur-md shadow-lg"
+      className="fixed top-0 z-50 w-full border-b border-outline-variant bg-background/80 backdrop-blur-md transition-all duration-200"
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12 lg:px-24">
-        <a href="#" className="text-xl font-bold text-accent transition-opacity hover:opacity-80">
-          <Image src="/images/logo.svg" alt={`${personalInfo.name} Logo`} width={30} height={30} preload />
+      <nav className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 md:px-10">
+        <a href="#" className="font-mono text-2xl font-bold text-primary transition-opacity hover:opacity-80" aria-label={`${personalInfo.name} home`}>
+          AKHIL_K.
         </a>
 
-        {/* Desktop Navigation */}
         <ul className="hidden items-center gap-8 md:flex">
-          {navigationLinks.map((link, index) => (
+          {navigationLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="group flex items-center gap-1 text-sm text-muted transition-colors hover:text-accent"
+                className="font-mono text-[13px] uppercase text-on-surface-variant transition-colors hover:text-primary"
               >
-                <span className="font-mono text-xs text-accent">0{index + 1}.</span>
                 {link.name}
               </a>
             </li>
@@ -28,7 +25,7 @@ export function Navigation() {
           <li>
             <a
               href="/resume.pdf"
-              className="rounded border border-accent px-4 py-2 text-sm text-accent transition-all hover:bg-accent/10"
+              className="cyber-btn px-4 py-2 font-mono text-[13px] uppercase"
             >
               Resume
             </a>

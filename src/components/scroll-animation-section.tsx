@@ -14,7 +14,7 @@ interface ScrollAnimationSectionProps {
     className?: string
     threshold?: number
     as?: ElementType
-    [key: string]: any
+    [key: string]: unknown
 }
 
 export function ScrollAnimationSection({

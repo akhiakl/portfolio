@@ -35,26 +35,26 @@ export const MobileNavigation = ({ navLinks }: MobileNavigationProps) => {
         <>
             {/* Mobile Menu Button */}
             <button
-                className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+                className="cyber-btn relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle menu"
                 aria-expanded={mobileMenuOpen}
             >
                 <span
                     className={cn(
-                        "h-0.5 w-6 bg-accent transition-all duration-300",
+                        "h-0.5 w-6 bg-primary-container transition-all duration-300",
                         mobileMenuOpen && "translate-y-2 rotate-45",
                     )}
                 />
                 <span
                     className={cn(
-                        "h-0.5 w-6 bg-accent transition-all duration-300",
+                        "h-0.5 w-6 bg-primary-container transition-all duration-300",
                         mobileMenuOpen && "opacity-0",
                     )}
                 />
                 <span
                     className={cn(
-                        "h-0.5 w-6 bg-accent transition-all duration-300",
+                        "h-0.5 w-6 bg-primary-container transition-all duration-300",
                         mobileMenuOpen && "-translate-y-2 -rotate-45",
                     )}
                 />
@@ -62,19 +62,18 @@ export const MobileNavigation = ({ navLinks }: MobileNavigationProps) => {
 
             <div
                 className={cn(
-                    "fixed inset-0 top-0 left-0 h-screen w-screen flex items-center justify-center bg-card transition-all duration-300 md:hidden",
+                    "fixed inset-0 left-0 top-0 flex h-screen w-screen items-center justify-center bg-surface-container-low transition-all duration-300 md:hidden",
                     mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none",
                 )}
             >
                 <ul className="flex flex-col items-center gap-8">
-                    {navLinks.map((link, index) => (
+                    {navLinks.map((link) => (
                         <li key={link.name}>
                             <a
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="flex flex-col items-center gap-1 text-lg text-foreground transition-colors hover:text-accent"
+                                className="font-mono text-lg uppercase text-on-surface-variant transition-colors hover:text-primary"
                             >
-                                <span className="font-mono text-sm text-accent">0{index + 1}.</span>
                                 {link.name}
                             </a>
                         </li>
@@ -83,7 +82,7 @@ export const MobileNavigation = ({ navLinks }: MobileNavigationProps) => {
                         <a
                             href="/resume.pdf"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="mt-4 rounded border border-accent px-6 py-3 text-accent transition-all hover:bg-accent/10"
+                            className="cyber-btn mt-4 px-6 py-3 font-mono uppercase"
                         >
                             Resume
                         </a>

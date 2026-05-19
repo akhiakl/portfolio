@@ -1,17 +1,14 @@
 import { projects, sectionTitles } from "@/lib/content"
-import { cn } from "@/lib/utils"
-import { ExternalLink } from "lucide-react"
-import Image from "next/image"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
 
 export function ProjectsSection() {
   return (
-    <ScrollAnimationSection as="section" id="projects" className="py-24">
-      <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-        <span className="font-mono text-xl text-accent">{sectionTitles.projects.number}.</span>
-        {sectionTitles.projects.title}
-        <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
-      </h2>      <div className="space-y-24">
+    <ScrollAnimationSection as="section" id="projects" className="section-shell">
+      <h2 className="section-title">&gt; SELECTED_WORKS</h2>
+      <h3 className="sr-only">{sectionTitles.projects.title}</h3>
+      <div className="section-rule" />
+      <p className="mb-8 font-mono text-[13px] text-on-surface-variant">{"// EXECUTE_PROJECT_QUERY"}</p>
+      <div className="space-y-6">
         {projects.map((project, index) => (
           <ProjectCard key={project.title} project={project} index={index} />
         ))}
@@ -27,85 +24,35 @@ function ProjectCard({
   project: (typeof projects)[0]
   index: number
 }) {
-  const isEven = index % 2 === 0
+  const ctaHref = project.github && project.github !== "#" ? project.github : project.live
+  const isExternal = ctaHref.startsWith("http")
 
   return (
     <AnimatedElement
       delay={index * 200}
-      className="group relative grid gap-4 md:grid-cols-12 md:items-center"
+      className="group flex flex-col items-start justify-between gap-4 bg-surface-container-low p-6 transition-colors duration-300 hover:bg-surface-container md:flex-row md:items-center"
     >
-      {/* Project Image */}
-      <div
-        className={cn(
-          "relative overflow-hidden rounded bg-card md:col-span-7 md:row-start-1",
-          isEven ? "md:col-start-1" : "md:col-start-6",
-        )}
-      >
-        <a href={project.live} className="block">
-          <div className="aspect-video overflow-hidden">
-            {project.image && <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              sizes="(max-width: 768px) 100vw, 700px"
-              className="h-full w-full object-cover opacity-60 transition-all duration-300 group-hover:opacity-80 group-hover:scale-105"
-            />}
-          </div>
-          <div className="absolute inset-0 bg-accent/10 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0" />
-        </a>
-      </div>
-
-      {/* Project Info */}
-      <div
-        className={cn(
-          "relative z-10 md:col-span-6 md:row-start-1",
-          isEven ? "md:col-start-6 md:text-right" : "md:col-start-1 md:text-left",
-        )}
-      >
-        <p className="mb-1 font-mono text-sm text-accent">Featured Project</p>
-        <h3 className="mb-4 text-2xl font-bold text-foreground transition-colors group-hover:text-accent">
-          <a href={project.live}>{project.title}</a>
+      <div>
+        <h3 className="mb-2 font-mono text-2xl font-semibold text-primary transition-colors group-hover:text-primary-container">
+          {project.title}
         </h3>
-
-        <div className="mb-4 rounded bg-card p-6 shadow-xl">
-          <p className="text-muted leading-relaxed">{project.description}</p>
-          <ul className={cn("mt-4 space-y-1", isEven ? "md:text-right" : "md:text-left")}>
-            {project.responsibilities.map((resp) => (
-              <li
-                key={resp}
-                className="flex items-center gap-2 text-sm text-muted"
-                style={{
-                  justifyContent: isEven ? "flex-end" : "flex-start",
-                }}
-              >
-                <span className="text-accent">▹</span>
-                {resp}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <ul
-          className={cn(
-            "mb-4 flex flex-wrap gap-3 font-mono text-sm text-muted",
-            isEven ? "md:justify-end" : "md:justify-start",
-          )}
-        >
+        <p className="mb-4 max-w-3xl font-mono text-[15px] leading-relaxed text-on-surface-variant">{project.description}</p>
+        <ul className="flex flex-wrap gap-2 font-mono text-[13px] text-primary-container">
           {project.tech.map((tech) => (
-            <li key={tech}>{tech}</li>
+            <li key={tech} className="border-primary-container/30 bg-primary-container/5 px-2 py-1">
+              {tech}
+            </li>
           ))}
         </ul>
-
-        <div className={cn("flex gap-4", isEven ? "md:justify-end" : "md:justify-start")}>
-          <a
-            href={project.live}
-            className="text-foreground transition-colors hover:text-accent"
-            aria-label="Live Demo"
-          >
-            <ExternalLink className="h-5 w-5" />
-          </a>
-        </div>
       </div>
+      <a
+        href={ctaHref}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className="cyber-btn self-start px-4 py-2 font-mono text-[13px] uppercase opacity-100 transition-opacity md:self-auto md:opacity-0 md:group-hover:opacity-100"
+      >
+        {project.github && project.github !== "#" ? "VIEW_SOURCE" : "VIEW_LIVE"}
+      </a>
     </AnimatedElement>
   )
 }
