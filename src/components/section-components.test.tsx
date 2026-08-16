@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react"
 import { describe, expect, it } from "vitest"
 import { AboutSection } from "./about-section"
 import { ContactSection } from "./contact-section"
+import { CurrentlyBuildingSection } from "./currently-building-section"
 import { ExperienceSection } from "./experience-section"
 import { Footer } from "./footer"
 import { HeroSection } from "./hero-section"
@@ -35,16 +36,19 @@ describe("main site components", () => {
         expect(screen.getByText("Skills & Technologies")).toBeTruthy()
     })
 
-    it("renders projects and experience with tab switching", () => {
+    it("renders projects, currently building, and experience with tab switching", () => {
         render(
             <>
                 <ProjectsSection />
+                <CurrentlyBuildingSection />
                 <ExperienceSection />
             </>,
         )
 
         expect(screen.getByText("Featured Projects")).toBeTruthy()
         expect(screen.getByText("SvgIn-React Library")).toBeTruthy()
+        expect(screen.getByText("Currently Building")).toBeTruthy()
+        expect(screen.getByText("Grand Tour")).toBeTruthy()
         expect(screen.getAllByText("Experience").length).toBeGreaterThan(0)
 
         const corraTab = screen.getByRole("button", { name: "Corra" })

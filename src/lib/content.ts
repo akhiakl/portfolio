@@ -164,7 +164,8 @@ export const skillCategories = [
             "PostgreSQL",
             "MySQL",
             "MongoDB",
-            "DocumentDB"
+            "DocumentDB",
+            "Redis"
         ],
     },
     {
@@ -175,7 +176,9 @@ export const skillCategories = [
             "CI/CD Pipelines",
             "Webpack",
             "Turborepo",
-            "Git"
+            "Git",
+            "Vitest",
+            "Playwright"
         ],
     },
     {
@@ -337,31 +340,18 @@ export const featuredProjects = [
 export const projects = [
     {
         title: "SvgIn-React Library",
-        description: "An open-source library for seamlessly importing and optimizing SVG icons in React applications. Supports tree-shaking and TypeScript out of the box.",
+        description: "An open-source React library for securely fetching and inlining untrusted SVGs as components, working in client, server, and RSC contexts. SVG markup is sanitized with DOMPurify by default, dynamically imported so it never ships in the bundle unless it's actually used. Separate client, server, and core entry points keep the package tree-shakeable, and the whole API is TypeScript-first.",
         responsibilities: [
-            "Created npm package architecture",
-            "Built CLI tooling for SVG processing",
-            "Wrote comprehensive documentation",
-            "Implemented tree-shaking support"
+            "Built a security-first sanitization layer using DOMPurify",
+            "Split the package into client, server, and core entry points for tree-shaking",
+            "Designed a TypeScript-first API with full type coverage",
+            "Added in-memory caching and a preload API to cut redundant fetches"
         ],
-        tech: ["React", "TypeScript", "Rollup", "Node.js", "CLI"],
+        tech: ["React", "TypeScript", "DOMPurify", "tsup", "Node.js"],
         image: "/images/npm.webp",
         live: "https://www.npmjs.com/package/svgin-react",
         github: "https://github.com/akhiakl/svgin-react",
         featured: true,
-    },
-    {
-        title: "Badan",
-        description: "Badan is a full service landscape architectural design specialist and construction firm",
-        responsibilities: [
-            "Developed corporate website",
-            "Created project portfolio gallery",
-            "Integrated WordPress CMS",
-        ],
-        tech: ["React", "WordPress", "HTML5", "CSS3", "Bootstrap"],
-        live: "https://badan.com.sa",
-        featured: true,
-        image: "/images/badan.webp",
     },
     {
         title: "The Common Closets",
@@ -377,31 +367,48 @@ export const projects = [
         image: "/images/commonclosets.webp",
     },
     {
-        title: "Beaudesk",
-        description: "Beaudesk is a Fully Integrated System to transform your Appointment system.",
+        title: "Badan",
+        description: "Badan is a full service landscape architectural design specialist and construction firm",
         responsibilities: [
-            "Built appointment booking system",
-            "Designed responsive interface",
-            "Implemented calendar integration",
+            "Developed corporate website",
+            "Created project portfolio gallery",
+            "Integrated WordPress CMS",
         ],
-        tech: ["HTML5", "CSS3", "Bootstrap"],
-        github: "#",
-        live: "https://www.beaudesk.com",
+        tech: ["React", "WordPress", "HTML5", "CSS3", "Bootstrap"],
+        live: "https://badan.com.sa",
         featured: true,
-        image: "/images/beaudesk.webp",
+        image: "/images/badan.webp",
+    },
+]
+
+// ============================================================================
+// CURRENTLY BUILDING SECTION
+// ============================================================================
+
+export const currentlyBuilding = [
+    {
+        title: "Grand Tour",
+        description: "A Next.js travel app that turns a trip idea into an AI-generated route on an interactive Leaflet map. Guests get no database at all, plans live in localStorage, and shared trips are stored as TTL-based links in Upstash Redis. The free tier limit is enforced at three separate layers so it can't be bypassed from the client.",
+        tech: ["Next.js", "TypeScript", "Leaflet", "Upstash Redis", "Tailwind CSS"],
+        status: "In Progress",
     },
     {
-        title: "UMR",
-        description: "United Machinery Resources Co. (UMR Company), serve the requirement of manufacturer of spare parts of all types of heavy equipment.",
-        responsibilities: [
-            "Created corporate website",
-            "Built product catalog system",
-            "Optimized for mobile devices",
-        ],
-        tech: ["HTML5", "CSS3", "Bootstrap"],
-        live: "https://www.umrcompany.com",
-        featured: true,
-        image: "/images/umr.webp",
+        title: "StoreBridge",
+        description: "A Shopify embedded app for bulk migrating and syncing store data across multiple Shopify stores. Built on Shopify's Bulk Operations API, with Redis as the sole persistence layer instead of a traditional database.",
+        tech: ["Shopify App", "React", "Redis", "Bulk Operations API"],
+        status: "In Progress",
+    },
+    {
+        title: "localVend",
+        description: "A local-seller e-commerce platform for plants, produce, and poultry vendors. Next.js on the frontend, a NestJS, Prisma, GraphQL, and Postgres backend, plus a separate admin dashboard secured with dual JWT auth for regular users and admin users.",
+        tech: ["Next.js", "NestJS", "Prisma", "GraphQL", "PostgreSQL"],
+        status: "In Progress",
+    },
+    {
+        title: "UK Visa Sponsor Search",
+        description: "A Next.js app for searching the UK's Skilled Worker sponsor license list, with Cognito-backed hosted login, Algolia-powered search and filtering, and an admin flow for uploading and deduplicating sponsor data from CSV.",
+        tech: ["Next.js", "Cognito", "Algolia", "Redis"],
+        status: "In Progress",
     }
 ]
 
@@ -410,7 +417,7 @@ export const projects = [
 // ============================================================================
 
 export const contactContent = {
-    sectionNumber: "05",
+    sectionNumber: "06",
     preTitle: "What's Next?",
     title: "Get In Touch",
 
@@ -463,12 +470,16 @@ export const sectionTitles = {
         number: "03",
         title: "Featured Projects"
     },
-    experience: {
+    currentlyBuilding: {
         number: "04",
+        title: "Currently Building"
+    },
+    experience: {
+        number: "05",
         title: "Experience"
     },
     contact: {
-        number: "05",
+        number: "06",
         title: "Get In Touch"
     }
 }
@@ -560,6 +571,7 @@ export type AboutContent = typeof aboutContent
 export type SkillCategory = typeof skillCategories[0]
 export type FeaturedProject = typeof featuredProjects[0]
 export type Project = typeof projects[0]
+export type CurrentlyBuildingProject = typeof currentlyBuilding[0]
 export type ContactContent = typeof contactContent
 export type SectionTitles = typeof sectionTitles
 export type NavigationLinks = typeof navigationLinks

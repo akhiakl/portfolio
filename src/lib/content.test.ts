@@ -3,6 +3,7 @@ import {
     achievements,
     aboutContent,
     contactContent,
+    currentlyBuilding,
     education,
     experiences,
     featuredProjects,
@@ -36,6 +37,7 @@ describe("content exports", () => {
         expect(experiences.length).toBeGreaterThan(0)
         expect(featuredProjects.length).toBeGreaterThan(0)
         expect(projects.length).toBeGreaterThan(0)
+        expect(currentlyBuilding.length).toBeGreaterThan(0)
         expect(achievements.length).toBe(4)
         expect(education.institution).toContain("Cochin")
         expect(languages[0].language).toBe("English")
