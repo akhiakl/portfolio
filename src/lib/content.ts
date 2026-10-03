@@ -10,9 +10,9 @@
 
 export const personalInfo = {
     name: "Akhil K",
-    title: "Lead Frontend Engineer | Frontend Architecture | Full Stack",
-    tagline: "I build scalable web platforms for enterprise and commerce",
-    description: "Senior frontend engineer with 8+ years building scalable web platforms for enterprise and commerce products. Deep expertise in React, TypeScript, and Node.js, with a strong focus on frontend architecture, design systems, and API integration patterns. Experienced leading teams, defining engineering standards, and designing systems that scale across distributed teams.",
+    title: "Lead Frontend Engineer | Frontend Architecture",
+    tagline: "Architecting scalable web platforms, design systems, and distributed commerce architectures.",
+    description: "Lead Frontend Engineer with 8+ years of experience designing multi-team web platforms, headless commerce solutions, and resilient frontend systems. Based in India, collaborating regularly with distributed teams across European and global time zones (GMT / CET overlap).",
 
     // Contact information  
     contact: {
@@ -26,10 +26,11 @@ export const personalInfo = {
     // SEO Meta
     seo: {
         title: "Akhil K | Lead Frontend Engineer | Frontend Architecture",
-        description: "Senior frontend engineer with 8+ years building scalable web platforms for enterprise and commerce products. Deep expertise in React, TypeScript, and Node.js.",
+        description: "Lead Frontend Engineer with 8+ years designing multi-team web platforms, design systems, and headless commerce architectures with React, Next.js, TypeScript, and Node.js. Working with distributed teams across European and global time zones.",
         keywords: [
             "Akhil K",
             "Lead Frontend Engineer",
+            "Frontend Architect",
             "Frontend Architecture",
             "React Developer",
             "Next.js Developer",
@@ -39,7 +40,9 @@ export const personalInfo = {
             "Shopify Developer",
             "Commerce Platforms",
             "Design Systems",
-            "Kerala Developer",
+            "Headless Commerce",
+            "Accessibility",
+            "Remote Frontend Engineer",
             "Frontend Portfolio",
             "System Design"
         ],
@@ -54,14 +57,15 @@ export const personalInfo = {
     hero: {
         greeting: "Hi, my name is",
         name: "Akhil K.",
-        tagline: "I build scalable web platforms for enterprise and commerce",
-        description: "Senior frontend engineer with 8+ years building scalable web platforms for enterprise and commerce products. Deep expertise in React, TypeScript, and Node.js, with a strong focus on frontend architecture, design systems, and API integration patterns.",
+        role: "Lead Frontend Engineer | Frontend Architecture",
+        tagline: "Architecting scalable web platforms, design systems, and distributed commerce architectures.",
+        description: "Lead Frontend Engineer with 8+ years of experience designing multi-team web platforms, headless commerce solutions, and resilient frontend systems. Based in India, collaborating regularly with distributed teams across European and global time zones (GMT / CET overlap).",
         primaryCta: {
-            text: "View Work",
+            text: "View Architecture & Work",
             href: "#projects"
         },
         secondaryCta: {
-            text: "Contact Me",
+            text: "Get in Touch",
             href: "#contact"
         },
         image: {
@@ -81,38 +85,28 @@ export const aboutContent = {
 
     paragraphs: [
         {
-            text: "I'm a ",
-            highlight: "Senior Frontend Engineer",
-            continuation: " with 8+ years building scalable web platforms for enterprise and commerce products. I specialize in React, TypeScript, and Node.js, with a strong focus on frontend architecture, design systems, and API integration patterns."
+            text: "I am a ",
+            highlight: "Lead Frontend Engineer",
+            continuation: " specializing in frontend architecture, design systems, and enterprise web platforms using React, Next.js, TypeScript, and Node.js."
         },
         {
-            text: "I'm experienced in leading teams, defining engineering standards, and designing systems that ",
-            highlight: "scale across distributed teams",
-            continuation: ". Whether it's architecting a multi-team commerce platform, building middleware layers, or establishing shared component libraries, I focus on solutions that balance speed with long-term maintainability."
-        },
-        {
-            text: "My key focus areas include ",
-            highlight: "frontend architecture",
-            continuation: ", commerce platforms (Shopify, Magento), design systems, and building scalable web applications. I'm comfortable working across the full stack and making architectural decisions that impact entire engineering organizations."
+            text: "Over the past 8+ years, I have led technical architecture for multi-team platforms, established shared component ecosystems, and designed ",
+            highlight: "Backend-for-Frontend (BFF) layers",
+            continuation: " that bridge complex microservices. My work focuses on building sustainable frontend foundations, prioritizing performance, strict accessibility (WCAG 2.1 compliance), automated testing, and developer velocity across distributed engineering teams."
         }
     ],
 
     technologies: {
-        title: "Core Technologies:",
+        title: "Focus Areas",
         items: [
-            "React & Next.js",
-            "TypeScript & JavaScript (ES6+)",
-            "Node.js & Express",
-            "Shopify & Commerce Platforms",
-            "Design Systems & Component Architecture",
-            "GraphQL & REST APIs"
+            "Frontend Architecture",
+            "Design Systems",
+            "BFF & API Design",
+            "Headless Commerce",
+            "Accessibility (WCAG 2.1)",
+            "Automated Testing"
         ]
     },
-
-    image: {
-        src: "/images/akhil-working.webp",
-        alt: "Akhil K working on code"
-    }
 }
 
 // ============================================================================
@@ -121,76 +115,67 @@ export const aboutContent = {
 
 export const skillCategories = [
     {
-        title: "Frontend",
+        title: "Architecture & System Design",
         skills: [
-            "React",
-            "Next.js",
-            "TypeScript",
-            "JavaScript (ES6+)",
-            "Angular",
-            "SSR/ISR",
-            "Component Architecture",
+            "Frontend Architecture",
+            "Product Architecture",
+            "System Design",
+            "BFF Patterns",
+            "Microfrontends",
+            "API Design (REST/GraphQL)",
             "Design Systems",
-            "Redux",
-            "MobX",
-            "Context API"
+            "Multi-brand Theming"
         ],
     },
     {
-        title: "Backend",
+        title: "Frontend Core",
+        skills: [
+            "React",
+            "Next.js (App Router, SSR/ISR)",
+            "TypeScript",
+            "JavaScript (ES6+)",
+            "State Management (Redux, MobX, Context)"
+        ],
+    },
+    {
+        title: "Backend & Integrations",
         skills: [
             "Node.js",
-            "Express",
             "NestJS",
-            "BFF Architecture",
-            "Middleware Design",
+            "Express",
+            "GraphQL",
             "REST APIs",
-            "GraphQL"
+            "Webhooks",
+            "PostgreSQL",
+            "AWS (SQS, S3, EC2)",
+            "Redis"
         ],
     },
     {
         title: "Commerce & CMS",
         skills: [
-            "Shopify (Storefront & Admin APIs)",
-            "Magento",
-            "Vue Storefront",
+            "Shopify (Storefront & Admin APIs, Custom Apps)",
+            "Adobe Commerce (Magento)",
+            "Salesforce Commerce",
             "Contentful",
-            "Builder.io"
+            "Builder.io",
+            "Algolia",
+            "Adyen",
+            "Stripe"
         ],
     },
     {
-        title: "Databases",
+        title: "Quality & Reliability",
         skills: [
-            "PostgreSQL",
-            "MySQL",
-            "MongoDB",
-            "DocumentDB",
-            "Redis"
-        ],
-    },
-    {
-        title: "Tools & Infrastructure",
-        skills: [
-            "Docker",
-            "GitHub Actions",
-            "CI/CD Pipelines",
-            "Webpack",
-            "Turborepo",
-            "Git",
+            "Playwright (E2E)",
             "Vitest",
-            "Playwright"
-        ],
-    },
-    {
-        title: "Practices",
-        skills: [
-            "System Design",
-            "Frontend Performance",
-            "Accessibility (WCAG 2.1)",
-            "Code Review",
-            "Mentoring",
-            "API Design",
-            "Service Integration Patterns"
+            "Jest",
+            "Testing Library",
+            "axe-core",
+            "WCAG 2.1 Accessibility Compliance",
+            "CI/CD (GitHub Actions)",
+            "Lint-staged",
+            "Husky"
         ],
     },
 ]
@@ -220,13 +205,11 @@ export const experiences: Experience[] = [
                 location: "Remote, India",
                 note: "Joined through Corra, acquired by Publicis Sapient in June 2023",
                 description: [
-                    "Designed the frontend architecture for a multi-team commerce platform built with React, Next.js, and TypeScript — supporting multiple storefronts and used across 5+ parallel engineering teams.",
-                    "Built a microservice-based middleware layer in Node.js that sits between Shopify APIs and the frontend, decoupling platform logic and enabling teams to evolve independently.",
-                    "Defined shared component library and design system standards that reduced UI duplication across teams and accelerated feature delivery across multiple storefront applications.",
-                    "Defined consistent integration patterns for REST and GraphQL APIs, simplifying data flow and improving maintainability across services.",
-                    "Led architecture reviews and set engineering standards that improved code quality and long-term platform stability.",
-                    "Mentored 4+ frontend engineers and led architectural reviews across multiple teams, raising the overall quality of frontend engineering practices.",
-                    "Collaborated with backend, DevOps, and product teams to align system boundaries, API contracts, and deployment workflows."
+                    "Lead frontend architecture for a multi-storefront headless commerce ecosystem for a Fortune 50 global automotive enterprise, supporting 5+ parallel engineering teams across React, Next.js, TypeScript, and Shopify Storefront APIs.",
+                    "Architected a custom Node.js middleware layer orchestrating catalog, pricing, and inventory synchronization across distributed microservices and AWS SQS event streams.",
+                    "Spearheaded enterprise commerce modernization from legacy HCL Commerce to Shopify for a leading national telecommunications provider in the Middle East.",
+                    "Formulated shared component library and design system governance, cutting UI duplication across independent team deployments.",
+                    "Conduct architecture RFCs, set automated quality and accessibility benchmarks, and mentor 4+ frontend engineers."
                 ],
             }
         ]
@@ -239,11 +222,9 @@ export const experiences: Experience[] = [
                 period: "Jan 2022 — May 2023",
                 location: "Remote, India",
                 description: [
-                    "Led frontend development for enterprise commerce platforms serving multiple brands across a shared React codebase.",
-                    "Designed a BFF (Backend-for-Frontend) integration layer that simplified communication between the frontend and legacy backend systems.",
-                    "Built a multi-brand theming architecture that allowed independent storefronts to share core platform logic without code duplication.",
-                    "Defined API contracts and deployment workflows in collaboration with backend and DevOps teams.",
-                    "Contributed to architectural decisions for modernizing legacy frontend systems, balancing delivery timelines with sustainable architecture."
+                    "Led frontend architecture across multi-brand enterprise commerce engagements.",
+                    "Designed a Backend-for-Frontend (BFF) architecture and multi-tenant theming system for a global luxury watch brand group, integrating Salesforce Commerce, Algolia Search, Adyen, and Builder.io.",
+                    "Established API contract standards and CI/CD deployment workflows in close coordination with backend and DevOps teams."
                 ],
             }
         ]
@@ -336,48 +317,47 @@ export const featuredProjects = [
     }
 ]
 
-// Additional projects (older work)
-export const projects = [
+export type ShowcaseProject = {
+    title: string;
+    role: string;
+    description: string;
+    responsibilities: string[];
+    tech: string[];
+    image?: string;
+    live?: string;
+    github?: string;
+    flagship?: boolean;
+}
+
+export const projects: ShowcaseProject[] = [
     {
-        title: "SvgIn-React Library",
-        description: "An open-source React library for securely fetching and inlining untrusted SVGs as components, working in client, server, and RSC contexts. SVG markup is sanitized with DOMPurify by default, dynamically imported so it never ships in the bundle unless it's actually used. Separate client, server, and core entry points keep the package tree-shakeable, and the whole API is TypeScript-first.",
+        title: "Tickd",
+        role: "Creator & Full Stack Engineer",
+        description: "A shared daily challenge platform. Conceived, architected, and built a dedicated full-stack web application to solve coordination friction in daily peer challenges. Features group dynamics, real-time checklist tracking, standings, and optimistic updates.",
         responsibilities: [
-            "Built a security-first sanitization layer using DOMPurify",
-            "Split the package into client, server, and core entry points for tree-shaking",
-            "Designed a TypeScript-first API with full type coverage",
-            "Added in-memory caching and a preload API to cut redundant fetches"
+            "Implemented secure server actions, authenticated route handlers, and Drizzle ORM data pipelines with PostgreSQL.",
+            "Built automated quality gates: Vitest unit/integration tests, cross-browser Playwright E2E tests, and WCAG accessibility audits via axe-core.",
+            "Configured strict GitOps pipelines with GitHub Actions, Commitlint, and Husky."
         ],
-        tech: ["React", "TypeScript", "DOMPurify", "tsup", "Node.js"],
+        tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Drizzle ORM", "Playwright", "Vitest", "axe-core", "Tailwind CSS"],
+        image: "/images/tickd.webp",
+        live: "https://tickd.akhiakl.in",
+        github: "https://github.com/akhiakl/tickd",
+        flagship: true,
+    },
+    {
+        title: "SvgIn-React",
+        role: "Creator & Maintainer",
+        description: "An open-source React/TypeScript library built to securely fetch, sanitize, and inline untrusted SVGs across client, server, and React Server Components (RSC).",
+        responsibilities: [
+            "Designed a lazy-loaded sanitization pipeline leveraging DOMPurify to eliminate XSS vectors.",
+            "Architected modular entry points (client, server, core) ensuring tree-shakability and minimal bundle overhead.",
+            "Engineered built-in memory caching and preloading APIs to eliminate redundant network requests."
+        ],
+        tech: ["React", "TypeScript", "Node.js", "DOMPurify", "tsup", "npm"],
         image: "/images/npm.webp",
         live: "https://www.npmjs.com/package/svgin-react",
         github: "https://github.com/akhiakl/svgin-react",
-        featured: true,
-    },
-    {
-        title: "The Common Closets",
-        description: "The common closets (now Gemme collective) is a cloth/apparel rental platform based in sweden",
-        responsibilities: [
-            "Built responsive rental platform",
-            "Implemented user authentication",
-            "Integrated payment systems",
-        ],
-        tech: ["Angular", "TypeScript", "HTML5", "Sass", "Bootstrap"],
-        live: "https://gemmecollective.com",
-        featured: true,
-        image: "/images/commonclosets.webp",
-    },
-    {
-        title: "Badan",
-        description: "Badan is a full service landscape architectural design specialist and construction firm",
-        responsibilities: [
-            "Developed corporate website",
-            "Created project portfolio gallery",
-            "Integrated WordPress CMS",
-        ],
-        tech: ["React", "WordPress", "HTML5", "CSS3", "Bootstrap"],
-        live: "https://badan.com.sa",
-        featured: true,
-        image: "/images/badan.webp",
     },
 ]
 
@@ -403,12 +383,6 @@ export const currentlyBuilding = [
         description: "A local-seller e-commerce platform for plants, produce, and poultry vendors. Next.js on the frontend, a NestJS, Prisma, GraphQL, and Postgres backend, plus a separate admin dashboard secured with dual JWT auth for regular users and admin users.",
         tech: ["Next.js", "NestJS", "Prisma", "GraphQL", "PostgreSQL"],
         status: "In Progress",
-    },
-    {
-        title: "UK Visa Sponsor Search",
-        description: "A Next.js app for searching the UK's Skilled Worker sponsor license list, with Cognito-backed hosted login, Algolia-powered search and filtering, and an admin flow for uploading and deduplicating sponsor data from CSV.",
-        tech: ["Next.js", "Cognito", "Algolia", "Redis"],
-        status: "In Progress",
     }
 ]
 
@@ -419,9 +393,9 @@ export const currentlyBuilding = [
 export const contactContent = {
     sectionNumber: "06",
     preTitle: "What's Next?",
-    title: "Get In Touch",
+    title: "Get in Touch",
 
-    description: "I'm currently open to new opportunities and interesting projects. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out.",
+    description: "I am always interested in discussing frontend architecture, design systems, and engineering leadership. Whether you'd like to talk through a technical challenge, collaborate on an initiative, or connect, feel free to drop a message.",
 
     primaryCta: {
         text: "Say Hello",
@@ -480,7 +454,7 @@ export const sectionTitles = {
     },
     contact: {
         number: "06",
-        title: "Get In Touch"
+        title: "Get in Touch"
     }
 }
 
@@ -570,7 +544,7 @@ export type PersonalInfo = typeof personalInfo
 export type AboutContent = typeof aboutContent
 export type SkillCategory = typeof skillCategories[0]
 export type FeaturedProject = typeof featuredProjects[0]
-export type Project = typeof projects[0]
+export type Project = ShowcaseProject
 export type CurrentlyBuildingProject = typeof currentlyBuilding[0]
 export type ContactContent = typeof contactContent
 export type SectionTitles = typeof sectionTitles

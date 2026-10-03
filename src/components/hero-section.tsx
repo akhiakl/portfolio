@@ -20,6 +20,10 @@ export function HeroSection() {
             {personalInfo.hero.name}
           </AnimatedElement>
 
+          <AnimatedElement as="p" delay={250} className="font-mono text-sm text-accent sm:text-base">
+            {personalInfo.hero.role}
+          </AnimatedElement>
+
           <AnimatedElement
             as="h2"
             delay={300}

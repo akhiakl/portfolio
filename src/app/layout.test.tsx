@@ -10,7 +10,7 @@ describe("app/layout", () => {
     it("exports metadata based on content", async () => {
         const mod = await import("./layout")
         expect(mod.metadata.title).toContain("Akhil K")
-        expect(mod.metadata.description).toContain("Senior frontend engineer")
+        expect(mod.metadata.description).toContain("Lead Frontend Engineer")
         expect(mod.metadata.openGraph).toBeTruthy()
     })
 

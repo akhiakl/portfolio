@@ -1,4 +1,3 @@
-import { GameLoader } from "./game-loader"
 import { ScrollAnimationSection } from "./scroll-animation-section"
 import { aboutContent } from "@/lib/content"
 
@@ -25,8 +24,16 @@ export function AboutSection() {
 
         <div className="relative mx-auto w-full max-w-xs">
           <div className="group relative">
-            <div className="relative z-10 overflow-hidden rounded bg-card border border-border aspect-square">
-              <GameLoader />
+            <div className="relative z-10 rounded border border-border bg-card p-6">
+              <h3 className="mb-4 font-mono text-sm text-accent">{aboutContent.technologies.title}</h3>
+              <ul className="space-y-2">
+                {aboutContent.technologies.items.map((item) => (
+                  <li key={item} className="flex gap-2 text-sm text-muted">
+                    <span className="text-accent">▹</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="absolute -bottom-3 -right-3 z-0 h-full w-full rounded border-2 border-accent transition-all duration-300 group-hover:-bottom-4 group-hover:-right-4" />
           </div>

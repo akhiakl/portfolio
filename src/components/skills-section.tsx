@@ -10,7 +10,7 @@ export function SkillsSection() {
         <span className="ml-4 h-px flex-1 max-w-xs bg-border" />
       </h2>
 
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2">
         {skillCategories.map((category, categoryIndex) => (
           <AnimatedElement
             key={category.title}
