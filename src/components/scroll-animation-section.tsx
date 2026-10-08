@@ -49,13 +49,15 @@ interface AnimatedElementProps {
     className?: string
     delay?: number
     as?: ElementType
+    [key: `data-${string}`]: string | undefined
 }
 
 export function AnimatedElement({
     children,
     className,
     delay = 0,
-    as: Component = 'div'
+    as: Component = 'div',
+    ...rest
 }: AnimatedElementProps) {
     const isVisible = useScrollVisibility()
 
@@ -67,6 +69,7 @@ export function AnimatedElement({
                 className
             )}
             style={{ transitionDelay: `${delay}ms` }}
+            {...rest}
         >
             {children}
         </Component>

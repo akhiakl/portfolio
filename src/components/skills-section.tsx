@@ -1,7 +1,8 @@
-import { skillCategories, sectionTitles } from "@/lib/content"
+import { skillCategories as defaultSkills, sectionTitles, type SkillCategory } from "@/lib/content"
+import { inspectorProps } from "@/lib/cms/inspector"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
 
-export function SkillsSection() {
+export function SkillsSection({ skillCategories = defaultSkills }: { skillCategories?: SkillCategory[] }) {
   return (
     <ScrollAnimationSection as="section" id="skills" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
@@ -16,8 +17,8 @@ export function SkillsSection() {
             key={category.title}
             delay={categoryIndex * 150}
           >
-            <h3 className="mb-4 font-mono text-lg text-accent">{category.title}</h3>
-            <div className="flex flex-wrap gap-2">
+            <h3 className="mb-4 font-mono text-lg text-accent" {...inspectorProps(category.entryId, "title")}>{category.title}</h3>
+            <div className="flex flex-wrap gap-2" {...inspectorProps(category.entryId, "skills")}>
               {category.skills.map((skill) => (
                 <span
                   key={skill}

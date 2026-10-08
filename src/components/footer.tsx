@@ -1,13 +1,13 @@
 import { Github, Linkedin, Mail } from "lucide-react"
 import { footerContent } from "@/lib/content"
 
-export function Footer() {
+export function Footer({ socialLinks = footerContent.socialLinks }: { socialLinks?: { name: string; href: string; icon: string; label: string }[] }) {
   return (
     <footer className="py-8">
       <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-24">
         {/* Social Links - Mobile Only */}
         <div className="mb-6 flex justify-center gap-6 md:hidden">
-          {footerContent.socialLinks.map((social) => {
+          {socialLinks.map((social) => {
             const IconComponent = social.icon === 'Mail' ? Mail : social.icon === 'Linkedin' ? Linkedin : Github
 
             return (

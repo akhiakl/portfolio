@@ -1,10 +1,11 @@
-import { projects, sectionTitles, type ShowcaseProject } from "@/lib/content"
+import { projects as defaultProjects, sectionTitles, type ShowcaseProject } from "@/lib/content"
+import { inspectorProps } from "@/lib/cms/inspector"
 import { cn } from "@/lib/utils"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
 
-export function ProjectsSection() {
+export function ProjectsSection({ projects = defaultProjects }: { projects?: ShowcaseProject[] }) {
   return (
     <ScrollAnimationSection as="section" id="projects" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
@@ -65,14 +66,14 @@ function ProjectCard({
         <p className="mb-1 font-mono text-sm text-accent">
           {project.flagship ? "Flagship Project" : "Featured Project"}
         </p>
-        <h3 className="mb-1 text-2xl font-bold text-foreground transition-colors group-hover:text-accent">
+        <h3 {...inspectorProps(project.entryId, "title")} className="mb-1 text-2xl font-bold text-foreground transition-colors group-hover:text-accent">
           <a href={project.live}>{project.title}</a>
         </h3>
         <p className="mb-4 font-mono text-xs text-muted">{project.role}</p>
 
         <div className="mb-4 rounded bg-card p-6 shadow-xl">
-          <p className="text-muted leading-relaxed">{project.description}</p>
-          <ul className={cn("mt-4 space-y-1", isEven ? "md:text-right" : "md:text-left")}>
+          <p className="text-muted leading-relaxed" {...inspectorProps(project.entryId, "description")}>{project.description}</p>
+          <ul {...inspectorProps(project.entryId, "responsibilities")} className={cn("mt-4 space-y-1", isEven ? "md:text-right" : "md:text-left")}>
             {project.responsibilities.map((resp) => (
               <li
                 key={resp}
@@ -89,6 +90,7 @@ function ProjectCard({
         </div>
 
         <ul
+          {...inspectorProps(project.entryId, "tech")}
           className={cn(
             "mb-4 flex flex-wrap gap-3 font-mono text-sm text-muted",
             isEven ? "md:justify-end" : "md:justify-start",

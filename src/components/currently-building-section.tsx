@@ -1,7 +1,8 @@
-import { currentlyBuilding, sectionTitles } from "@/lib/content"
+import { currentlyBuilding as defaultProjects, sectionTitles, type CurrentlyBuildingProject } from "@/lib/content"
+import { inspectorProps } from "@/lib/cms/inspector"
 import { ScrollAnimationSection, AnimatedElement } from "./scroll-animation-section"
 
-export function CurrentlyBuildingSection() {
+export function CurrentlyBuildingSection({ currentlyBuilding = defaultProjects }: { currentlyBuilding?: CurrentlyBuildingProject[] }) {
   return (
     <ScrollAnimationSection as="section" id="currently-building" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
@@ -18,8 +19,8 @@ export function CurrentlyBuildingSection() {
                 {project.status}
               </span>
 
-              <h3 className="mb-3 pr-24 text-lg font-bold text-foreground">{project.title}</h3>
-              <p className="mb-4 text-sm leading-relaxed text-muted">{project.description}</p>
+              <h3 className="mb-3 pr-24 text-lg font-bold text-foreground" {...inspectorProps(project.entryId, "title")}>{project.title}</h3>
+              <p className="mb-4 text-sm leading-relaxed text-muted" {...inspectorProps(project.entryId, "description")}>{project.description}</p>
 
               <ul className="flex flex-wrap gap-2 font-mono text-xs text-muted">
                 {project.tech.map((tech) => (

@@ -113,7 +113,13 @@ export const aboutContent = {
 // SKILLS SECTION
 // ============================================================================
 
-export const skillCategories = [
+export type SkillCategory = {
+    entryId?: string;
+    title: string;
+    skills: string[];
+}
+
+export const skillCategories: SkillCategory[] = [
     {
         title: "Architecture & System Design",
         skills: [
@@ -185,8 +191,10 @@ export const skillCategories = [
 // ============================================================================
 
 export type Experience = {
+    entryId?: string;
     company: string;
     roles: {
+        entryId?: string;
         role: string;
         period: string;
         location: string;
@@ -318,6 +326,7 @@ export const featuredProjects = [
 ]
 
 export type ShowcaseProject = {
+    entryId?: string;
     title: string;
     role: string;
     description: string;
@@ -365,7 +374,15 @@ export const projects: ShowcaseProject[] = [
 // CURRENTLY BUILDING SECTION
 // ============================================================================
 
-export const currentlyBuilding = [
+export type CurrentlyBuildingProject = {
+    entryId?: string;
+    title: string;
+    description: string;
+    tech: string[];
+    status: string;
+}
+
+export const currentlyBuilding: CurrentlyBuildingProject[] = [
     {
         title: "Grand Tour",
         description: "A Next.js travel app that turns a trip idea into an AI-generated route on an interactive Leaflet map. Guests get no database at all, plans live in localStorage, and shared trips are stored as TTL-based links in Upstash Redis. The free tier limit is enforced at three separate layers so it can't be bypassed from the client.",
@@ -542,10 +559,8 @@ export const achievements = [
 
 export type PersonalInfo = typeof personalInfo
 export type AboutContent = typeof aboutContent
-export type SkillCategory = typeof skillCategories[0]
 export type FeaturedProject = typeof featuredProjects[0]
 export type Project = ShowcaseProject
-export type CurrentlyBuildingProject = typeof currentlyBuilding[0]
 export type ContactContent = typeof contactContent
 export type SectionTitles = typeof sectionTitles
 export type NavigationLinks = typeof navigationLinks

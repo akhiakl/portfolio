@@ -1,8 +1,13 @@
 import { ScrollAnimationSection } from "./scroll-animation-section"
-import { aboutContent } from "@/lib/content"
+import { aboutContent as defaultAbout, type AboutContent } from "@/lib/content"
+import { inspectorProps } from "@/lib/cms/inspector"
 
-export function AboutSection() {
+type AboutSectionProps = {
+  aboutContent?: AboutContent
+  entryId?: string
+}
 
+export function AboutSection({ aboutContent = defaultAbout, entryId }: AboutSectionProps) {
   return (
     <ScrollAnimationSection as="section" id="about" className="py-24">
       <h2 className="mb-10 flex items-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
@@ -12,7 +17,7 @@ export function AboutSection() {
       </h2>
 
       <div className="grid gap-12 md:grid-cols-3">
-        <div className="space-y-4 md:col-span-2">
+        <div className="space-y-4 md:col-span-2" {...inspectorProps(entryId, "aboutParagraphs")}>
           {aboutContent.paragraphs.map((paragraph, index) => (
             <p key={index} className="text-muted leading-relaxed">
               {paragraph.text}
@@ -26,7 +31,7 @@ export function AboutSection() {
           <div className="group relative">
             <div className="relative z-10 rounded border border-border bg-card p-6">
               <h3 className="mb-4 font-mono text-sm text-accent">{aboutContent.technologies.title}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2" {...inspectorProps(entryId, "focusAreas")}>
                 {aboutContent.technologies.items.map((item) => (
                   <li key={item} className="flex gap-2 text-sm text-muted">
                     <span className="text-accent">▹</span>

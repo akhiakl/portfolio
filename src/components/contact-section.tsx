@@ -1,13 +1,19 @@
 import { Mail, Linkedin, Github } from "lucide-react"
-import { contactContent } from "@/lib/content"
+import { contactContent as defaultContact, type ContactContent } from "@/lib/content"
+import { inspectorProps } from "@/lib/cms/inspector"
 
-export function ContactSection() {
+type ContactSectionProps = {
+  contactContent?: ContactContent
+  entryId?: string
+}
+
+export function ContactSection({ contactContent = defaultContact, entryId }: ContactSectionProps) {
   return (
     <section id="contact" className="py-24">
       <div className="mx-auto max-w-2xl text-center animate-fade-in">
         <p className="mb-4 font-mono text-accent">{contactContent.sectionNumber}. {contactContent.preTitle}</p>
-        <h2 className="mb-6 text-4xl font-bold text-foreground sm:text-5xl">{contactContent.title}</h2>
-        <p className="mb-12 text-muted leading-relaxed">
+        <h2 className="mb-6 text-4xl font-bold text-foreground sm:text-5xl" {...inspectorProps(entryId, "contactTitle")}>{contactContent.title}</h2>
+        <p className="mb-12 text-muted leading-relaxed" {...inspectorProps(entryId, "contactDescription")}>
           {contactContent.description}
         </p>
 
