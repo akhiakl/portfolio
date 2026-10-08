@@ -29,3 +29,5 @@ class NoopIntersectionObserver {
 }
 
 vi.stubGlobal("IntersectionObserver", NoopIntersectionObserver)
+
+vi.mock("server-only", () => ({}))

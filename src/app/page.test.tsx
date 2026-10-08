@@ -1,30 +1,40 @@
 import { render, screen } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
+import { beforeEach, describe, expect, it, vi } from "vitest"
+import { fallbackContent } from "@/lib/cms/mappers"
 
-vi.mock("@/components/navigation", () => ({ Navigation: () => <div>NavigationMock</div> }))
-vi.mock("@/components/hero-section", () => ({ HeroSection: () => <div>HeroMock</div> }))
-vi.mock("@/components/about-section", () => ({ AboutSection: () => <div>AboutMock</div> }))
-vi.mock("@/components/skills-section", () => ({ SkillsSection: () => <div>SkillsMock</div> }))
-vi.mock("@/components/projects-section", () => ({ ProjectsSection: () => <div>ProjectsMock</div> }))
-vi.mock("@/components/currently-building-section", () => ({ CurrentlyBuildingSection: () => <div>CurrentlyBuildingMock</div> }))
-vi.mock("@/components/experience-section", () => ({ ExperienceSection: () => <div>ExperienceMock</div> }))
-vi.mock("@/components/contact-section", () => ({ ContactSection: () => <div>ContactMock</div> }))
-vi.mock("@/components/footer", () => ({ Footer: () => <div>FooterMock</div> }))
+const draft = vi.hoisted(() => ({ isEnabled: false }))
+const fetchSiteData = vi.hoisted(() => vi.fn())
+vi.mock("next/headers", () => ({ draftMode: async () => draft }))
+vi.mock("@/lib/cms/client", () => ({ fetchSiteData }))
+vi.mock("@/lib/cms/get-site-content", () => ({ getSiteContent: async () => fallbackContent }))
+vi.mock("@/components/site-sections", () => ({
+    SiteSections: ({ content }: { content: typeof fallbackContent }) => <div>Sections:{content.personalInfo.name}</div>,
+}))
+vi.mock("@/components/preview/live-preview-sections", () => ({
+    LivePreviewSections: ({ initialData }: { initialData: unknown }) => <div>Live:{JSON.stringify(initialData)}</div>,
+}))
 
 import Home from "./page"
 
 describe("app/page", () => {
-    it("renders all home sections", () => {
-        render(<Home />)
+    beforeEach(() => {
+        draft.isEnabled = false
+        fetchSiteData.mockReset()
+    })
 
-        expect(screen.getByText("NavigationMock")).toBeTruthy()
-        expect(screen.getByText("HeroMock")).toBeTruthy()
-        expect(screen.getByText("AboutMock")).toBeTruthy()
-        expect(screen.getByText("SkillsMock")).toBeTruthy()
-        expect(screen.getByText("ProjectsMock")).toBeTruthy()
-        expect(screen.getByText("CurrentlyBuildingMock")).toBeTruthy()
-        expect(screen.getByText("ExperienceMock")).toBeTruthy()
-        expect(screen.getByText("ContactMock")).toBeTruthy()
-        expect(screen.getByText("FooterMock")).toBeTruthy()
+    it("renders published content", async () => {
+        render(await Home())
+        expect(screen.getByText("Sections:Akhil K")).toBeTruthy()
+        expect(screen.queryByText(/Preview mode/)).toBeNull()
+        expect(fetchSiteData).not.toHaveBeenCalled()
+    })
+
+    it("renders live preview with preview data in draft mode", async () => {
+        draft.isEnabled = true
+        fetchSiteData.mockResolvedValue({ projectCollection: null })
+        render(await Home())
+        expect(fetchSiteData).toHaveBeenCalledWith({ preview: true })
+        expect(screen.getByText('Live:{"projectCollection":null}')).toBeTruthy()
+        expect(screen.getByRole("link", { name: "Exit preview" }).getAttribute("href")).toBe("/api/draft/disable")
     })
 })

@@ -4,86 +4,102 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { GoogleTagManager } from "@next/third-parties/google"
 import GtmNoScript from "@/components/GtmNoScript"
-import { personalInfo } from "@/lib/content"
+import { draftMode } from "next/headers"
+import type { PersonalInfo } from "@/lib/content"
+import { getSiteContent } from "@/lib/cms/get-site-content"
+import { LivePreviewProvider } from "@/components/preview/live-preview-provider"
 
-const { seo } = personalInfo
-const description = seo.description
-const title = seo.title
-const url = seo.url
-export const metadata: Metadata = {
-  title,
-  description,
-  keywords: seo.keywords,
-  authors: [{ name: personalInfo.name, url: url }],
-  creator: personalInfo.name,
-  publisher: personalInfo.name,
-  openGraph: {
+const absolute = (url: string, src: string) => (src.startsWith("http") ? src : `${url}${src}`)
+
+function buildMetadata(personalInfo: PersonalInfo): Metadata {
+  const { seo } = personalInfo
+  const { description, title, url } = seo
+  return {
     title,
     description,
-    url,
-    siteName: "Akhil K Portfolio",
-    images: [
-      {
-        url: `${url}/images/akhil-portrait.webp`,
-        alt: "Akhil K Portfolio Preview",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: personalInfo.title,
-    description,
-    creator: "@akhiakl",
-    images: [`${url}${personalInfo.hero.image.src}`],
-  },
-  alternates: {
-    canonical: url,
-  },
-  other: {
-    "google-site-verification":
-      process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "",
-  },
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
+    keywords: seo.keywords,
+    authors: [{ name: personalInfo.name, url: url }],
+    creator: personalInfo.name,
+    publisher: personalInfo.name,
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Akhil K Portfolio",
+      images: [
+        {
+          url: absolute(url, personalInfo.hero.image.src),
+          alt: "Akhil K Portfolio Preview",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: personalInfo.title,
+      description,
+      creator: "@akhiakl",
+      images: [absolute(url, personalInfo.hero.image.src)],
+    },
+    alternates: {
+      canonical: url,
+    },
+    other: {
+      "google-site-verification":
+        process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "",
+    },
+    icons: {
+      icon: [
+        {
+          url: "/icon-light-32x32.png",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          url: "/icon-dark-32x32.png",
+          media: "(prefers-color-scheme: dark)",
+        },
+        {
+          url: "/icon.svg",
+          type: "image/svg+xml",
+        },
+      ],
+      apple: "/apple-icon.png",
+    },
+  }
 }
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: personalInfo.name,
-  jobTitle: personalInfo.title,
-  url,
-  image: `${url}${personalInfo.hero.image.src}`,
-  description,
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "Kerala",
-    addressCountry: "India",
-  },
-  sameAs: [personalInfo.contact.github, personalInfo.contact.linkedin],
-};
 
-export default function RootLayout({
+export async function generateMetadata(): Promise<Metadata> {
+  const { personalInfo } = await getSiteContent()
+  return buildMetadata(personalInfo)
+}
+
+const buildJsonLd = (personalInfo: PersonalInfo) => {
+  const { description, url } = personalInfo.seo
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: personalInfo.name,
+    jobTitle: personalInfo.title,
+    url,
+    image: absolute(url, personalInfo.hero.image.src),
+    description,
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Kerala",
+      addressCountry: "India",
+    },
+    sameAs: [personalInfo.contact.github, personalInfo.contact.linkedin],
+  }
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const [{ personalInfo }, { isEnabled: preview }] = await Promise.all([getSiteContent(), draftMode()])
+  const jsonLd = buildJsonLd(personalInfo)
   return (
     <html lang="en">
       {process.env.NEXT_PUBLIC_GTM_ID && (
@@ -99,7 +115,7 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        {children}
+        {preview ? <LivePreviewProvider>{children}</LivePreviewProvider> : children}
         <Analytics />
       </body>
     </html>

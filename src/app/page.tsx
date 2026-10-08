@@ -1,27 +1,26 @@
-import { Navigation } from "@/components/navigation"
-import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
-import { SkillsSection } from "@/components/skills-section"
-import { ProjectsSection } from "@/components/projects-section"
-import { CurrentlyBuildingSection } from "@/components/currently-building-section"
-import { ExperienceSection } from "@/components/experience-section"
-import { ContactSection } from "@/components/contact-section"
-import { Footer } from "@/components/footer"
+import { draftMode } from "next/headers"
+import { SiteSections } from "@/components/site-sections"
+import { LivePreviewSections } from "@/components/preview/live-preview-sections"
+import { PreviewBanner } from "@/components/preview/preview-banner"
+import { fetchSiteData } from "@/lib/cms/client"
+import { getSiteContent } from "@/lib/cms/get-site-content"
 
-export default function Home() {
+export default async function Home() {
+  const { isEnabled: preview } = await draftMode()
+
+  if (preview) {
+    const initialData = await fetchSiteData({ preview: true })
+    return (
+      <main className="min-h-screen">
+        <LivePreviewSections initialData={initialData} />
+        <PreviewBanner />
+      </main>
+    )
+  }
+
   return (
     <main className="min-h-screen">
-      <Navigation />
-      <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-24">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <CurrentlyBuildingSection />
-        <ExperienceSection />
-        <ContactSection />
-      </div>
-      <Footer />
+      <SiteSections content={await getSiteContent()} />
     </main>
   )
 }

@@ -21,7 +21,7 @@ describe("main site components", () => {
 
         expect(screen.getAllByRole("link", { name: /Resume/i }).length).toBeGreaterThan(0)
         expect(screen.getByText("Akhil K.")).toBeTruthy()
-        expect(screen.getByRole("link", { name: "View Work" })).toBeTruthy()
+        expect(screen.getByRole("link", { name: "View Architecture & Work" })).toBeTruthy()
     })
 
     it("renders about and skills sections", () => {
@@ -46,7 +46,8 @@ describe("main site components", () => {
         )
 
         expect(screen.getByText("Featured Projects")).toBeTruthy()
-        expect(screen.getByText("SvgIn-React Library")).toBeTruthy()
+        expect(screen.getByText("Tickd")).toBeTruthy()
+        expect(screen.getByText("SvgIn-React")).toBeTruthy()
         expect(screen.getByText("Currently Building")).toBeTruthy()
         expect(screen.getByText("Grand Tour")).toBeTruthy()
         expect(screen.getAllByText("Experience").length).toBeGreaterThan(0)
@@ -64,7 +65,7 @@ describe("main site components", () => {
             </>,
         )
 
-        expect(screen.getByText("Get In Touch")).toBeTruthy()
+        expect(screen.getByText("Get in Touch")).toBeTruthy()
         expect(screen.getAllByRole("link", { name: "Email" }).length).toBeGreaterThan(0)
         expect(screen.getByText("Built with Next.js & Tailwind CSS")).toBeTruthy()
     })
