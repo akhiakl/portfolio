@@ -68,7 +68,7 @@ const contentTypes: (CreateContentTypeProps & { id: string })[] = [
       symbol("contactPreTitle", "Contact pre-title"),
       symbol("contactTitle", "Contact title"),
       text("contactDescription", "Contact description"),
-      { id: "aboutParagraphs", name: "About paragraphs (JSON: [{ text, highlight, continuation }])", type: "Object", required: false, localized: false },
+      { id: "aboutParagraphs", name: "About paragraphs (JSON)", type: "Object", required: false, localized: false },
       symbols("focusAreas", "Focus areas"),
     ],
   },
