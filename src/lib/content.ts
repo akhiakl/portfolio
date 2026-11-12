@@ -384,7 +384,7 @@ export type CurrentlyBuildingProject = {
 
 export const currentlyBuilding: CurrentlyBuildingProject[] = [
     {
-        title: "Grand Tour",
+        title: "DrawMyTrip",
         description: "A Next.js travel app that turns a trip idea into an AI-generated route on an interactive Leaflet map. Guests get no database at all, plans live in localStorage, and shared trips are stored as TTL-based links in Upstash Redis. The free tier limit is enforced at three separate layers so it can't be bypassed from the client.",
         tech: ["Next.js", "TypeScript", "Leaflet", "Upstash Redis", "Tailwind CSS"],
         status: "In Progress",
