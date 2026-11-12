@@ -49,7 +49,7 @@ describe("main site components", () => {
         expect(screen.getByText("Tickd")).toBeTruthy()
         expect(screen.getByText("SvgIn-React")).toBeTruthy()
         expect(screen.getByText("Currently Building")).toBeTruthy()
-        expect(screen.getByText("Grand Tour")).toBeTruthy()
+        expect(screen.getByText("DrawMyTrip")).toBeTruthy()
         expect(screen.getAllByText("Experience").length).toBeGreaterThan(0)
 
         const corraTab = screen.getByRole("button", { name: "Corra" })
